@@ -63,7 +63,7 @@ render() {
                 <div id="blogpage" className="exampleStory">
                     {(post.title)} 
                 </div>
-                <div className="contentPreview" dangerouslySetInnerHTML={{ __html: marked(post.content).substring(0,100)+'...' }}><p>hello</p></div>
+                <div className="contentPreview"><p>hello</p></div>
 
               </div >
 
