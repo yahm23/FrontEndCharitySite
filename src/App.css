@@ -1,0 +1,601 @@
+@font-face {
+  font-family: "Geon";
+  src: url("./Media/Fonts/geon.ttf") format("truetype");
+}
+.NavBarPadding {
+  margin-top: 0;
+  padding-top: 35%;
+}
+
+.navbar {
+  padding-top: 2%;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+}
+
+.navbar-mobile {
+  padding-top: 4%;
+  margin-bottom: 2%;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+}
+
+/* Style the links inside the navigation bar */
+.navbarright {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  font-size: 15px;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.navbarright-mobile {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  font-size: 15px;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.navbarleft {
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  font-size: 15px;
+  padding-left: 3%;
+  flex-grow: 3;
+}
+
+#bigger {
+  font: weight 6;
+}
+
+#space {
+  flex-grow: 3;
+  text-align: center;
+  margin-top: 4%;
+}
+
+#space-mobile {
+  flex-grow: 3;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.donateButton {
+  background-color: #84C632;
+  /* Green */
+  font-family: "Geon", Times, sans-serif;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 3%;
+  flex-grow: 1;
+  margin-right: 4%;
+}
+
+.donateButton-mobile {
+  background-color: #84C632;
+  /* Green */
+  font-family: "Geon", Times, sans-serif;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 3%;
+  flex-grow: 1;
+  margin: 5% auto;
+  display: block;
+}
+
+.buttons {
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.buttons-mobile {
+  display: block;
+  margin: 0%;
+  width: 80%;
+}
+
+.donateButton2 {
+  background-color: #84C632;
+  /* Green */
+  font-family: "Geon", Times, sans-serif;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 3% 9%;
+  flex-grow: 1;
+  margin-right: 3%;
+}
+
+.LearnButton {
+  background-color: white;
+  font-family: "Geon", Times, sans-serif;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 3% 9%;
+  margin: 5% 6%;
+}
+
+.LearnButton-mobile {
+  background-color: white;
+  font-family: "Geon", Times, sans-serif;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 3% 9%;
+  margin: 5% 0%;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+}
+
+.main-container {
+  background-image: url("./Media/DesktopBackgrounds/bgrnd.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
+  background-position: center 120%;
+}
+
+.main-container-mobile {
+  background-image: url("./Media/DesktopBackgrounds/bgrnd.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
+  background-position: 80% 140%;
+}
+
+.homeText {
+  padding-top: 7%;
+  padding-bottom: 13%;
+  color: white;
+  font-family: "Geon", Times, sans-serif;
+  padding-left: 2%;
+  margin-left: 10%;
+  margin-right: 50%;
+}
+
+.homeText-mobile {
+  padding-top: 7%;
+  padding-bottom: 13%;
+  color: white;
+  font-family: "Geon", Times, sans-serif;
+  padding-left: 2%;
+  padding-top: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.localSmall {
+  margin-bottom: 10%;
+  font-size: 180%;
+  font-weight: 100;
+}
+
+.local {
+  font-size: 340%;
+  font-weight: 100;
+  color: white;
+}
+
+.local-mobile {
+  font-size: 250%;
+  font-weight: 100;
+  color: white;
+}
+
+.title {
+  font-size: 190%;
+  padding-bottom: 3%;
+  font-weight: 190;
+}
+
+.wave-container {
+  bottom: 1px;
+}
+
+.wave {
+  width: 100%;
+  height: 40%;
+  display: block;
+}
+
+.descriptionContainer {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.descriptionContainer-mobile {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.white {
+  padding-top: 30%;
+  width: 100%;
+}
+
+.black {
+  font-family: "Geon", Times, sans-serif;
+  font-weight: 100;
+  color: black;
+  margin-bottom: 0%;
+  margin-top: 10%;
+  padding: 0% 6%;
+  text-align: center;
+  font-size: 330%;
+}
+
+.black-mobile {
+  font-family: "Geon", Times, sans-serif;
+  font-weight: 100;
+  color: black;
+  margin-bottom: 0%;
+  margin-top: 10%;
+  padding: 0% 6%;
+  text-align: center;
+  font-size: 230%;
+}
+
+.whiteBackground {
+  background-color: white;
+  width: 100%;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  align-self: center;
+}
+
+.numbers {
+  color: #E4BD0F;
+  font-family: "Geon", Times, sans-serif;
+  font-size: 410%;
+  text-align: center;
+  margin-bottom: 0%;
+  font-weight: 200;
+}
+
+.numbers-mobile {
+  color: #E4BD0F;
+  font-family: "Geon", Times, sans-serif;
+  font-size: 410%;
+  text-align: center;
+  margin-bottom: 0%;
+  font-weight: 200;
+  font-size: 310%;
+}
+
+.itemName {
+  color: #C2C2C3;
+  font-family: "Geon", Times, sans-serif;
+  text-align: center;
+  margin-top: 0%;
+}
+
+.blurb {
+  font-family: "Geon", Times, sans-serif;
+  text-align: center;
+  font-size: 150%;
+  margin-bottom: 15%;
+  font-weight: 200;
+}
+
+.blurb-mobile {
+  font-family: "Geon", Times, sans-serif;
+  text-align: center;
+  font-size: 120%;
+  margin-bottom: 15%;
+  font-weight: 200;
+}
+
+.storyContainer {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.stories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.story {
+  display: flex;
+  margin-bottom: 5%;
+  width: 380px;
+  height: 480px;
+  box-shadow: -10px -10px 8px -11px #84C632;
+  background-image: url("./Media/plants/plant.jpg");
+  background-position: 103% center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 120%;
+  position: relative;
+}
+
+.exampleStory {
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  color: #84C632;
+  margin: 10%;
+  width: 100%;
+  font-size: 220%;
+}
+
+.readStory {
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 90%;
+  font-weight: lighter;
+  background-color: #83C330;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.padding {
+  padding: 5%;
+  flex-grow: 4;
+}
+
+.chevron-right {
+  flex-grow: 1;
+  align-self: center;
+}
+
+.viewMore {
+  font-family: "Geon", Times, serif;
+  border: 1px solid #C2C2C1;
+  box-shadow: 1px 1px -8px -1px #C2C2C1 #C2C2C1;
+  color: #4E4E54;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20PX;
+  padding: 1%;
+  width: 20%;
+  margin: 30px auto;
+  display: block;
+}
+
+.viewMore-mobile {
+  font-family: "Geon", Times, serif;
+  border: 1px solid #C2C2C1;
+  box-shadow: 1px 1px -8px -1px #C2C2C1 #C2C2C1;
+  color: #4E4E54;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20PX;
+  padding: 1%;
+  width: 20%;
+  margin: 30px auto;
+  display: block;
+  padding: 3%;
+  width: 90%;
+}
+
+hr.solid {
+  border-top: 3px solid #F3F3F3;
+}
+
+.logoBanner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 6%;
+}
+
+::placeholder {
+  color: #cccccc;
+}
+
+.update {
+  float: right;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-color: #cccccc;
+  border-style: solid;
+  color: #cccccc;
+  box-shadow: 2px 0px 5px 0px rgba(42, 42, 42, 0.11);
+  text-shadow: 0px 0px 0px rgba(42, 42, 42, 0.35);
+  font-size: 22px;
+  border-radius: 0px;
+  border-width: 1px;
+  width: 95%;
+  padding: 2%;
+}
+
+#email {
+  flex-basis: 90%;
+  font-family: "Geon", Times, sans-serif;
+  border-color: white;
+  border-style: none;
+  color: #cccccc;
+  font-size: 22px;
+  display: inline-block;
+}
+
+input {
+  text-decoration: none;
+  outline-width: 0;
+}
+
+#chevron-email {
+  flex-basis: 10%;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 265px;
+  top: 2px;
+}
+
+.update {
+  font-family: "Geon", Times, sans-serif;
+  font-size: 180%;
+  font-weight: lighter;
+}
+
+.bottomBanner {
+  margin: 5%;
+}
+
+.links {
+  justify-content: space-between;
+  width: 60%;
+  font-size: 110%;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Geon", Times, sans-serif;
+  margin-bottom: 2%;
+}
+
+.copyright {
+  color: #B2B3B6;
+  margin-top: 4%;
+  font-size: 110%;
+}
+
+.blankSpace {
+  height: 500px;
+}
+
+#icon {
+  font-family: "Geon", Times, sans-serif;
+  align-items: center;
+  background: none;
+  border: 0;
+}
+
+.blogs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#icon:focus {
+  outline: 0;
+}
+
+div .Bar {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+.dropdown-menu.show {
+  background-color: white;
+  padding: 3%;
+  width: 80%;
+  border: black;
+  border-radius: 20px;
+  color: #84C632;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.container-mobile {
+  height: 100%;
+}
+
+.blogcontainer {
+  padding: 5%;
+  font-size: 150%;
+  text-justify: inter-word;
+}
+
+.list {
+  height: 200px;
+  width: 300px;
+}
+
+.blogBanner {
+  background-image: url("./Media/plants/backdrop.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.exampleStory #blogpage {
+  position: relative;
+  top: 400px;
+}
+
+.contentPreview, p {
+  font-weight: lighter !important;
+  color: black;
+  margin: 8%;
+  font-weight: normal;
+  font-size: 70%;
+}
+
+.Posts {
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  top: 1000px;
+  padding: 10%;
+  font-size: 300%;
+  margin: 0% auto;
+  text-align: center;
+}
+
+.blogs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=App.css.map */
