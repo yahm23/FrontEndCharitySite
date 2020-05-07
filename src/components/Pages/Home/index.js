@@ -42,8 +42,8 @@ const Story = ()=>{
         }
     },[]);
 
+    //Get first 3 entries of the stories available
     if (data ){
-        //Get first 3 entries of the stories available
         const sampleStories = data.slice(0,3);
 
         return(
@@ -82,8 +82,7 @@ const Story = ()=>{
 const HomeComp = () => {
     let isMobile = useMediaQuery({ maxWidth: 767 })
     return (
-      // Passing down props for different classes based on platform, 
-      // space  will be left at bottom of screen for typing on mobile
+    
 
       <div >
         {/* <Container mobileClass={`${isMobile ? "mobile" : ""}`}></Container> */}

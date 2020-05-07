@@ -10,9 +10,7 @@ function App() {
   const DesktopOrMobile = () => {
     let isMobile = useMediaQuery({ maxWidth: 767 })
     return (
-      // Passing down props for different classes based on platform, 
-      // space  will be left at bottom of screen for typing on mobile
-
+ 
       <div className ={`container${isMobile ? "-mobile" : ""}`}>
         <Container mobileClass={`${isMobile ? "mobile" : ""}`}></Container>
       </div>
