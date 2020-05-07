@@ -10,22 +10,7 @@ import Strapi from "strapi-sdk-javascript/build/main";
 
 export class Article extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //      post: []
-    //    }
-    //  }
-    
-    // async componentDidMount() {
-    //  try {
-    //    const post = await strapi.getEntries('blogs')
-    //    this.setState({ post });
-    //  } 
-    //  catch(err) {
-    //   alert(err);
-    //  }
-    // }
+
     
     render() {
       return (

@@ -5,20 +5,14 @@ import Article from '../Article';
 
 import {BrowserRouter as Switch,Route ,  Link } from "react-router-dom";
 
-// import Articles from "../containers/Articles";
-// import Article from "../Article";
-// import Author from "../containers/Author";
-// import Authors from "../containers/Authors";
+
 
 const strapi = new Strapi('http://localhost:1337');
 
 
 export class Blogs extends Component {
 
-  // class func = ()=>{
-  //   let { path, url } = useRouteMatch();
 
-  // }
 
   constructor(props) {
     super(props);
@@ -42,7 +36,7 @@ async componentDidMount() {
 
 
 render() {
-  // var preview='';
+
   return (
 
 
@@ -67,7 +61,6 @@ render() {
               <div key={post.title} className="list">
 
                 <div id="blogpage" className="exampleStory">
-                  {/* {url = `/blogs/`+post.id} */}
                     {(post.title)} 
                 </div>
                 <div className="contentPreview" dangerouslySetInnerHTML={{ __html: marked(post.content).substring(0,100)+'...' }}></div>

@@ -37,23 +37,11 @@ class SingleBlog extends React.Component{
                 <div className="blogcontainer">
                     <h1 className="Posts">{this.state.blog.title}</h1>
                     <h4>Written by {this.state.blog.authors? this.state.blog.authors[0].Name:'Green'}</h4>
-                    {/* {console.log(this.state.authors[0])} */}
-                    
-
-                    {/* {this.state.authors.map(post => (
-            
-                
-                        <div>                 
-                            <div className="title">
-                                {post.Name} 
-                            </div>
-                        </div >
-                
-                    ))} */}
+                   
 
 
                     <div className="individualArticle" dangerouslySetInnerHTML={{ __html: marked(this.state.test)}}></div>
-                    {/* {marked(this.state.test)} */}
+     
 
                     <p>{this.state.blog.published}</p>
                     <Link to={'/blogs'}><button className="donateButton2">Go back to all blogs</button></Link>

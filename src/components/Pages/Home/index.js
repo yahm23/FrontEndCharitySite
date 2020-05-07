@@ -36,7 +36,6 @@ const Story = ()=>{
     
     useEffect(() => {
         fetchData();
-        // console.log(fetchData());
         return () => {
             console.log('unmounting...') 
         }
@@ -85,7 +84,6 @@ const HomeComp = () => {
     
 
       <div >
-        {/* <Container mobileClass={`${isMobile ? "mobile" : ""}`}></Container> */}
         <div >
                 <div className={isMobile ?"main-container-mobile":"main-container"} >
                     
