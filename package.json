@@ -6,7 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.4.1",
+    "gatsby-plugin-styled-components": "^3.3.1",
     "marked": "^0.3.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -15,7 +17,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "strapi-sdk-javascript": "^0.3.3"
+    "strapi-sdk-javascript": "^0.3.3",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
