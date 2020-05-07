@@ -18,8 +18,8 @@ function App() {
   }
 
 
+  // Rendering the component above 
   return (
-    // Rendering the component above 
     <div className="App">
       <BrowserRouter>
         <DesktopOrMobile>
