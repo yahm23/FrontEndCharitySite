@@ -491,7 +491,7 @@ input {
   margin: 5%;
 }
 
-.links {
+#links {
   justify-content: space-between;
   width: 60%;
   font-size: 110%;
@@ -574,7 +574,7 @@ div .Bar {
   top: 400px;
 }
 
-.contentPreview, p {
+.contentPreview {
   font-weight: lighter !important;
   color: black;
   margin: 8%;

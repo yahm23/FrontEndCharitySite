@@ -26,7 +26,7 @@ const BottomBanner= ()=> {
                         </div>
                     </div>
 
-                    <div className="links">
+                    <div id="links">
                         <p><Link  to='/'>Home</Link></p> 
                         <p><Link  to='/about'>About</Link></p>
                         <p><Link  to='/support'>Support Us</Link></p>
