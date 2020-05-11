@@ -606,13 +606,20 @@ div .Bar {
   font-size: 150%;
 
 }
-
-.blogs{
+@mixin blogs{
   display: flex;
   background-color: white;
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.blogs{
+  @include blogs();
+}
+.blogs-mobile{
+  @include blogs();
+  margin-top: 20%;
 }
 
 .individualArticle{

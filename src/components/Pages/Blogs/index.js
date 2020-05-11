@@ -1,13 +1,15 @@
-import React, { Component, useState, useEffect, setErrors} from 'react'
-import Strapi from "strapi-sdk-javascript/build/main";
-import marked from 'marked';
-import Article from '../Article';
+import React, { useState, useEffect, setErrors} from 'react'
+// import Strapi from "strapi-sdk-javascript/build/main";
+// import marked from 'marked';
+// import Article from '../Article';
 
 import {BrowserRouter as Switch,Route ,  Link } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive';
 
 
 
-const strapi = new Strapi('https://blog-back-end-green.herokuapp.com/');
+
+// const strapi = new Strapi('https://blog-back-end-green.herokuapp.com/');
 
 
 const Blogs=()=> {
@@ -32,6 +34,7 @@ const Blogs=()=> {
   },[]);
 
 
+  let isMobile = useMediaQuery({ maxWidth: 767 })
   if(posts){
   return (
 
@@ -53,7 +56,7 @@ const Blogs=()=> {
             
           </div>
           
-          <div className="blogs">
+          <div className={isMobile? "blogs-mobile":"blogs"}>
           {posts.map(post => (
             
             <Link key={post.id} to = {`/blogs/`+post.id}>

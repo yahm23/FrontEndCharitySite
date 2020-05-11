@@ -615,6 +615,15 @@ div .Bar {
   flex-wrap: wrap;
 }
 
+.blogs-mobile {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20%;
+}
+
 .individualArticle {
   font-family: "Geon", Times, sans-serif;
   padding: 5%;
