@@ -421,6 +421,7 @@ body{
 
 hr.solid {
   border-top: 3px solid #F3F3F3;
+  margin-bottom: 5%;
 }
 
 
@@ -611,4 +612,14 @@ div .Bar {
   font-size: 150%;
   padding: 5%;
   padding-top:0%;
+}
+@mixin bottomBanner{
+  margin-top: 25px;
+}
+.keepUpdated{
+  @include bottomBanner();
+  margin-bottom: 2%;
+}
+.bottomLogo{
+  @include bottomBanner();
 }

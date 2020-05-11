@@ -144,10 +144,9 @@ const HomeComp = () => {
                         <Story></Story>
                     <Link to='/blogs'><button className={isMobile ?"viewMore-mobile":"viewMore"}>View more success stories</button></Link>
                 </div>
-                <div className="blankSpace"></div>
-                <hr className="solid"></hr>
+                
 
-                <BottomBanner></BottomBanner>
+                
 
               
             </div>
