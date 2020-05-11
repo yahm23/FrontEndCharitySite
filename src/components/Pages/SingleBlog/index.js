@@ -26,7 +26,8 @@ class SingleBlog extends React.Component{
     }
 
     getBlog() {
-    return fetch(`${baseURL}${this.props.match.params._id}`)
+        console.log(this.props.match.params.id);
+        return fetch(`${baseURL}${this.props.match.params.id}`)
     }
 
 
