@@ -578,14 +578,13 @@ div .Bar {
   font-family: "Geon", Times, sans-serif;
   color: white;
   top: 1000px;
-  padding: 10%;
+  padding-top: 10%;
   font-size: 300%;
   margin: 0% auto;
   text-align: center;
   background-image: url(/static/media/background2.ab104ed9.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  /* height: 400px; */
   background-position: center 46%;
   margin-bottom: 10%;
 }
