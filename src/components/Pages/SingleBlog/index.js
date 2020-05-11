@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect, setErrors } from 'react'
 import {BrowserRouter as Switch,Route ,Link} from "react-router-dom";
 // import Blogs from '../Blogs';
 import Strapi from "strapi-sdk-javascript/build/main";
@@ -7,46 +7,36 @@ import marked from 'marked';
 
 const baseURL='https://blog-back-end-green.herokuapp.com/blogs/';
 
-class SingleBlog extends React.Component{
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          blog: 'blurb',
-          content:'',
-          author:'',
-          date:'',
-          time:''
+const SingleBlog = (props)=>{
+    var [blog,setBlog]= useState();
 
+    async function fetchData() {
+
+        await fetch(`https://blog-back-end-green.herokuapp.com/blogs/${props.match.params.id}`)
+        .then(response => response.json())
+        .then(response => {
+            setBlog(response);            
+        })
+        .catch(err => setErrors(err));
+    }
+
+    useEffect(() => {
+        fetchData();
+        return () => {
+            console.log('unmounting...') 
         }
-      }
+    },[]);
+
+
+    if(blog){
     
-    componentDidMount() {
-    this.getBlog()
-    .then(response => response.json())
-    .then(data => this.setState({ 
-        blog: data,
-        content: data.content,
-        author: data.author,
-        date: (data.published.split('T')[0]).replace(/-/g, '/')
-        }));
-    
-    }
-
-    getBlog() {
-        return fetch(`${baseURL}${this.props.match.params.id}`)
-    }
-
-
-
-    render(){
         return(
             <div className="blogBanner">
                 <div className="blogcontainer">
 
                     <div className="Posts">
-                        <h1>{this.state.blog.title}</h1>
-                        <h4>Written by {this.state.author? this.state.author.name:'Green'}</h4>
+                        <h1>{blog.title}</h1>
+                        <h4>Written by {blog.author? blog.author.name:'Green'}</h4>
 
                         <div className= "wave-container">
                             <svg  className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1420 95">
@@ -56,8 +46,8 @@ class SingleBlog extends React.Component{
                     </div>
 
                     <div className="individualArticle">
-                        <div  dangerouslySetInnerHTML={{ __html: marked(this.state.content)}}></div>
-                        <p>{this.state.date}</p>
+                        <div  dangerouslySetInnerHTML={{ __html: marked(blog.content)}}></div>
+                        <p>{blog.date}</p>
                         <Link to={'/blogs'}><button className="donateButton2">Go back to all blogs</button></Link>
                     </div>
 
@@ -65,7 +55,11 @@ class SingleBlog extends React.Component{
             </div>
         )
         
+    } else {
+        return null
     }
+
 }
+
 
 export default SingleBlog
