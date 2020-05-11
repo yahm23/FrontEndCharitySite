@@ -37,7 +37,7 @@ class SingleBlog extends React.Component{
             <div className="blogBanner">
                 <div className="blogcontainer">
                     <h1 className="Posts">{this.state.blog.title}</h1>
-                    <h4>Written by {this.state.blog.authors? this.state.blog.authors[0].Name:'Green'}</h4>
+                    <h4>Written by {this.state.blog.author.name? this.state.blog.author.name:"Green"}</h4>
                    
 
 
