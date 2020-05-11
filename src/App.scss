@@ -588,7 +588,7 @@ div .Bar {
   padding-top: 10%;
   margin: 0% auto;
   text-align: center;
-  background-image: url('./Media/DesktopBackgrounds/background2.jpg');
+  background-image: url('./Media/DesktopBackgrounds/background4.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 46%;
@@ -636,6 +636,12 @@ div .Bar {
   @include bottomBanner();
   margin-bottom: 2%;
 }
+
 .bottomLogo{
   @include bottomBanner();
+}
+
+.noBottomPadding{
+  margin-bottom: 0%;
+  margin-top:0% ;
 }

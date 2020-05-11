@@ -40,8 +40,8 @@ const SingleBlog = (props)=>{
                 <div className="blogcontainer">
 
                     <div className={isMobile ?"Posts-mobile":"Posts"} >
-                        <h1>{blog.title}</h1>
-                        <h4>Written by {blog.author? blog.author.name:'Green'}</h4>
+                        <h1 className="noBottomPadding">{blog.title}</h1>
+                        <h4 className="noBottomPadding">Written by {blog.author? blog.author.name:'Green'}</h4>
 
                         <div className= "wave-container">
                             <svg  className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1420 95">
