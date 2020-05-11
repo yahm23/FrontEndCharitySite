@@ -348,7 +348,7 @@ body{
   
   display: flex;
   margin-bottom: 5%;
-  width: 380px;
+  width: 370px;
   height: 420px;
   
   box-shadow:-10px -10px 8px -11px #84C632;
@@ -550,7 +550,7 @@ div .Bar {
 }
 
 .blogcontainer{
-  padding: 5%;
+  // padding: 5%;
   // font-size: 150%;
   text-justify: inter-word;
 }
@@ -560,12 +560,12 @@ div .Bar {
 }
 
 .blogBanner{
-background-image: url("./Media/plants/backdrop.jpg");
-background-size: 100%;
-background-repeat: no-repeat;
-height: 400px;
-width: 100%;
-margin-bottom: 10%;;
+// background-image: url("./Media/DesktopBackgrounds/background2.jpg");
+// background-size: 100%;
+// background-repeat: no-repeat;
+// height: 400px;
+// width: 100%;
+// margin-bottom: 10%;;
 }
 .exampleStory #blogpage{
   position: relative;
@@ -587,10 +587,20 @@ margin-bottom: 10%;;
   font-size: 300%;
   margin: 0% auto;
   text-align: center;
+
+  background-image: url(/static/media/background2.ab104ed9.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* height: 400px; */
+  background-position: center 46%;
+  // width: 100%;
+  margin-bottom: 10%;
 }
 
 .blogs{
   display: flex;
+  background-color: white;
+  width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
 }

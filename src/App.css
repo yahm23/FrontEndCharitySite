@@ -349,7 +349,7 @@ body {
 .story {
   display: flex;
   margin-bottom: 5%;
-  width: 380px;
+  width: 370px;
   height: 420px;
   box-shadow: -10px -10px 8px -11px #84C632;
   background-image: url("./Media/plants/plant.jpg");
@@ -553,22 +553,12 @@ div .Bar {
 }
 
 .blogcontainer {
-  padding: 5%;
   text-justify: inter-word;
 }
 
 .list {
   height: 200px;
   width: 300px;
-}
-
-.blogBanner {
-  background-image: url("./Media/plants/backdrop.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 400px;
-  width: 100%;
-  margin-bottom: 10%;
 }
 
 .exampleStory #blogpage {
@@ -592,10 +582,18 @@ div .Bar {
   font-size: 300%;
   margin: 0% auto;
   text-align: center;
+  background-image: url(/static/media/background2.ab104ed9.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* height: 400px; */
+  background-position: center 46%;
+  margin-bottom: 10%;
 }
 
 .blogs {
   display: flex;
+  background-color: white;
+  width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
 }
