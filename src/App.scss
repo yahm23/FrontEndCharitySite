@@ -311,22 +311,25 @@ body{
   text-align: center;
   margin-top: 0%;
 }
-.blurb{
+
+@mixin blurb {
   font-family: $font;
   text-align: center;
-  font-size: 150%;
   margin-bottom: 15%;
   font-weight: 200;
+}
+.blurb{
+  @include blurb();
+  font-size: 150%;
 }
 
 .blurb-mobile{
-  font-family: $font;
-  text-align: center;
+  @include blurb();
   font-size: 120%;
-  margin-bottom: 15%;
-  font-weight: 200;
 }
-
+.mini-title{
+  font-weight: bold;
+}
 .storyContainer{
   margin-left: 8%;
   margin-right: 8%;
@@ -346,7 +349,7 @@ body{
   display: flex;
   margin-bottom: 5%;
   width: 380px;
-  height: 480px;
+  height: 420px;
   
   box-shadow:-10px -10px 8px -11px #84C632;
   background-image: url("./Media/plants/plant.jpg");
@@ -363,7 +366,7 @@ body{
   color: #84C632;
   margin:10%;
   width: 100%;
-  font-size: 220%;
+  font-size: 40px;
 
 }  
 
@@ -548,7 +551,7 @@ div .Bar {
 
 .blogcontainer{
   padding: 5%;
-  font-size: 150%;
+  // font-size: 150%;
   text-justify: inter-word;
 }
 .list{
@@ -590,4 +593,8 @@ margin-bottom: 10%;;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.individualArticle{
+  font-family: $font;
 }

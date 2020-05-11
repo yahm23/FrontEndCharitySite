@@ -118,14 +118,26 @@ const HomeComp = () => {
                     </div>
                 
                 {/* <p className={`blurb${this.props.route.something ? "-mobile" : ""}`}> */}
-                   <p className={isMobile ?"blurb-mobile":"blurb"}>
-                    Bacon ipsum dolor amet picanha ham hock tri-tip pork, t-bone drumstick chislic pork belly chuck hamburger ground round. Filet mignon alcatra biltong hamburger pig flank andouille turkey doner venison beef ribs. Landjaeger short ribs kevin shoulder turkey frankfurter tail spare ribs tri-tip alcatra burgdoggen pastrami. Flank drumstick t-bone swine. Leberkas pancetta sausage venison meatloaf capicola flank. Beef ribs t-bone chuck pork belly pastrami alcatra. Kevin boudin shoulder, ribeye fatback cupim frankfurter sirloin cow pork chop.
-                    Alcatra pig chuck, pork loin ball tip leberkas rump chicken. Flank pig frankfurter pork sausage shank. T-bone burgdoggen shank brisket kevin. 
+                   <div className={isMobile ?"blurb-mobile":"blurb"}>
+                    
+                    <p className="mini-title">
+                        The Green Foundation was founded in July 2020 to help Green make a difference in our local community, and throughout the country. Green provides all of our Members with renewable energy to reduce their carbon footprint, however we wanted to do more to help those in need.
+                        Green donates £1 to The Green Foundation each time a new Member switches.
+                    </p>
+
+                    <br></br>
+                    <p className="mini-title">Making a change in a local community, and throughout the country</p>
+                    The Green Foundation understands that combating climate change requires individuals to make a change to their habits to become more sustainable. We support communities and individuals by providing education on the benefits of sustainability, conservation and renewable energy. To help those in need, we provide energy hardship grants to cover energy bills for those experiencing financial hardship or difficulties. We also provide grants towards sustainable development and regeneration projects.
+                    Green strongly believes in empowering our Members to make a change in the community. To have the greatest impact, we allow our Members to vote upon sustainable development and regeneration projects that have been approved by the board of trustees. This allows Members to help select projects that they believe will have the greatest impact upon the environment or local communities.
+
                     <br></br>
                     <br></br>
-                    Cow pork belly pork chop porchetta, tenderloin buffalo turducken turkey meatball t-bone. T-bone pork belly corned beef buffalo. Picanha kevin pork chop bacon, brisket burgdoggen ham hamburger frankfurter shankle ground round ribeye biltong alcatra.            Chislic doner t-bone leberkas, buffalo rump kielbasa turducken bresaola porchetta sausage swine pork loin. Landjaeger short loin strip steak prosciutto short ribs cupim ground round boudin t-bone pork chop tri-tip kielbasa venison beef. Shoulder chislic chicken, pig salami shank rump. Pork loin spare ribs fatback, kevin biltong meatloaf salami shank turkey jowl andouille flank brisket chuck. Tongue short ribs alcatra ball tip. Burgdoggen buffalo kevin strip steak cow, swine filet mignon tail porchetta spare ribs. Alcatra bresaola ham pancetta turducken, burgdoggen turkey.
-                    Short loin chislic buffalo, je our generator a try… it’s tasty!
-                </p>
+                    <p className="mini-title">We work together with Green, with our Members at the heart</p>
+                    
+                    The board of trustees for The Green Foundation is responsible for the day-to-day running of the charity, and for managing the strategic direction to allow us to do the most good possible.
+                    Our Members help us decide what projects should be funded. We believe that this allows The Green Foundation to be truly independent as a charity, by decentralising the decision making process across all Members, it will result in a fair decision making process.
+
+                </div>
                 </div>
 
                 <div className="storyContainer">

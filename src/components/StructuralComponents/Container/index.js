@@ -70,6 +70,7 @@ const NavBar = () => {
     </nav>
   );
 }
+
 const MobileNavBar = () => {
   return (
 

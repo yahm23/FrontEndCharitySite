@@ -317,17 +317,21 @@ body {
 .blurb {
   font-family: "Geon", Times, sans-serif;
   text-align: center;
-  font-size: 150%;
   margin-bottom: 15%;
   font-weight: 200;
+  font-size: 150%;
 }
 
 .blurb-mobile {
   font-family: "Geon", Times, sans-serif;
   text-align: center;
-  font-size: 120%;
   margin-bottom: 15%;
   font-weight: 200;
+  font-size: 120%;
+}
+
+.mini-title {
+  font-weight: bold;
 }
 
 .storyContainer {
@@ -346,7 +350,7 @@ body {
   display: flex;
   margin-bottom: 5%;
   width: 380px;
-  height: 480px;
+  height: 420px;
   box-shadow: -10px -10px 8px -11px #84C632;
   background-image: url("./Media/plants/plant.jpg");
   background-position: 103% center;
@@ -361,7 +365,7 @@ body {
   color: #84C632;
   margin: 10%;
   width: 100%;
-  font-size: 220%;
+  font-size: 40px;
 }
 
 .readStory {
@@ -550,7 +554,6 @@ div .Bar {
 
 .blogcontainer {
   padding: 5%;
-  font-size: 150%;
   text-justify: inter-word;
 }
 
@@ -595,6 +598,10 @@ div .Bar {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.individualArticle {
+  font-family: "Geon", Times, sans-serif;
 }
 
 /*# sourceMappingURL=App.css.map */
