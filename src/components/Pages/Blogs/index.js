@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect, setErrors} from 'react'
 import Strapi from "strapi-sdk-javascript/build/main";
 import marked from 'marked';
 import Article from '../Article';
@@ -10,33 +10,29 @@ import {BrowserRouter as Switch,Route ,  Link } from "react-router-dom";
 const strapi = new Strapi('https://blog-back-end-green.herokuapp.com/');
 
 
-export class Blogs extends Component {
+const Blogs=()=> {
+  var [posts,setPosts] = useState();
+
+  async function fetchData() {
+
+    await fetch("https://blog-back-end-green.herokuapp.com/blogs")
+    .then(response => response.json())
+    .then(response => {
+        setPosts(response);            
+    })
+
+    .catch(err => setErrors(err));
+  }
+
+  useEffect(() => {
+    fetchData();
+    return () => {
+        console.log('unmounting...') 
+    }
+  },[]);
 
 
-
-  constructor(props) {
-    super(props);
-    this.state = {
-     posts: [],
-     post:'',
-   }
- }
-
-async componentDidMount() {
- try {
-   const posts = await strapi.getEntries('blogs')
-   this.setState({ posts });
- } 
-
- catch(err) {
-  alert(err);
- }
-}
-
-
-
-render() {
-
+  if(posts){
   return (
 
 
@@ -58,7 +54,7 @@ render() {
           </div>
           
           <div className="blogs">
-          {this.state.posts.map(post => (
+          {posts.map(post => (
             
             <Link key={post.id} to = {`/blogs/`+post.id}>
             <div className="story">
@@ -83,7 +79,11 @@ render() {
         </div> 
     </div>
   )
- }
+  } else {
+    return null
+  }
+
+ 
 }
 
 export default Blogs

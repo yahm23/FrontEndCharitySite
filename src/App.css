@@ -351,8 +351,8 @@ body {
 .story {
   display: flex;
   margin-bottom: 5%;
-  width: 370px;
-  height: 420px;
+  width: 340px;
+  height: 460px;
   box-shadow: -10px -10px 8px -11px #84C632;
   background-image: url("./Media/plants/plant.jpg");
   background-position: 103% center;
