@@ -121,11 +121,11 @@ font: weight 6;;
 .donateButton2{
   @include donateButton();
   font-size: 22px;
-  padding:2% 5%;
+  padding:3% 9%;
   flex-grow: 1;
   margin-right: 3%;
-  display: block;
-  margin: 0 auto;
+  // display: block;
+  // margin: 0 auto;
 }
 
 @mixin LearnButton {

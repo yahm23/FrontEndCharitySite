@@ -123,11 +123,9 @@
   text-align: center;
   text-decoration: none;
   font-size: 22px;
-  padding: 2% 5%;
+  padding: 3% 9%;
   flex-grow: 1;
   margin-right: 3%;
-  display: block;
-  margin: 0 auto;
 }
 
 .LearnButton {
