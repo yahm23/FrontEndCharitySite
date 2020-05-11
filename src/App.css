@@ -123,9 +123,11 @@
   text-align: center;
   text-decoration: none;
   font-size: 22px;
-  padding: 3% 9%;
+  padding: 2% 5%;
   flex-grow: 1;
   margin-right: 3%;
+  display: block;
+  margin: 0 auto;
 }
 
 .LearnButton {
@@ -580,7 +582,6 @@ div .Bar {
   color: white;
   top: 1000px;
   padding-top: 10%;
-  font-size: 200%;
   margin: 0% auto;
   text-align: center;
   background-image: url("./Media/DesktopBackgrounds/background2.jpg");
@@ -588,6 +589,22 @@ div .Bar {
   background-repeat: no-repeat;
   background-position: center 46%;
   margin-bottom: 3%;
+  font-size: 200%;
+}
+
+.Posts-mobile {
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  top: 1000px;
+  padding-top: 10%;
+  margin: 0% auto;
+  text-align: center;
+  background-image: url("./Media/DesktopBackgrounds/background2.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 46%;
+  margin-bottom: 3%;
+  font-size: 150%;
 }
 
 .blogs {
@@ -600,9 +617,10 @@ div .Bar {
 
 .individualArticle {
   font-family: "Geon", Times, sans-serif;
-  font-size: 150%;
   padding: 5%;
   padding-top: 0%;
+  font-size: 130%;
+  text-align: justify;
 }
 
 .keepUpdated {

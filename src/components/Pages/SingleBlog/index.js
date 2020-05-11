@@ -1,13 +1,18 @@
 import React, { Component, useState, useEffect, setErrors } from 'react'
 import {BrowserRouter as Switch,Route ,Link} from "react-router-dom";
 // import Blogs from '../Blogs';
-import Strapi from "strapi-sdk-javascript/build/main";
+// import Strapi from "strapi-sdk-javascript/build/main";
 import marked from 'marked';
+import { useMediaQuery } from 'react-responsive';
 
 
-const baseURL='https://blog-back-end-green.herokuapp.com/blogs/';
+
+// const baseURL='https://blog-back-end-green.herokuapp.com/blogs/';
 
 const SingleBlog = (props)=>{
+
+    let isMobile = useMediaQuery({ maxWidth: 767 })
+
     var [blog,setBlog]= useState();
 
     async function fetchData() {
@@ -34,7 +39,7 @@ const SingleBlog = (props)=>{
             <div className="blogBanner">
                 <div className="blogcontainer">
 
-                    <div className="Posts">
+                    <div className={isMobile ?"Posts-mobile":"Posts"} >
                         <h1>{blog.title}</h1>
                         <h4>Written by {blog.author? blog.author.name:'Green'}</h4>
 
