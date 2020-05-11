@@ -23,10 +23,10 @@ class SingleBlog extends React.Component{
     this.getBlog()
     .then(response => response.json())
     .then(data => this.setState({ blog: data, test: data.content, authors: data.authors}));
+    
     }
 
     getBlog() {
-        console.log(this.props.match.params.id);
         return fetch(`${baseURL}${this.props.match.params.id}`)
     }
 
@@ -37,7 +37,7 @@ class SingleBlog extends React.Component{
             <div className="blogBanner">
                 <div className="blogcontainer">
                     <h1 className="Posts">{this.state.blog.title}</h1>
-                    <h4>Written by {this.state.blog.author.name? this.state.blog.author.name:"Green"}</h4>
+                    <h4>Written by {this.state.blog.authors? this.state.blog.authors[0].Name:'Green'}</h4>
                    
 
 
