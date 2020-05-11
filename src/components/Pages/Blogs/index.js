@@ -7,7 +7,7 @@ import {BrowserRouter as Switch,Route ,  Link } from "react-router-dom";
 
 
 
-const strapi = new Strapi('http://localhost:1337');
+const strapi = new Strapi('https://blog-back-end-green.herokuapp.com/');
 
 
 export class Blogs extends Component {

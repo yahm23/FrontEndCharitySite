@@ -5,7 +5,7 @@ import Strapi from "strapi-sdk-javascript/build/main";
 import marked from 'marked';
 
 
-const baseURL='http://localhost:1337/blogs/';
+const baseURL='https://blog-back-end-green.herokuapp.com/blogs';
 
 class SingleBlog extends React.Component{
     constructor(props) {

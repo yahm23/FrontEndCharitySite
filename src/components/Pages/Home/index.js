@@ -25,7 +25,7 @@ const Story = ()=>{
 
     async function fetchData() {
 
-        await fetch("http://localhost:1337/blogs/")
+        await fetch("https://blog-back-end-green.herokuapp.com/blogs")
         .then(response => response.json())
         .then(response => {
             setStory(response);            
