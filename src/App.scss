@@ -584,7 +584,7 @@ div .Bar {
   color: white;
   top: 1000px;
   padding-top: 10%;
-  font-size: 300%;
+  font-size: 200%;
   margin: 0% auto;
   text-align: center;
 
@@ -594,7 +594,7 @@ div .Bar {
 
   background-position: center 46%;
 
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 
 }
 
@@ -608,4 +608,7 @@ div .Bar {
 
 .individualArticle{
   font-family: $font;
+  font-size: 150%;
+  padding: 5%;
+  padding-top:0%;
 }

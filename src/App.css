@@ -579,14 +579,14 @@ div .Bar {
   color: white;
   top: 1000px;
   padding-top: 10%;
-  font-size: 300%;
+  font-size: 200%;
   margin: 0% auto;
   text-align: center;
   background-image: url(/static/media/background2.ab104ed9.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 46%;
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 }
 
 .blogs {
@@ -599,6 +599,9 @@ div .Bar {
 
 .individualArticle {
   font-family: "Geon", Times, sans-serif;
+  font-size: 150%;
+  padding: 5%;
+  padding-top: 0%;
 }
 
 /*# sourceMappingURL=App.css.map */
