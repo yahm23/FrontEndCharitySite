@@ -32,7 +32,7 @@ const BottomBanner= ()=> {
                         <p><Link  to='/'>Home</Link></p> 
                         <p><Link  to='/about'>About</Link></p>
                         <p><Link  to='/support'>Support Us</Link></p>
-                        <p><Link to='/stories'>Success Stories</Link></p>
+                        <p><Link to='/blogs'>Success Stories</Link></p>
                         <p><Link to='/contact'>Contact Us</Link></p>
                         <p><Link to='/privacypolicy'>Privacy Policy</Link></p>
                         
