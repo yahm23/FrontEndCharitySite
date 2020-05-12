@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Wave from '../../StructuralComponents/Wave'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
+import SimpleMap from '../../StructuralComponents/Map';
+// import GoogleMapReact from 'google-map-react';
+
 
 
 const Contact=()=>{
@@ -17,6 +20,12 @@ const Contact=()=>{
                 </div>
 
                 <div className="contactContent">
+                {/* <div id="map-container-google-2" class="z-depth-1-half map-container" style="height: 500px">
+                    <iframe src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        style="border:0" allowfullscreen></iframe>
+                    </div> */}
+
+                    {/* <SimpleMap></SimpleMap> */}
                 </div>
             
             </div>
@@ -25,6 +34,8 @@ const Contact=()=>{
         </div>
     )
 }
+
+
 
 
 export default Contact

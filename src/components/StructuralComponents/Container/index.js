@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 // import './App.css';
 import About from "../../Pages/About";
 import Blogs from "../../Pages/Blogs";
-import Support from "../../Pages/Contact";
+import Contact from "../../Pages/Contact";
 import Home from "../../Pages/Home";
 import Donation from "../../Pages/Donation";
 import LightLogo from "../../../Media/Logos/SVG/logo-the-light.svg"
@@ -27,7 +27,8 @@ class Container extends Component {
 
             <Route path='/' exact component={Home}/>
             <Route path='/about' component ={About}/>
-            <Route path='/support' component ={Support}/>
+            <Route path='/contact' component ={Contact}/>
+            
             <Route path='/donation' component ={Donation}/>
             <Route path='/blogs' component ={BlogMain}/>
             <Route path='/articles' exact component ={Article}/>
@@ -64,7 +65,8 @@ const NavBar = () => {
         <div className= "navbarright">
           <h3 id="space"><Link to='/'>Home</Link> </h3>
           <h3 id="space"><Link to='/about'>About us</Link></h3>
-          <h3 id="space"><NavLink to='/support'> Support Us</NavLink></h3>
+          <h3 id="space"><NavLink to='/'> Support Us</NavLink></h3>
+          <h3 id="space"><Link to='/contact'>Contact</Link></h3>
           <button className="donateButton"><Link to='/donation'> Make a donation</Link></button>
         </div>
       </div>

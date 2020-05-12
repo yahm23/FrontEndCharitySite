@@ -3,7 +3,7 @@ import LightLogo from "../../../Media/Logos/JPG/logo-the.jpg"
 import {BrowserRouter as  Route, Link, Switch} from "react-router-dom";
 import About from "../../Pages/About";
 import Blogs from "../../Pages/Blogs";
-import Support from "../../Pages/Contact";
+import Contact from "../../Pages/Contact";
 import Home from "../../Pages/Home";
 import Donation from "../../Pages/Donation";
 
@@ -31,7 +31,7 @@ const BottomBanner= ()=> {
                     <div id="links">
                         <p><Link  to='/'>Home</Link></p> 
                         <p><Link  to='/about'>About</Link></p>
-                        <p><Link  to='/support'>Support Us</Link></p>
+                        <p><Link  to='/'>Support Us</Link></p>
                         <p><Link to='/blogs'>Success Stories</Link></p>
                         <p><Link to='/contact'>Contact Us</Link></p>
                         <p><Link to='/privacypolicy'>Privacy Policy</Link></p>
@@ -40,7 +40,8 @@ const BottomBanner= ()=> {
                         <Switch>
                             <Route path='/' exact component ={Home}/>
                             <Route path='/about' component ={About}/>
-                            <Route path='/support' component ={Support}/>
+                            <Route path='/' component ={Home}/>
+                            <Route path='/contact' component ={Contact}/>
                             <Route path='/donation' component ={Donation}/>
                             <Route path='/blogs' component ={Blogs}/>
                    
