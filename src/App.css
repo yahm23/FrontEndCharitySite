@@ -575,6 +575,16 @@ div .Bar {
   font-size: 70%;
 }
 
+.blogcontainer {
+  background-image: url("./Media/DesktopBackgrounds/background4.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
+  background-position: center center;
+}
+
 .Posts {
   font-family: "Geon", Times, sans-serif;
   color: white;
@@ -582,11 +592,6 @@ div .Bar {
   padding-top: 10%;
   margin: 0% auto;
   text-align: center;
-  background-image: url("./Media/DesktopBackgrounds/background4.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center 46%;
-  margin-bottom: 3%;
   font-size: 200%;
 }
 
@@ -597,11 +602,6 @@ div .Bar {
   padding-top: 10%;
   margin: 0% auto;
   text-align: center;
-  background-image: url("./Media/DesktopBackgrounds/background4.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center 46%;
-  margin-bottom: 3%;
   font-size: 150%;
 }
 
@@ -619,13 +619,13 @@ div .Bar {
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 20%;
+  padding-top: 20%;
 }
 
 .individualArticle {
   font-family: "Geon", Times, sans-serif;
+  background-color: white;
   padding: 5%;
-  padding-top: 0%;
   font-size: 130%;
   text-align: justify;
 }
@@ -633,15 +633,22 @@ div .Bar {
 .keepUpdated {
   margin-top: 25px;
   margin-bottom: 2%;
+  color: #4E4E54;
 }
 
 .bottomLogo {
   margin-top: 25px;
 }
 
+.writtenBy {
+  margin: 0;
+  padding: 4%;
+}
+
 .noBottomPadding {
   margin-bottom: 0%;
-  margin-top: 0%;
+  margin-top: 6%;
+  padding: 4%;
 }
 
 /*# sourceMappingURL=App.css.map */

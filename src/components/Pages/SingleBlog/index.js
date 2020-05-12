@@ -4,6 +4,7 @@ import {BrowserRouter as Switch,Route ,Link} from "react-router-dom";
 // import Strapi from "strapi-sdk-javascript/build/main";
 import marked from 'marked';
 import { useMediaQuery } from 'react-responsive';
+import BottomBanner from "../../StructuralComponents/BottomBanner"
 
 
 
@@ -41,7 +42,7 @@ const SingleBlog = (props)=>{
 
                     <div className={isMobile ?"Posts-mobile":"Posts"} >
                         <h1 className="noBottomPadding">{blog.title}</h1>
-                        <h4 className="noBottomPadding">Written by {blog.author? blog.author.name:'Green'}</h4>
+                        <h4 className="writtenBy">Written by {blog.author? blog.author.name:'Green'}</h4>
 
                         <div className= "wave-container">
                             <svg  className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1420 95">
@@ -57,6 +58,7 @@ const SingleBlog = (props)=>{
                     </div>
 
                 </div>
+                <BottomBanner></BottomBanner>
             </div>
         )
         

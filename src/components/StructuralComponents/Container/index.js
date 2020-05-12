@@ -13,7 +13,7 @@ import LightLogo from "../../../Media/Logos/SVG/logo-the-light.svg"
 import SmallLogo from "../../../Media/Logos/PNG/LighterLogo.png"
 import Article from "../../Pages/Article";
 import SingleBlog from "../../Pages/SingleBlog";
-import BottomBanner from "../BottomBanner";
+// import BottomBanner from "../BottomBanner";
 
 class Container extends Component {
     render() {
@@ -36,7 +36,7 @@ class Container extends Component {
         
       
     </div>
-    <BottomBanner></BottomBanner>
+    
     </div>)
     }
 }

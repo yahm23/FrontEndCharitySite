@@ -5,6 +5,7 @@ import React, { useState, useEffect, setErrors} from 'react'
 
 import {BrowserRouter as Switch,Route ,  Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
+import BottomBanner from '../../StructuralComponents/BottomBanner';
 
 
 
@@ -80,6 +81,7 @@ const Blogs=()=> {
           </div>
         </div>
         </div> 
+        <BottomBanner></BottomBanner>
     </div>
   )
   } else {

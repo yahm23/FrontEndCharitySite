@@ -7,6 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 
 
 
+
 export class Home extends Component { 
 
     render() {
@@ -146,7 +147,7 @@ const HomeComp = () => {
                 </div>
                 
 
-                
+                <BottomBanner></BottomBanner>
 
               
             </div>
