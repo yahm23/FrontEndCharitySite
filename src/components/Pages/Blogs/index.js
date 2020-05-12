@@ -6,6 +6,7 @@ import React, { useState, useEffect, setErrors} from 'react'
 import {BrowserRouter as Switch,Route ,  Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import BottomBanner from '../../StructuralComponents/BottomBanner';
+import Wave from '../../StructuralComponents/Wave';
 
 
 
@@ -47,11 +48,7 @@ const Blogs=()=> {
 
           <div className="Posts" >
             <h1>Posts</h1>
-            <div className= "wave-container">
-                <svg  className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1420 95">
-                <path fill="white" fillOpacity="1" d="M0,160L120,165.3C240,171,480,181,720,176C960,171,1200,149,1320,138.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-                </svg>
-            </div>
+            <Wave></Wave>
           </div>
           <div className="">
             

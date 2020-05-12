@@ -551,11 +551,7 @@ div .Bar {
   height:100%;
 }
 
-.blogcontainer{
-  // padding: 5%;
-  // font-size: 150%;
-  text-justify: inter-word;
-}
+
 .list{
   height:200px;
   width: 300px;
@@ -581,14 +577,22 @@ div .Bar {
   font-weight:normal;
   font-size: 70%;
 }
-.blogcontainer{
-  background-image: url('./Media/DesktopBackgrounds/background4.jpg');
+@mixin backgroundSettings{
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
   background-position: center -236px;
+}
+.blogcontainer{
+  background-image: url('./Media/DesktopBackgrounds/background4.jpg');
+  @include backgroundSettings();
+}
+
+.contactContainer{
+  background-image: url('./Media/DesktopBackgrounds/background2.jpg');
+  @include backgroundSettings();
 }
 
 @mixin posts(){

@@ -553,10 +553,6 @@ div .Bar {
   height: 100%;
 }
 
-.blogcontainer {
-  text-justify: inter-word;
-}
-
 .list {
   height: 200px;
   width: 300px;
@@ -577,6 +573,16 @@ div .Bar {
 
 .blogcontainer {
   background-image: url("./Media/DesktopBackgrounds/background4.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
+  background-position: center -236px;
+}
+
+.contactContainer {
+  background-image: url("./Media/DesktopBackgrounds/background2.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;

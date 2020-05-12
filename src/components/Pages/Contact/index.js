@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
+import Wave from '../../StructuralComponents/Wave'
 
-export class Contact extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Contact Content</h1>
-            </div>
-        )
-    }
+const Contact=()=>{
+
+
+
+    return (
+
+        <div className="contactContainer">
+
+            <div className="Posts" >
+            <h1>Contact</h1>
+            <Wave></Wave>
+
+          </div>
+          
+
+        </div>
+    )
 }
+
 
 export default Contact
