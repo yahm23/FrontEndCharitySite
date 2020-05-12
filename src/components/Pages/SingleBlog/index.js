@@ -35,7 +35,7 @@ const SingleBlog = (props)=>{
 
 
     if(blog){
-        var avatarUrl='https://blog-back-end-green.herokuapp.com/uploads/generic_4338c43b3f.png'
+        var avatarUrl='https://blog-back-end-green.herokuapp.com/uploads/default-avatar_e55c67cd0b.jpeg'
         if(blog.author.avatar){
         avatarUrl=`https://blog-back-end-green.herokuapp.com${blog.author.avatar.url}`}
     
