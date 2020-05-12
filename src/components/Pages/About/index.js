@@ -11,7 +11,7 @@ const About = ()=> {
         <div className="blogBanner">
             <div className="aboutcontainer">
 
-                <div className={isMobile ?"Posts-mobile":"Posts"} >
+                <div className={isMobile ?"Posts-mobile":"contactHeading"} >
                     <h1 className="noBottomPadding"> About The Green Foundation</h1>
                     <Wave></Wave>
                     
