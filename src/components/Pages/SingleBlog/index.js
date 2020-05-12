@@ -35,6 +35,9 @@ const SingleBlog = (props)=>{
 
 
     if(blog){
+        var avatarUrl='https://blog-back-end-green.herokuapp.com/uploads/generic_4338c43b3f.png'
+        if(blog.author.avatar){
+        avatarUrl=`https://blog-back-end-green.herokuapp.com${blog.author.avatar.url}`}
     
         return(
             <div className="blogBanner">
@@ -42,7 +45,8 @@ const SingleBlog = (props)=>{
 
                     <div className={isMobile ?"Posts-mobile":"Posts"} >
                         <h1 className="noBottomPadding">{blog.title}</h1>
-                        <h4 className="writtenBy">Written by {blog.author? blog.author.name:'Green'}</h4>
+                        <h4 className="writtenBy">Written by {blog.author? blog.author.name:'Green'} </h4>
+                        <img  className="avatar" src={avatarUrl}></img>
 
                         <div className= "wave-container">
                             <svg  className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 130 1420 95">

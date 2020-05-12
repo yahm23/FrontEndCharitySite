@@ -653,4 +653,11 @@ div .Bar {
   margin-top: 15%;
 }
 
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 /*# sourceMappingURL=App.css.map */
