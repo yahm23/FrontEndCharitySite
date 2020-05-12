@@ -602,6 +602,19 @@ div .Bar {
   @include backgroundSettings();
 }
 
+.donationContainer{
+  background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
+  @include backgroundSettings();
+  background-size: 108%;
+  background-position: center -525px;
+}
+.donationContainer-mobile{
+  background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
+  @include backgroundSettings();
+  background-size: 208%;
+  background-position: center -200px;
+}
+
 @mixin posts(){
   font-family: $font;
   color: white;

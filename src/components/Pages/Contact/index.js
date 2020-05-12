@@ -17,11 +17,11 @@ const Contact=()=>{
                 </div>
 
                 <div className="contactContent">
-                    
                 </div>
             
             </div>
-                <BottomBanner></BottomBanner>
+            
+            <BottomBanner></BottomBanner>
         </div>
     )
 }
