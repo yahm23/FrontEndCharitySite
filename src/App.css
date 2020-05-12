@@ -588,7 +588,16 @@ div .Bar {
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
-  background-position: center -236px;
+  background-position: center -350px;
+}
+
+.contactContainer-mobile {
+  background-image: url("./Media/DesktopBackgrounds/background2.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
 }
 
 .Posts {

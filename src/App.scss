@@ -583,14 +583,21 @@ div .Bar {
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
-  background-position: center -236px;
 }
 .blogcontainer{
   background-image: url('./Media/DesktopBackgrounds/background4.jpg');
   @include backgroundSettings();
+  background-position: center -236px;
+
 }
 
 .contactContainer{
+  background-image: url('./Media/DesktopBackgrounds/background2.jpg');
+  @include backgroundSettings();
+  background-position: center -350px;
+
+}
+.contactContainer-mobile{
   background-image: url('./Media/DesktopBackgrounds/background2.jpg');
   @include backgroundSettings();
 }
