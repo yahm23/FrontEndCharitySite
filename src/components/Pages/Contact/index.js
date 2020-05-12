@@ -11,7 +11,7 @@ const Contact=()=>{
         <div>
             <div className={isMobile? "contactContainer-mobile":"contactContainer"} >
 
-                <div className="Posts" >
+                <div className="contactHeading" >
                     <h1>Contact</h1>
                     <Wave></Wave>
                 </div>

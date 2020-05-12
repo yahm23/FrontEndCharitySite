@@ -578,7 +578,17 @@ div .Bar {
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
-  background-position: center -236px;
+  background-position: center -150px;
+}
+
+.aboutcontainer {
+  background-image: url("./Media/DesktopBackgrounds/background4.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
+  background-position: center -295px;
 }
 
 .contactContainer {
@@ -643,6 +653,16 @@ div .Bar {
   font-size: 150%;
 }
 
+.contactHeading {
+  font-family: "Geon", Times, sans-serif;
+  color: white;
+  top: 1000px;
+  padding-top: 10%;
+  margin: 0% auto;
+  text-align: center;
+  font-size: 200%;
+}
+
 .blogs {
   display: flex;
   background-color: white;
@@ -664,6 +684,7 @@ div .Bar {
   font-family: "Geon", Times, sans-serif;
   background-color: white;
   padding: 5%;
+  padding-top: 1%;
   font-size: 20px;
   margin-top: 0;
   color: black;
@@ -682,12 +703,12 @@ div .Bar {
 
 .writtenBy {
   margin: 0;
-  padding: 4%;
+  padding: 2%;
 }
 
 .noBottomPadding {
   margin-bottom: 0%;
-  margin-top: 15%;
+  padding-top: 1%;
 }
 
 .avatar {

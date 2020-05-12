@@ -587,8 +587,12 @@ div .Bar {
 .blogcontainer{
   background-image: url('./Media/DesktopBackgrounds/background4.jpg');
   @include backgroundSettings();
-  background-position: center -236px;
-
+  background-position: center -150px;
+}
+.aboutcontainer{
+  background-image: url('./Media/DesktopBackgrounds/background4.jpg');
+  @include backgroundSettings();
+  background-position: center -295px;
 }
 
 .contactContainer{
@@ -615,7 +619,7 @@ div .Bar {
   background-position: center -200px;
 }
 
-@mixin posts(){
+@mixin headings(){
   font-family: $font;
   color: white;
   top: 1000px;
@@ -626,15 +630,20 @@ div .Bar {
 }
 
 .Posts{
-  @include posts();
+  @include headings();
   font-size: 200%;
   padding-top: 2%;
+}
 
+.Posts-mobile{
+  @include headings();
+  font-size: 150%;
 
 }
-.Posts-mobile{
-  @include posts();
-  font-size: 150%;
+
+.contactHeading{
+  @include headings();
+  font-size: 200%;
 
 }
 @mixin blogs{
@@ -657,7 +666,7 @@ div .Bar {
   font-family: $font;
   background-color: white;
   padding: 5%;
- 
+  padding-top: 1%;
   font-size: 20px;
   margin-top: 0;
   color:black;
@@ -677,14 +686,14 @@ div .Bar {
 }
 .writtenBy{
   margin: 0;
-  padding: 4%;
+  padding: 2%;
 
 }
 
 .noBottomPadding{
   margin-bottom: 0%;
-  margin-top: 15%;
-  // padding: 4%;
+  // margin-top: 15%;
+  padding-top: 1%;
 
 }
 

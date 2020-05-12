@@ -9,7 +9,7 @@ const About = ()=> {
 
     return (
         <div className="blogBanner">
-            <div className="blogcontainer">
+            <div className="aboutcontainer">
 
                 <div className={isMobile ?"Posts-mobile":"Posts"} >
                     <h1 className="noBottomPadding"> About The Green Foundation</h1>
