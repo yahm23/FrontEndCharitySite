@@ -121,7 +121,7 @@ font: weight 6;;
 .donateButton2{
   @include donateButton();
   font-size: 22px;
-  padding:3% 9%;
+  padding:20px 25px;
   flex-grow: 1;
   margin-right: 3%;
   // display: block;
@@ -588,7 +588,7 @@ div .Bar {
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
-  background-position: center center;
+  background-position: center -236px;
 }
 
 @mixin posts(){
@@ -604,6 +604,7 @@ div .Bar {
 .Posts{
   @include posts();
   font-size: 200%;
+  padding-top: 2%;
 
 
 }
@@ -633,7 +634,7 @@ div .Bar {
   background-color: white;
   padding: 5%;
  
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 0;
   color:black;
   text-align: justify;
@@ -658,7 +659,7 @@ div .Bar {
 
 .noBottomPadding{
   margin-bottom: 0%;
-  margin-top: 6%;
-  padding: 4%;
+  margin-top: 15%;
+  // padding: 4%;
 
 }
