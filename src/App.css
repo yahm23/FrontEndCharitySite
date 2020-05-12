@@ -512,7 +512,7 @@ input {
 }
 
 .blankSpace {
-  height: 500px;
+  height: 10px;
 }
 
 #icon {
@@ -626,7 +626,9 @@ div .Bar {
   font-family: "Geon", Times, sans-serif;
   background-color: white;
   padding: 5%;
-  font-size: 130%;
+  font-size: 15px;
+  margin-top: 0;
+  color: black;
   text-align: justify;
 }
 
