@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import Wave from '../../StructuralComponents/Wave'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
@@ -14,75 +14,30 @@ const Contact=()=>{
         <div>
             <div className="contactContainer" >
 
-            <div className="contactHeading" >
-                <h1>Contact</h1>
-                <Wave></Wave>
-            </div>
+                <div className="contactHeading" >
+                    <h1>Contact</h1>
+                    <Wave></Wave>
+                </div>
 
-            <div className="contactContent">
-            
-            <Form></Form>
-            <ContactInfo></ContactInfo>
-            <BottomBanner></BottomBanner>
+                <div className="contactContent">
+                
+                    <Form ></Form>
+                    <ContactInfo></ContactInfo>
                 </div>
             </div>
+            
+            <BottomBanner></BottomBanner>
         </div>
     )
 }
 
 
-     
-// const ContactContainer=()=>{
-    
-    
 
-//     return (
-//         <div>
-//             {/* <form action="https://blog-back-end-green.herokuapp.com/contact-submissions" method="post"> */}
-                
-//                 <form id="formElem" onSubmit={this.handleSubmit} >
-//                 <>
-                
-//                     <label for="name">Name</label>
-//                     <br></br>
-//                     <input value={this.state.name} onChange={this.handleChange} type="text" id="name" name="user_name"></input>
-                    
-                
-//                 </>
-//                         <br></br>
-//                         <label for="mail">E-mail</label>
-//                         <br></br>
-//                         <input type="email" id="mail" name="user_email"></input>
-                    
-                   
-                
-//                         <br></br>
-//                         <label for="number">Phone Number(Optional)</label>
-//                         <br></br>
-//                         <input type="number" id="number" name="user_enumber"></input>
-                    
-                  
-                
-//                         <br></br>
-//                         <label for="msg">Message</label>
-//                         <br></br>
-//                         <textarea id="msg" name="user_message"></textarea>
-                    
-//                     <ul class="button">
-//                         <button type="submit">Submit</button>
-//                     </ul>
-
-//             </form>
-
-//         </div>
-        
-//     )
-// }
 
 const ContactInfo=()=>{
     return(
-        <div>
-            <div className="contactDetails">
+        <div className="">
+            <div className="contactDetails card">
                 <div className="address">
                     <h4>Address</h4>
                     <p>Address Line 1,</p>

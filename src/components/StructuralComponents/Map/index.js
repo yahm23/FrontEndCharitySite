@@ -12,12 +12,11 @@ const mapStyles = {
     width: '800px',
     height: '600px',
 };
-
-
 const mapStylesMobile = {
     width: '100%',
     height: '400px',
 };
+
 
 function GoogleMaps(props) {
     // refs
@@ -54,7 +53,7 @@ function GoogleMaps(props) {
     });
 
     return (
-        <div
+        <div className="card"
             id="google-map"
             ref={googleMapRef}
             style={useMediaQuery({ maxWidth: 767 })? mapStylesMobile:mapStyles}

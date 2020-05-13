@@ -71,19 +71,19 @@ class Form extends PureComponent {
 
     render(){
     return (
-        <div>
+        <div className="card form" id="form">
             
             {/* <form action="https://blog-back-end-green.herokuapp.com/contact-submissions" method="post"> */}
                 
                 <form  onSubmit={this.handleSubmit} >
-                <>
                 
+                <div classname="formComponents">
                     <label htmlFor="name">Name</label>
                     <br></br>
                     <input value={this.state.name} onChange={this.handleNameChange} type="text" id="name" name="user_name" required></input>
                     
                 
-                </>
+                
                         <br></br>
                         <label htmlFor="mail">E-mail</label>
                         <br></br>
@@ -106,6 +106,8 @@ class Form extends PureComponent {
                     <ul className="button">
                         <button type="submit">Submit</button>
                     </ul>
+                
+                </div>
 
             </form>
 
