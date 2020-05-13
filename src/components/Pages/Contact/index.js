@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Wave from '../../StructuralComponents/Wave'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
-import SimpleMap from '../../StructuralComponents/Map';
+// import SimpleMap from '../../StructuralComponents/Map';
+import GoogleMaps from '../../StructuralComponents/Map';
 // import GoogleMapReact from 'google-map-react';
 
 
@@ -25,7 +26,7 @@ const Contact=()=>{
                         style="border:0" allowfullscreen></iframe>
                     </div> */}
 
-                    {/* <SimpleMap></SimpleMap> */}
+                    <GoogleMaps></GoogleMaps>
                 </div>
             
             </div>
