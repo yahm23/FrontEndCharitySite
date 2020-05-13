@@ -37,7 +37,9 @@ const Contact=()=>{
 const ContactInfo=()=>{
     return(
         <div className="">
+            <GoogleMaps></GoogleMaps>
             <div className="contactDetails card">
+                
                 <div className="address">
                     <h4>Address</h4>
                     <p>Address Line 1,</p>
@@ -52,7 +54,6 @@ const ContactInfo=()=>{
                 </div>
             </div>
 
-            <GoogleMaps></GoogleMaps>
         </div>
     )
 }

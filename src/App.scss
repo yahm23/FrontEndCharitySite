@@ -720,12 +720,6 @@ div .Bar {
   justify-content: space-between;
 }
 
-.address{
-  flex-grow: 1;
-}
-.PhoneEmail{
-  flex-grow: 3;
-}
 
 .card {
   
@@ -736,6 +730,7 @@ div .Bar {
 }
 #form.card{
   width: 30%;
+  font-size: 130%;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -749,12 +744,38 @@ div .Bar {
 label, input {
   display: block;
 }
+@mixin inputLines {
+  background: transparent;
+  border: none;
+  width:80%;
+  border-bottom: 1px solid #000000;
+  
+}
+input  {
+  @include inputLines();
+}
 
-// input {
-//   margin-bottom: 10px;
-// }
+#msg{
+  @include inputLines();
+}
+
+button#submit{
+  height: 60px;
+  width: 150px;
+  background-color: #84C632;
+  font-family: $font;
+  font-size: 120%;
+  color:white;
+  margin: 10% 0%;
+
+}
 .contactDetails.card{
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 1%;
   padding:4%;
+}
 
+.message{
+  margin-bottom:15%;
 }

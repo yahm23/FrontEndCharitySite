@@ -733,14 +733,6 @@ div .Bar {
   justify-content: space-between;
 }
 
-.address {
-  flex-grow: 1;
-}
-
-.PhoneEmail {
-  flex-grow: 3;
-}
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -749,6 +741,7 @@ div .Bar {
 
 #form.card {
   width: 30%;
+  font-size: 130%;
 }
 
 .card:hover {
@@ -763,9 +756,39 @@ label, input {
   display: block;
 }
 
+input {
+  background: transparent;
+  border: none;
+  width: 80%;
+  border-bottom: 1px solid #000000;
+}
+
+#msg {
+  background: transparent;
+  border: none;
+  width: 80%;
+  border-bottom: 1px solid #000000;
+}
+
+button#submit {
+  height: 60px;
+  width: 150px;
+  background-color: #84C632;
+  font-family: "Geon", Times, sans-serif;
+  font-size: 120%;
+  color: white;
+  margin: 10% 0%;
+}
+
 .contactDetails.card {
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 1%;
   padding: 4%;
+}
+
+.message {
+  margin-bottom: 15%;
 }
 
 /*# sourceMappingURL=App.css.map */

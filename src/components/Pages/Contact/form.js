@@ -35,12 +35,7 @@ class Form extends PureComponent {
     }
 
     handleSubmit(event) {
-        // var enquiry = {
-        //     "name":this.state.name,
-        //     "email":this.state.email,
-        //     "number":this.state.number,
-        //     "message":this.state.message
-        // }
+  
         console.log('We are in the handle submit bitch');
         
         const postURL = "https://blog-back-end-green.herokuapp.com/contact-submissions"
@@ -74,10 +69,12 @@ class Form extends PureComponent {
         <div className="card form" id="form">
             
             {/* <form action="https://blog-back-end-green.herokuapp.com/contact-submissions" method="post"> */}
+                <div className="message">
+                    <h2>Send us a message</h2>
+                </div>
+                <form classname="formComponents" onSubmit={this.handleSubmit} >
                 
-                <form  onSubmit={this.handleSubmit} >
-                
-                <div classname="formComponents">
+                <div >
                     <label htmlFor="name">Name</label>
                     <br></br>
                     <input value={this.state.name} onChange={this.handleNameChange} type="text" id="name" name="user_name" required></input>
@@ -103,9 +100,8 @@ class Form extends PureComponent {
                         <br></br>
                         <textarea value={this.state.message} onChange={this.handleMessageChange} id="msg" name="user_message" required></textarea>
                     
-                    <ul className="button">
-                        <button type="submit">Submit</button>
-                    </ul>
+                        <button id= "submit" type="submit">Submit</button>
+                    
                 
                 </div>
 
