@@ -760,6 +760,8 @@ input {
   background: transparent;
   border: none;
   width: 80%;
+  font-family: "Geon", Times, sans-serif;
+  font-size: 110%;
   border-bottom: 1px solid #000000;
 }
 
@@ -767,6 +769,8 @@ input {
   background: transparent;
   border: none;
   width: 80%;
+  font-family: "Geon", Times, sans-serif;
+  font-size: 110%;
   border-bottom: 1px solid #000000;
 }
 

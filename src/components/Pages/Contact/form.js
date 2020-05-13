@@ -59,7 +59,7 @@ class Form extends PureComponent {
         alert('Your message has been submitted');
         
 
-        event.preventDefault();
+        // event.preventDefault();
     }
     
 
