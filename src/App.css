@@ -719,4 +719,26 @@ div .Bar {
   border-radius: 50%;
 }
 
+.contactContent {
+  padding: 0% 4%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contactDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  flex-grow: 1;
+}
+
+.PhoneEmail {
+  flex-grow: 3;
+}
+
 /*# sourceMappingURL=App.css.map */

@@ -1,4 +1,5 @@
 import React, {useEffect, useRef} from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 // Variables
 const GOOGLE_MAP_API_KEY = 'AIzaSyArrzT1uhH3oVsX6g_Wbs-u1RErPldO9w8';
@@ -8,8 +9,14 @@ const myLocation = { // CN Tower Landmark
 };
 // styles
 const mapStyles = {
-    width: '50%',
-    height: '300px',
+    width: '800px',
+    height: '600px',
+};
+
+
+const mapStylesMobile = {
+    width: '100%',
+    height: '400px',
 };
 
 function GoogleMaps(props) {
@@ -21,7 +28,7 @@ function GoogleMaps(props) {
     // helper functions
     const createGoogleMap = () =>
         new window.google.maps.Map(googleMapRef.current, {
-            zoom: 14,
+            zoom: 16,
             center: {
                 lat: myLocation.lat,
                 lng: myLocation.lng
@@ -50,7 +57,7 @@ function GoogleMaps(props) {
         <div
             id="google-map"
             ref={googleMapRef}
-            style={mapStyles}
+            style={useMediaQuery({ maxWidth: 767 })? mapStylesMobile:mapStyles}
         />
     )
 
