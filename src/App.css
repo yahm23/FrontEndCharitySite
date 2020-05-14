@@ -547,6 +547,7 @@ div .Bar {
   color: #84C632;
   margin: 0 auto;
   display: inline-block;
+  box-shadow: 0 15px 19px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container-mobile {
@@ -728,28 +729,30 @@ div .Bar {
   justify-content: space-around;
 }
 
-.contactDetails {
-  display: flex;
-  justify-content: space-between;
-}
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   font-family: "Geon", Times, sans-serif;
 }
 
+#form.card-mobile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  font-family: "Geon", Times, sans-serif;
+  width: 100%;
+  font-size: 130%;
+  margin: 1%;
+  padding: 3%;
+}
+
 #form.card {
   width: 30%;
   font-size: 130%;
+  padding: 2%;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.form {
-  padding: 2%;
 }
 
 label, input {
@@ -759,7 +762,7 @@ label, input {
 input {
   background: transparent;
   border: none;
-  width: 80%;
+  width: 100%;
   font-family: "Geon", Times, sans-serif;
   font-size: 110%;
   border-bottom: 1px solid #000000;
@@ -768,7 +771,7 @@ input {
 #msg {
   background: transparent;
   border: none;
-  width: 80%;
+  width: 100%;
   font-family: "Geon", Times, sans-serif;
   font-size: 110%;
   border-bottom: 1px solid #000000;
@@ -789,6 +792,20 @@ button#submit {
   justify-content: space-around;
   margin-top: 1%;
   padding: 4%;
+}
+
+.contactDetails-mobile.card {
+  flex-direction: column;
+  padding: 4%;
+}
+
+.contactPanel {
+  margin: 1%;
+}
+
+.contactPanel-mobile {
+  margin: 1%;
+  width: 100%;
 }
 
 .message {

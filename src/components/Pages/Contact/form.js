@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react'
-import Wave from '../../StructuralComponents/Wave'
-import BottomBanner from '../../StructuralComponents/BottomBanner'
- 
+// import Wave from '../../StructuralComponents/Wave'
+// import BottomBanner from '../../StructuralComponents/BottomBanner'
+import { useMediaQuery } from 'react-responsive';
+
 
 class Form extends PureComponent {
     constructor(props) {
@@ -36,7 +37,6 @@ class Form extends PureComponent {
 
     handleSubmit(event) {
   
-        console.log('We are in the handle submit bitch');
         
         const postURL = "https://blog-back-end-green.herokuapp.com/contact-submissions"
         fetch(postURL, {
@@ -53,26 +53,27 @@ class Form extends PureComponent {
             })
         })
         .then(()=>{
-            console.log('We are in the handle submit bitch');
             
+            
+            alert('Your message has been submitted');
         })
-        alert('Your message has been submitted');
         
 
         // event.preventDefault();
     }
     
 
-
+    
     render(){
     return (
-        <div className="card form" id="form">
+        <div className={this.props.isMobile? "card-mobile":"card"} id="form">
             
             {/* <form action="https://blog-back-end-green.herokuapp.com/contact-submissions" method="post"> */}
                 <div className="message">
                     <h2>Send us a message</h2>
                 </div>
-                <form classname="formComponents" onSubmit={this.handleSubmit} >
+
+                <form className="formComponents" onSubmit={this.handleSubmit} >
                 
                 <div >
                     <label htmlFor="name">Name</label>

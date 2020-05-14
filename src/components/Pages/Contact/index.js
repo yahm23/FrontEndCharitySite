@@ -9,7 +9,8 @@ import Form from './form';
 
 
 const Contact=()=>{
-
+    let isMobile=useMediaQuery({ maxWidth: 767 });
+    
     return (
         <div>
             <div className="contactContainer" >
@@ -21,7 +22,7 @@ const Contact=()=>{
 
                 <div className="contactContent">
                 
-                    <Form ></Form>
+                    <Form isMobile={isMobile}></Form>
                     <ContactInfo></ContactInfo>
                 </div>
             </div>
@@ -35,10 +36,11 @@ const Contact=()=>{
 
 
 const ContactInfo=()=>{
+    let isMobile=useMediaQuery({ maxWidth: 767 });
     return(
-        <div className="">
+        <div className={isMobile? "contactPanel-mobile":"contactPanel"}>
             <GoogleMaps></GoogleMaps>
-            <div className="contactDetails card">
+            <div className={isMobile? "contactDetails-mobile card":"contactDetails card"}>
                 
                 <div className="address">
                     <h4>Address</h4>
