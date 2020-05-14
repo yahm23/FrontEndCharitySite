@@ -1,5 +1,6 @@
-.App{
-  max-width: 4000px;
+body{
+  max-width: 1920px;
+  margin: 0 auto;
 }
 @font-face {
   font-family: 'Geon';
@@ -32,6 +33,7 @@ $font: 'Geon', Times, sans-serif;
 @mixin navbar{
   position: absolute;
   width:100%;
+  max-width: 1920px;
   display:flex;
   flex-direction: row;
   align-self: stretch;
@@ -236,7 +238,7 @@ body{
 }
 
 .wave{
-  width:100%;
+  width:101%;
   height:40%;
   display: block;
 }

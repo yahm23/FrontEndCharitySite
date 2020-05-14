@@ -17,7 +17,7 @@ class Container extends Component {
       return(
     <div>
       <div className ={this.props.mobileClass==="mobile" ? "container-mobile" : "container"}>
-            {this.props.mobileClass==="mobile" ? <MobileNavBar></MobileNavBar>: <NavBar></NavBar>}
+          {this.props.mobileClass==="mobile" ? <MobileNavBar></MobileNavBar>: <NavBar></NavBar>}
         <nav className="app-container">
         </nav>
           <Switch>

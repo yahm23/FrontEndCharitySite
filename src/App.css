@@ -1,5 +1,6 @@
-.App {
-  max-width: 4000px;
+body {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 @font-face {
@@ -15,6 +16,7 @@
   padding-top: 2%;
   position: absolute;
   width: 100%;
+  max-width: 1920px;
   display: flex;
   flex-direction: row;
   align-self: stretch;
@@ -25,6 +27,7 @@
   margin-bottom: 2%;
   position: absolute;
   width: 100%;
+  max-width: 1920px;
   display: flex;
   flex-direction: row;
   align-self: stretch;
@@ -235,7 +238,7 @@ body {
 }
 
 .wave {
-  width: 100%;
+  width: 101%;
   height: 40%;
   display: block;
 }
