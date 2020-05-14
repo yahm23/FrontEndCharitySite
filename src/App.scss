@@ -1,3 +1,6 @@
+.App{
+  max-width: 4000px;
+}
 @font-face {
   font-family: 'Geon';
   src: url('./Media/Fonts/geon.ttf') format('truetype' );
@@ -13,7 +16,6 @@ $font: 'Geon', Times, sans-serif;
 @mixin nav {
   @include whiteFont();
   font-size: 15px;
-
 }
 .NavBarPadding{
  margin-top: 0;
