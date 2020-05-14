@@ -66,7 +66,6 @@ class Form extends PureComponent {
     return (
         <div className={this.props.isMobile? "card-mobile":"card"} id="form">
             
-            {/* <form action="https://blog-back-end-green.herokuapp.com/contact-submissions" method="post"> */}
                 <div className="message">
                     <h2>Send us a message</h2>
                 </div>
