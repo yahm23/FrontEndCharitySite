@@ -67,6 +67,7 @@ class Form extends PureComponent {
         <div className={this.props.isMobile? "card-mobile":"card"} id="form">
             
                 <div className="message">
+                    
                     <h2>Send us a message</h2>
                 </div>
 
