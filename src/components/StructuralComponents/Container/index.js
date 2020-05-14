@@ -13,6 +13,7 @@ import LightLogo from "../../../Media/Logos/SVG/logo-the-light.svg"
 import SmallLogo from "../../../Media/Logos/PNG/LighterLogo.png"
 import Article from "../../Pages/Article";
 import SingleBlog from "../../Pages/SingleBlog";
+import Support from "../../Pages/Support";
 // import BottomBanner from "../BottomBanner";
 
 class Container extends Component {
@@ -30,6 +31,7 @@ class Container extends Component {
             <Route path='/contact' component ={Contact}/>
             
             <Route path='/donation' component ={Donation}/>
+            <Route path='/support' component ={Support}/>
             <Route path='/blogs' component ={BlogMain}/>
             <Route path='/articles' exact component ={Article}/>
             <Route render={()=><h1> 404: Page not found</h1>}/>
@@ -65,7 +67,7 @@ const NavBar = () => {
         <div className= "navbarright">
           <h3 id="space"><Link to='/'>Home</Link> </h3>
           <h3 id="space"><Link to='/about'>About us</Link></h3>
-          <h3 id="space"><NavLink to='/'> Support Us</NavLink></h3>
+          <h3 id="space"><NavLink to='/support'> Support Us</NavLink></h3>
           <h3 id="space"><Link to='/contact'>Contact</Link></h3>
           <button className="donateButton"><Link to='/donation'> Make a donation</Link></button>
         </div>
