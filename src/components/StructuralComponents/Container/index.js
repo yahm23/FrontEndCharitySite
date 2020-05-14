@@ -1,7 +1,7 @@
 import React , { Component }  from "react";
 import { Route, Switch} from "react-router-dom";
 
-// import './App.css';
+
 import About from "../../Pages/About";
 import Blogs from "../../Pages/Blogs";
 import Contact from "../../Pages/Contact";
@@ -12,7 +12,6 @@ import SingleBlog from "../../Pages/SingleBlog";
 import Support from "../../Pages/Support";
 import NavBar from "../NavBar";
 import MobileNavBar from "../MobileNavBar";
-// import BottomBanner from "../BottomBanner";
 
 class Container extends Component {
     render() {

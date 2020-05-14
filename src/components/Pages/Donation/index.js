@@ -11,8 +11,7 @@ const Donation =()=> {
         <div>
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
 
-                <div >
-                    
+                <div >      
                     <div className={isMobile? "Posts-mobile":"contactHeading"}>
                         <h1>Donate</h1>
                         <Wave></Wave>

@@ -45,10 +45,10 @@ const SingleBlog = (props)=>{
             <div className="blogBanner">
                 <div className="blogcontainer">
 
-                    <div className={isMobile ?"Posts-mobile":"Posts"} >
+                    <div className={isMobile ?"Posts-mobile":"contactHeading"} >
                         <h1 className="noBottomPadding">{blog.title}</h1>
                         <h4 className="writtenBy">Written by {blog.author? blog.author.name:'Green'} </h4>
-                        <img alt="avatar" className="avatar" src={avatarUrl}></img>
+                        {/* <img alt="avatar" className="avatar" src={avatarUrl}></img> */}
 
                         <Wave></Wave>
                     </div>

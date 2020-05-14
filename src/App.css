@@ -705,12 +705,11 @@ div .Bar {
 
 .writtenBy {
   margin: 0;
-  padding: 2%;
+  padding: 0%;
 }
 
 .noBottomPadding {
   margin-bottom: 0%;
-  padding-top: 1%;
 }
 
 .avatar {
