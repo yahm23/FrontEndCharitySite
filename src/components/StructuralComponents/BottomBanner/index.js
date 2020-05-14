@@ -41,7 +41,7 @@ const BottomBanner= ()=> {
                         <Switch>
                             <Route path='/' exact component ={Home}/>
                             <Route path='/about' component ={About}/>
-                            <Route path='/support' component ={Supportgaa}/>
+                            <Route path='/support' component ={Support}/>
                             <Route path='/contact' component ={Contact}/>
                             <Route path='/donation' component ={Donation}/>
                             <Route path='/blogs' component ={Blogs}/>
