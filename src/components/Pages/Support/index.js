@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';

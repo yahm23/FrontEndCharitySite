@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react'
-// import Wave from '../../StructuralComponents/Wave'
-// import BottomBanner from '../../StructuralComponents/BottomBanner'
-import { useMediaQuery } from 'react-responsive';
+
 
 
 class Form extends PureComponent {

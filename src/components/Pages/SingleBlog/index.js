@@ -1,7 +1,5 @@
-import React, { Component, useState, useEffect, setErrors } from 'react'
-import {BrowserRouter as Switch,Route ,Link} from "react-router-dom";
-// import Blogs from '../Blogs';
-// import Strapi from "strapi-sdk-javascript/build/main";
+import React, { useState, useEffect, setErrors } from 'react'
+import {Link} from "react-router-dom";
 import marked from 'marked';
 import { useMediaQuery } from 'react-responsive';
 import BottomBanner from "../../StructuralComponents/BottomBanner"
@@ -17,22 +15,25 @@ const SingleBlog = (props)=>{
 
     var [blog,setBlog]= useState();
 
-    async function fetchData() {
-
-        await fetch(`https://blog-back-end-green.herokuapp.com/blogs/${props.match.params.id}`)
-        .then(response => response.json())
-        .then(response => {
-            setBlog(response);            
-        })
-        .catch(err => setErrors(err));
-    }
-
+    
     useEffect(() => {
+
+        async function fetchData() {
+    
+            await fetch(`https://blog-back-end-green.herokuapp.com/blogs/${props.match.params.id}`)
+            .then(response => response.json())
+            .then(response => {
+                setBlog(response);            
+            })
+            .catch(err => setErrors(err));
+        }
+
         fetchData();
         return () => {
             console.log('unmounting...') 
         }
-    },[]);
+
+    },[props.match.params.id]);
 
 
     if(blog){
@@ -47,7 +48,7 @@ const SingleBlog = (props)=>{
                     <div className={isMobile ?"Posts-mobile":"Posts"} >
                         <h1 className="noBottomPadding">{blog.title}</h1>
                         <h4 className="writtenBy">Written by {blog.author? blog.author.name:'Green'} </h4>
-                        <img  className="avatar" src={avatarUrl}></img>
+                        <img alt="avatar" className="avatar" src={avatarUrl}></img>
 
                         <Wave></Wave>
                     </div>

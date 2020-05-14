@@ -1,7 +1,5 @@
 import React , { Component }  from "react";
-import {DropdownButton, Dropdown} from 'react-bootstrap'
-import {   Route, Link, Switch, NavLink} from "react-router-dom";
-import { withRouter } from 'react-router-dom';
+import { Route, Switch} from "react-router-dom";
 
 // import './App.css';
 import About from "../../Pages/About";
@@ -9,8 +7,6 @@ import Blogs from "../../Pages/Blogs";
 import Contact from "../../Pages/Contact";
 import Home from "../../Pages/Home";
 import Donation from "../../Pages/Donation";
-import LightLogo from "../../../Media/Logos/SVG/logo-the-light.svg"
-import SmallLogo from "../../../Media/Logos/PNG/LighterLogo.png"
 import Article from "../../Pages/Article";
 import SingleBlog from "../../Pages/SingleBlog";
 import Support from "../../Pages/Support";

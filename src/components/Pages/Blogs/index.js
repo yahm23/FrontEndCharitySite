@@ -3,7 +3,7 @@ import React, { useState, useEffect, setErrors} from 'react'
 // import marked from 'marked';
 // import Article from '../Article';
 
-import {BrowserRouter as Switch,Route ,  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import BottomBanner from '../../StructuralComponents/BottomBanner';
 import Wave from '../../StructuralComponents/Wave';

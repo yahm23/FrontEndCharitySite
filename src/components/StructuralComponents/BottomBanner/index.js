@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import LightLogo from "../../../Media/Logos/JPG/logo-the.jpg"
 import {BrowserRouter as  Route, Link, Switch} from "react-router-dom";
 import About from "../../Pages/About";

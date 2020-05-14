@@ -1,7 +1,6 @@
-import React , { Component }  from "react";
-import {DropdownButton, Dropdown} from 'react-bootstrap'
-import {   Route, Link, Switch, NavLink} from "react-router-dom";
-import { withRouter } from 'react-router-dom';
+import React from "react";
+
+import { Link, NavLink } from 'react-router-dom';
 import LightLogo from "../../../Media/Logos/SVG/logo-the-light.svg"
 
 
