@@ -420,7 +420,7 @@ body{
 }
 
 hr.solid {
-  border-top: 3px solid #F3F3F3;
+  border-top: 1px solid #F3F3F3;
   margin-bottom: 5%;
 }
 
@@ -582,13 +582,13 @@ div .Bar {
   background-position: center -150px;
 }
 .aboutcontainer{
-  background-image: url('./Media/DesktopBackgrounds/background4.jpg');
+  background-image: url('./Media/DesktopBackgrounds/NCL2.jpg');
   @include backgroundSettings();
-  background-position: center -295px;
+  background-position: center -445px;
 }
 
 .contactContainer{
-  background-image: url('./Media/DesktopBackgrounds/background2.jpg');
+  background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
   @include backgroundSettings();
   background-position: center -350px;
 
@@ -599,7 +599,7 @@ div .Bar {
 }
 
 .donationContainer{
-  background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
+  background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
   background-size: 108%;
   background-position: center -525px;
