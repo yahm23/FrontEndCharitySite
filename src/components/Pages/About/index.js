@@ -9,11 +9,11 @@ const About = ()=> {
     let isMobile = useMediaQuery({ maxWidth: 767 })
 
     return (
-        <div className="blogBanner">
+        <div>
             <div className="aboutcontainer">
 
                 <div className={isMobile ?"Posts-mobile":"contactHeading"} >
-                    <h1 className="noBottomPadding"> About The Green Foundation</h1>
+                    <h1 className=""> About The Green Foundation</h1>
                     <Wave></Wave>
                     
                     <div className="individualArticle">

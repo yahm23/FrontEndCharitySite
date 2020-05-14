@@ -9,11 +9,17 @@ const Donation =()=> {
 
     return (
         <div>
-            <div className={isMobile? "donationContainer-mobile":"donationContainer"}>
-                <div className="Posts">
-                    <h1>Donate</h1>
-                    <Wave></Wave>
+            <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
+
+                <div >
+                    
+                    <div className={isMobile? "Posts-mobile":"contactHeading"}>
+                        <h1>Donate</h1>
+                        <Wave></Wave>
+                    </div>
+
                 </div>
+
             </div>
             <BottomBanner></BottomBanner>
         </div>
