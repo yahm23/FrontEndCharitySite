@@ -815,4 +815,8 @@ button#submit {
   margin-bottom: 15%;
 }
 
+.chevronButton {
+  border: none;
+}
+
 /*# sourceMappingURL=App.css.map */

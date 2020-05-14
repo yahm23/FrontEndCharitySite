@@ -7,6 +7,7 @@ import Contact from "../../Pages/Contact";
 import Home from "../../Pages/Home";
 import Donation from "../../Pages/Donation";
 import Support from '../../Pages/Support';
+import MailingList from '../MailingList';
 
 const BottomBanner= ()=> {
    
@@ -17,16 +18,17 @@ const BottomBanner= ()=> {
 
                     <div className="logoBanner">
                         <img className="bottomLogo" alt="logo"  height="45px" src={LightLogo}></img>
-                        <div className="update">
-
+                        <MailingList></MailingList>
+                        {/* <div className="update">
                             <p className="keepUpdated" >Keep updated with our progress.</p>
                             <div className="email">
                                 <input height="100px" id="email" placeholder="Email address"></input>
                                 
-                                <svg  height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>   
+                                <button onClick className="chevronButton"><svg  height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg></button>
                                 
                             </div>
-                        </div>
+                        </div> */}
+
                     </div>
 
                     <div id="links">
