@@ -1,17 +1,22 @@
 body{
   max-width: 1920px;
   margin: 0 auto;
+  
 }
 @font-face {
   font-family: 'Geon';
   src: url('./Media/Fonts/geon.ttf') format('truetype' );
 }
-
+$green:#84C632;
 $font: 'Geon', Times, sans-serif;
 
 @mixin whiteFont {
   font-family: $font;
   color: white;
+}
+@mixin blackFont {
+  font-family: $font;
+  color: black;
 }
 
 @mixin nav {
@@ -26,10 +31,9 @@ $font: 'Geon', Times, sans-serif;
 @mixin navFlex{
   display:flex;
   flex-direction: row;
-  // justify-content: space-around;
   align-self: stretch;
-
 }
+
 @mixin navbar{
   position: absolute;
   width:100%;
@@ -62,14 +66,13 @@ $font: 'Geon', Times, sans-serif;
   @include nav();
   align-items: center;
   flex-grow: 1;
-  justify-content:space-evenly ;
+  justify-content:space-evenly;
 }
 
 .navbarleft{
   @include nav();
-  // align-content: right;
   padding-left: 3%;
-  flex-grow: 3;
+  flex-grow: 1;
 }
 
 #bigger{
@@ -85,13 +88,12 @@ font: weight 6;;
   flex-grow: 3;
   text-align: center;
   margin-top: 8%;
-
 }
+
 @mixin donateButton {
-  background-color: #84C632; /* Green */
-  font-family: $font;
+  @include whiteFont();
+  background-color: $green; 
   border: none;
-  color: white;
   text-align: center;
   text-decoration: none;
 }
@@ -127,15 +129,12 @@ font: weight 6;;
   padding:20px 25px;
   flex-grow: 1;
   margin-right: 3%;
-  // display: block;
-  // margin: 0 auto;
 }
 
 @mixin LearnButton {
+  @include blackFont();
   background-color: white; 
-  font-family: $font;
   border: none;
-  color: black;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
@@ -159,9 +158,8 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-.app-container{
-  // display: flex;
-}
+// // HOMEPAGE CSS
+
 @mixin main{
   background-image: url('./Media/DesktopBackgrounds/bgrnd.jpg');
   width: 100%;
@@ -171,9 +169,7 @@ a, a:visited, a:hover, a:active {
   height: 100%;
 
 }
-body{
-  height: 100%;
-}
+
 .main-container{
   @include main();
   background-position: center 120%;  
@@ -184,10 +180,9 @@ body{
 }
 
 @mixin homeText {
+  @include whiteFont();
   padding-top: 7%;
   padding-bottom: 13%;
-  color: white;
-  font-family: $font;
   padding-left: 2%;
 }
 .homeText{
@@ -228,12 +223,8 @@ body{
   font-weight: 190;
 }
 
-
-.wave-container {
-  // position: absolute;
-  // top:0px;
-  // left:0px;
-  bottom:1px;
+.wave-container{
+  width: 99%;
 }
 
 .wave{
@@ -245,25 +236,24 @@ body{
 .descriptionContainer{
   margin-left: 15%;
   margin-right: 15%;
-  // margin-top: 50%;
+  
   
 }
 .descriptionContainer-mobile{
   margin-left: 5%;
   margin-right: 5%;
-  // margin-top: 50%;
+  
   
 }
 
 .white{
   padding-top: 30%;
   width:100%
-  
 }
+
 @mixin black{
-  font-family: $font;
+  @include blackFont();
   font-weight: 100;
-  color: black;
   margin-bottom: 0%;
   margin-top: 10%;
   padding: 0% 6%;
@@ -354,7 +344,7 @@ body{
   margin-bottom: 5%;
   width: 340px;
   height: 460px;
-  box-shadow:-10px -10px 8px -11px #84C632;
+  box-shadow:-10px -10px 8px -11px $green;
   background-image: url("./Media/plants/plant.jpg");
   background-position: 103% center;
   background-repeat: no-repeat;
@@ -366,7 +356,7 @@ body{
 
 .exampleStory{
   @include whiteFont();
-  color: #84C632;
+  color: $green;
   margin:10%;
   width: 100%;
   font-size: 40px;
@@ -379,11 +369,10 @@ body{
   justify-content: space-between;
   font-size: 90%;
   font-weight: lighter;
-  background-color: #83C330;
+  background-color: $green;
   position: absolute;
   bottom: 0;
   left: 0;
-  color: white;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -421,6 +410,8 @@ body{
   width: 90%;
   
 }
+
+// // END OF HOMEPAGE CONTAINER CSS
 
 hr.solid {
   border-top: 1px solid #F3F3F3;
@@ -542,7 +533,7 @@ div .Bar {
   width: 80%;
   border:black;
   border-radius: 20px;
-  color: #84C632;
+  color: $green;
   margin: 0 auto;
   display: inline-block;
   box-shadow: 0 15px 19px 0 rgba(0,0,0,0.2);
@@ -615,8 +606,7 @@ div .Bar {
 }
 
 @mixin headings(){
-  font-family: $font;
-  color: white;
+  @include whiteFont();
   top: 1000px;
   padding-top: 10%;
   margin: 0% auto;
@@ -659,13 +649,12 @@ div .Bar {
 }
 
 .individualArticle{
-  font-family: $font;
+  @include blackFont();
   background-color: white;
   padding: 5%;
   padding-top: 1%;
   font-size: 20px;
   margin-top: 0;
-  color:black;
   text-align: justify;
 }
 @mixin bottomBanner{
@@ -724,7 +713,7 @@ div .Bar {
   width: 100%;
   font-size: 130%;
   margin:1%;
-  padding: 3%;
+  padding: 7%;
 }
 #form.card{
   width: 30%;
@@ -758,13 +747,12 @@ input  {
 }
 
 button#submit{
+  @include whiteFont();
   height: 60px;
   width: 150px;
-  background-color: #84C632;
-  font-family: $font;
+  background-color: $green;
   font-size: 120%;
-  color:white;
-  margin: 10% 0%;
+  margin:  0%;
 
 }
 .contactDetails.card{
@@ -796,4 +784,8 @@ button#submit{
 
 .chevronButton{
   border: none;
+}
+
+.space{
+  margin-bottom: 15%;
 }

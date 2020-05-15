@@ -73,33 +73,34 @@ class Form extends PureComponent {
 
                 <form className="formComponents" onSubmit={this.handleSubmit} >
                 
-                <div >
-                    <label htmlFor="name">Name</label>
-                    <br></br>
-                    <input value={this.state.name} onChange={this.handleNameChange} type="text" id="name" name="user_name" required></input>
-                    
+                <div  >
+
+                    <div className="space">
+                        <label htmlFor="name">Name</label>
+                        <input value={this.state.name} onChange={this.handleNameChange} type="text" id="name" name="user_name" required></input>
+                    </div>
                 
                 
-                        <br></br>
+                    <div className="space">
                         <label htmlFor="mail">E-mail</label>
-                        <br></br>
                         <input value={this.state.email} onChange={this.handleEmailChange} type="email" id="mail" name="user_email" required></input>
+                    </div>    
                     
                    
                 
-                        <br></br>
+                    <div className="space">
                         <label htmlFor="number">Phone Number(Optional)</label>
-                        <br></br>
                         <input value={this.state.number} onChange={this.handlePhoneChange} type="text" id="number" name="user_enumber" ></input>
+                    </div>
                     
                   
                 
-                        <br></br>
+                    <div className="space">
                         <label htmlFor="msg">Message</label>
-                        <br></br>
-                        <textarea value={this.state.message} onChange={this.handleMessageChange} id="msg" name="user_message" required></textarea>
+                        <textarea  rows="1" cols="33" value={this.state.message} onChange={this.handleMessageChange} id="msg" name="user_message" required></textarea>
+                    </div>
                     
-                        <button id= "submit" type="submit">Submit</button>
+                    <button id= "submit" type="submit">Submit</button>
                     
                 
                 </div>
