@@ -46,15 +46,7 @@ body {
 }
 
 .navbarright-mobile {
-  display: flex;
-  flex-direction: row;
-  align-self: stretch;
-  font-family: "Geon", Times, sans-serif;
-  color: white;
-  font-size: 15px;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: space-evenly;
+  margin: 4% 7%;
 }
 
 .navbarleft {

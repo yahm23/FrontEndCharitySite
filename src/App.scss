@@ -62,11 +62,7 @@ $font: 'Geon', Times, sans-serif;
 }
 
 .navbarright-mobile{
-  @include navFlex();
-  @include nav();
-  align-items: center;
-  flex-grow: 1;
-  justify-content:space-evenly;
+  margin:4% 7%;
 }
 
 .navbarleft{
