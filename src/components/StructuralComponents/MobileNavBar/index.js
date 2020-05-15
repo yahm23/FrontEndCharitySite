@@ -8,6 +8,27 @@ const MobileNavbar=()=>{
     const switchToggle=()=>{
         setToggle(!toggle)
     }
+
+    const DropDown = ()=>{
+        return(
+            <div className="dropdown">
+                <div className="menu-mobile">
+                
+                    <p id="space-mobile"><Link onClick={switchToggle} to='/'>Home</Link></p>
+                
+                    <p id="space-mobile"><Link onClick={switchToggle} to='/about'>About us</Link></p>
+                
+                    <p id="space-mobile"><Link onClick={switchToggle} to='/support'> Support Us</Link></p>
+                
+                    <p id="space-mobile"><Link onClick={switchToggle} to='/contact'>Contact</Link></p>
+                
+                    <button className="donateButton-mobile"><Link onClick={switchToggle} to='/donation'>Make a donation</Link></button>
+                
+                </div>
+            </div>
+        )
+    
+    }
      
     return (
         <div>
@@ -38,25 +59,5 @@ const MobileNavbar=()=>{
     
 }
 
-const DropDown = ()=>{
-    return(
-        <div className="dropdown">
-            <div className="menu-mobile">
-            
-                <p id="space-mobile"><Link to='/'>Home</Link></p>
-            
-                <p id="space-mobile"><Link to='/about'>About us</Link></p>
-            
-                <p id="space-mobile"><Link to='/support'> Support Us</Link></p>
-            
-                <p id="space-mobile"><Link to='/contact'>Contact</Link></p>
-            
-                <button className="donateButton-mobile"><Link to='/donation'>Make a donation</Link></button>
-            
-            </div>
-        </div>
-    )
-
-}
 
 export default MobileNavbar
