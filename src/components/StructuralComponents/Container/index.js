@@ -11,6 +11,7 @@ import SingleBlog from "../../Pages/SingleBlog";
 import Support from "../../Pages/Support";
 import NavBar from "../NavBar";
 import MobileNavBar from "../MobileNavBar";
+import PrivacyPolicy from "../../Pages/PrivacyPolicy";
 
 class Container extends Component {
     render() {
@@ -29,6 +30,7 @@ class Container extends Component {
             <Route path='/donation' component ={Donation}/>
             <Route path='/support' component ={Support}/>
             <Route path='/blogs' component ={BlogMain}/>
+            <Route path='/privacy-policy' component ={PrivacyPolicy}/>
             <Route render={()=><h1> 404: Page not found</h1>}/>
           </Switch>
      </div>

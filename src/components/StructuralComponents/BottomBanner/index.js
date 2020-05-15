@@ -8,6 +8,7 @@ import Home from "../../Pages/Home";
 import Donation from "../../Pages/Donation";
 import Support from '../../Pages/Support';
 import MailingList from '../MailingList';
+import PrivacyPolicy from '../../Pages/PrivacyPolicy';
 
 const BottomBanner= ()=> {
    
@@ -27,7 +28,7 @@ const BottomBanner= ()=> {
                         <p><Link  to='/support'>Support Us</Link></p>
                         <p><Link to='/blogs'>Success Stories</Link></p>
                         <p><Link to='/contact'>Contact Us</Link></p>
-                        <p><Link to='/privacypolicy'>Privacy Policy</Link></p>
+                        <p><Link to='/privacy-policy'>Privacy Policy</Link></p>
                         
                     
                         <Switch>
@@ -37,6 +38,7 @@ const BottomBanner= ()=> {
                             <Route path='/contact' component ={Contact}/>
                             <Route path='/donation' component ={Donation}/>
                             <Route path='/blogs' component ={Blogs}/>
+                            <Route path='/privacy-policy' component ={PrivacyPolicy}/>
                    
                         </Switch>
 
