@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 
 export class MailingList extends Component {
+
     constructor(props) {
         super(props);
         this.state ={
@@ -39,14 +40,12 @@ export class MailingList extends Component {
     render() {
         return (
             <div className="update">
-                <p className="keepUpdated" >Keep updated with our progress.</p>
                 
+                <p className="keepUpdated" >Keep updated with our progress.</p>
                     <form className="email" onSubmit={this.handleSubmit}>
                         <input value={this.state.email} onChange={this.handleEmailChange} height="100px" id="email" placeholder="Email address" required></input>
-                        
                         <button type="submit"  className="chevronButton"><svg  height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg></button>
                     </form>
-                
             </div>
         )
     }

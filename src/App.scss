@@ -224,7 +224,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .wave{
-  width:101%;
+  width:102%;
   height:40%;
   display: block;
 }
@@ -566,30 +566,32 @@ div .Bar {
   background-size: cover;
   height: 100%;
 }
+
 .blogcontainer{
   background-image: url('./Media/DesktopBackgrounds/background4.jpg');
   @include backgroundSettings();
   background-position: center -150px;
 }
+
 .aboutcontainer{
-  background-image: url('./Media/DesktopBackgrounds/NCL2.jpg');
+  background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
   background-position: center -415px;
 }
 
 .contactContainer{
-  background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
+  background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
   background-position: center -350px;
-
 }
+
 .contactContainer-mobile{
-  background-image: url('./Media/DesktopBackgrounds/background2.jpg');
+  background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
 }
 
 .donationContainer{
-  background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
+  background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
   @include backgroundSettings();
   background-size: 108%;
   background-position: center -525px;
@@ -779,6 +781,7 @@ button#submit{
 }
 
 .chevronButton{
+  background: none;
   border: none;
 }
 

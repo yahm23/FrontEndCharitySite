@@ -22,7 +22,6 @@ class Container extends Component {
         <nav className="app-container">
         </nav>
           <Switch>
-
             <Route path='/' exact component={Home}/>
             <Route path='/about' component ={About}/>
             <Route path='/contact' component ={Contact}/>

@@ -12,7 +12,7 @@ const  PrivacyPolicy =()=> {
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
                 <div>      
                     <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                        <h1>Our PrivacyPolicy</h1>
+                        <h1>Our Privacy Policy</h1>
                         <Wave></Wave>
                     </div>
                 </div>

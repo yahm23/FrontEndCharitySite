@@ -40,7 +40,7 @@ const Blogs=()=> {
   if(posts){
     return (
         <div>
-          <div className="blogcontainer">  
+          <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>  
 
             <div className={isMobile ?"Posts-mobile":"contactHeading"}>
               <h1>Posts</h1>

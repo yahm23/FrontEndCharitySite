@@ -39,7 +39,6 @@ const BottomBanner= ()=> {
                             <Route path='/donation' component ={Donation}/>
                             <Route path='/blogs' component ={Blogs}/>
                             <Route path='/privacy-policy' component ={PrivacyPolicy}/>
-                   
                         </Switch>
 
 

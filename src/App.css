@@ -223,7 +223,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .wave {
-  width: 101%;
+  width: 102%;
   height: 40%;
   display: block;
 }
@@ -574,7 +574,7 @@ div .Bar {
 }
 
 .aboutcontainer {
-  background-image: url("./Media/DesktopBackgrounds/NCL2.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -584,7 +584,7 @@ div .Bar {
 }
 
 .contactContainer {
-  background-image: url("./Media/DesktopBackgrounds/meeting.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -594,7 +594,7 @@ div .Bar {
 }
 
 .contactContainer-mobile {
-  background-image: url("./Media/DesktopBackgrounds/background2.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -603,7 +603,7 @@ div .Bar {
 }
 
 .donationContainer {
-  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
+  background-image: url("./Media/DesktopBackgrounds/meeting.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -803,6 +803,7 @@ button#submit {
 }
 
 .chevronButton {
+  background: none;
   border: none;
 }
 
