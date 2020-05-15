@@ -54,16 +54,15 @@ $font: 'Geon', Times, sans-serif;
   @include navFlex();
   @include nav();
   flex-grow: 1;
-  justify-content:space-evenly ;
-  
+  justify-content:space-evenly;
 }
+
 .navbarright-mobile{
   @include navFlex();
   @include nav();
   align-items: center;
   flex-grow: 1;
   justify-content:space-evenly ;
-  
 }
 
 .navbarleft{

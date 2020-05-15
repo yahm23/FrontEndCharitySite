@@ -40,24 +40,23 @@ function GoogleMaps(props) {
             map: googleMap.current
         });
 
-    // useEffect Hook
-    useEffect(() => {
-        const googleMapScript = document.createElement('script');
-        googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAP_API_KEY}&libraries=places`
-        window.document.body.appendChild(googleMapScript);
 
-        googleMapScript.addEventListener('load', () => {
-            googleMap.current = createGoogleMap();
-            marker.current = createMarker()
-        })
-    });
+        useEffect(() => {
+            const googleMapScript = document.createElement('script');
+            googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAP_API_KEY}&libraries=places`
+            window.document.body.appendChild(googleMapScript);
+
+            googleMapScript.addEventListener('load', () => {
+                googleMap.current = createGoogleMap();
+                marker.current = createMarker()
+            })
+        },[]);
 
     return (
         <div className="card"
             id="google-map"
             ref={googleMapRef}
-            style={useMediaQuery({ maxWidth: 767 })? mapStylesMobile:mapStyles}
-        />
+            style={useMediaQuery({ maxWidth: 767 })? mapStylesMobile:mapStyles} />
     )
 
 }
