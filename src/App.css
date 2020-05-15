@@ -46,7 +46,7 @@ body {
 }
 
 .navbarright-mobile {
-  margin: 4% 7%;
+  margin: 4%;
 }
 
 .navbarleft {
@@ -69,7 +69,9 @@ body {
 
 #space-mobile {
   flex-grow: 3;
-  text-align: center;
+  padding-left: 12%;
+  text-align: left;
+  font-family: "Geon", Times, sans-serif;
   margin-top: 8%;
 }
 
@@ -96,7 +98,7 @@ body {
   font-size: 20px;
   padding: 3%;
   flex-grow: 1;
-  margin: 5% auto;
+  margin: 5% 11%;
   display: block;
 }
 
@@ -219,11 +221,11 @@ a, a:visited, a:hover, a:active {
 }
 
 .wave-container {
-  width: 99%;
+  width: 100%;
 }
 
 .wave {
-  width: 102%;
+  width: 100%;
   height: 40%;
   display: block;
 }
@@ -535,6 +537,7 @@ div .Bar {
   width: 80%;
   border: black;
   border-radius: 20px;
+  font-family: "Geon", Times, sans-serif;
   color: #84C632;
   margin: 0 auto;
   display: inline-block;
@@ -809,6 +812,23 @@ button#submit {
 
 .space {
   margin-bottom: 15%;
+}
+
+#burger {
+  left: 1%;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: white;
+  top: 75px;
+  left: 5%;
+  width: 90%;
+  font-size: 120%;
+  max-width: 100%;
+  font-weight: normal;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15), 0 3px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=App.css.map */

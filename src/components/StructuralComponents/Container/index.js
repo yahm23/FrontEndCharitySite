@@ -10,15 +10,16 @@ import Donation from "../../Pages/Donation";
 import SingleBlog from "../../Pages/SingleBlog";
 import Support from "../../Pages/Support";
 import NavBar from "../NavBar";
-import MobileNavBar from "../MobileNavBar";
+// import MobileNavBar from "../MobileNavBar2";
 import PrivacyPolicy from "../../Pages/PrivacyPolicy";
+import MobileNavbar from "../MobileNavBar2";
 
 class Container extends Component {
     render() {
       return(
     <div>
       <div className ={this.props.mobileClass==="mobile" ? "container-mobile" : "container"}>
-          {this.props.mobileClass==="mobile" ? <MobileNavBar></MobileNavBar>: <NavBar></NavBar>}
+          {this.props.mobileClass==="mobile" ? <MobileNavbar></MobileNavbar>: <NavBar></NavBar>}
         <nav className="app-container">
         </nav>
           <Switch>

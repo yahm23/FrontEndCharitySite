@@ -41,11 +41,11 @@ const MobileNavBar = () => {
                 </Dropdown.Item>
   
                 <Dropdown.Item>
-                  <h3 id="space-mobile"><Link to='/contact'> Contact</Link></h3>
+                  <h3 id="space-mobile"><Link to='/contact'>Contact</Link></h3>
                 </Dropdown.Item>
   
                 <Dropdown.Item>
-                  <button className="donateButton-mobile"> <Link to='/donation'> Make a donation</Link></button>
+                  <button className="donateButton-mobile"><Link to='/donation'>Make a donation</Link></button>
                 </Dropdown.Item>
   
               </div>
