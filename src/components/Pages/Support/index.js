@@ -2,6 +2,7 @@ import React from 'react'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';
+import {Helmet} from "react-helmet";
 
 
 const Support =()=> {
@@ -9,6 +10,9 @@ const Support =()=> {
 
     return (
         <div>
+            <Helmet>
+                <title>Support Us</title>
+            </Helmet>
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
 
                 <div >

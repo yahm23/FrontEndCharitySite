@@ -6,13 +6,16 @@ import { useMediaQuery } from 'react-responsive';
 import GoogleMaps from '../../StructuralComponents/Map';
 import Form from './form';
 // import GoogleMapReact from 'google-map-react';
-
+import {Helmet} from "react-helmet";
 
 const Contact=()=>{
     let isMobile=useMediaQuery({ maxWidth: 767 });
     
     return (
         <div>
+            <Helmet>
+                <title>Contact Us</title>
+            </Helmet>
             <div className="contactContainer" >
 
                 <div className="contactHeading" >

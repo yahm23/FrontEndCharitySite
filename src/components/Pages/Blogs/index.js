@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
 import BottomBanner from '../../StructuralComponents/BottomBanner';
 import Wave from '../../StructuralComponents/Wave';
-
+import {Helmet} from "react-helmet";
 
 
 
@@ -40,6 +40,9 @@ const Blogs=()=> {
   if(posts){
     return (
         <div>
+          <Helmet>
+                <title>Stories</title>
+          </Helmet>
           <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>  
 
             <div className={isMobile ?"Posts-mobile":"contactHeading"}>
@@ -78,7 +81,11 @@ const Blogs=()=> {
         </div>
     )
     } else {
-      return null
+      
+      return (
+      <Helmet>
+        <title>Stories</title>
+      </Helmet>)
     }
 
  

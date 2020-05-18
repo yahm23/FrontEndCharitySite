@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import BottomBanner from "../../StructuralComponents/BottomBanner";
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';
+import {Helmet} from "react-helmet";
 
 
 
@@ -14,6 +15,10 @@ export class Home extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <title>The Green Foundation</title>
+                </Helmet>
+                
                 <HomeComp>
                 </HomeComp>
             </div> 

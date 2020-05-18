@@ -2,14 +2,19 @@ import React from 'react'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';
- 
+import {Helmet} from "react-helmet";
+
 
 
 const About = ()=> {
     let isMobile = useMediaQuery({ maxWidth: 767 })
 
     return (
-        <div>
+        <div> 
+            <Helmet>
+                <title>About Us</title>
+                {/* <img  id="favicon" rel="icon" href="./Media/Logos/PNG/LighterLogo.png" /> */}
+            </Helmet>
             <div className="aboutcontainer">
 
                 <div className={isMobile ?"Posts-mobile":"contactHeading"} >

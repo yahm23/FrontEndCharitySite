@@ -4,6 +4,7 @@ import marked from 'marked';
 import { useMediaQuery } from 'react-responsive';
 import BottomBanner from "../../StructuralComponents/BottomBanner"
 import Wave from '../../StructuralComponents/Wave';
+import {Helmet} from "react-helmet";
 
 
 
@@ -43,6 +44,9 @@ const SingleBlog = (props)=>{
     
         return(
             <div className="blogBanner">
+                <Helmet>
+                    <title>{blog.title}</title>
+                </Helmet>
                 <div className="blogcontainer">
 
                     <div className={isMobile ?"Posts-mobile":"contactHeading"} >
