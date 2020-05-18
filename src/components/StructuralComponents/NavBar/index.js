@@ -17,13 +17,15 @@ const NavBar = () => {
           </Link>    
         </div>
 
-        <div className= "navbarright">
-          <h3 id="space"><Link to='/'>Home</Link> </h3>
-          <h3 id="space"><Link to='/about'>About us</Link></h3>
-          <h3 id="space"><Link to='/blogs'>Stories</Link></h3>
-          <h3 id="space"><NavLink to='/support'> Support Us</NavLink></h3>
-          <h3 id="space"><Link to='/contact'>Contact</Link></h3>
-          <button className="donateButton"><Link to='/donation'> Make a donation</Link></button>
+        <div id="space" className= "navbarright">
+          <h3><Link to='/'>Home</Link> </h3>
+          <h3><Link to='/about'>About us</Link></h3>
+          <h3><Link to='/blogs'>Stories</Link></h3>
+          <h3><NavLink to='/support'> Support Us</NavLink></h3>
+          <h3><Link to='/contact'>Contact</Link></h3>
+          <Link to='/donation'><button className="donateButton"> Make a donation</button></Link>
+          
+          
         </div>
       </div>
     </nav>
