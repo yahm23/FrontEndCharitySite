@@ -17,10 +17,13 @@ const MobileNavbar=()=>{
                     <p id="space-mobile"><Link onClick={switchToggle} to='/'>Home</Link></p>
                 
                     <p id="space-mobile"><Link onClick={switchToggle} to='/about'>About us</Link></p>
+                    
+                    <p id="space-mobile"><Link onClick={switchToggle} to='/blogs'>Success Stories</Link></p>
                 
                     <p id="space-mobile"><Link onClick={switchToggle} to='/support'> Support Us</Link></p>
                 
                     <p id="space-mobile"><Link onClick={switchToggle} to='/contact'>Contact</Link></p>
+                    
                 
                     <button className="donateButton-mobile"><Link onClick={switchToggle} to='/donation'>Make a donation</Link></button>
                 
