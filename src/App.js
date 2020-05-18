@@ -27,8 +27,9 @@ function App() {
       <Helmet>
           <meta charSet="utf-8" />
           <title>Green</title>
-          <link rel="canonical" href="http://mysite.com/example" />
+          {/* <img  id="favicon" rel="icon" href="./Media/Logos/PNG/LighterLogo.png" /> */}
       </Helmet>
+
       <BrowserRouter>
         <DesktopOrMobile>
         </DesktopOrMobile>
