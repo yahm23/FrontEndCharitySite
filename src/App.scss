@@ -343,6 +343,8 @@ a, a:visited, a:hover, a:active {
 .story{
   
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 5%;
   width: 340px;
   height: 460px;
@@ -352,7 +354,7 @@ a, a:visited, a:hover, a:active {
   background-repeat: no-repeat;
   background-size: cover;
   // opacity: 120%;
-  position: relative;
+  // position: relative;
 
 }
 
@@ -360,7 +362,7 @@ a, a:visited, a:hover, a:active {
   @include whiteFont();
   color: $green;
   margin:10%;
-  width: 100%;
+  // width: 100%;
   font-size: 40px;
 
 }  
@@ -372,7 +374,7 @@ a, a:visited, a:hover, a:active {
   font-size: 90%;
   font-weight: lighter;
   background-color: $green;
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -798,6 +800,8 @@ button#submit{
 }
 #burger{
   left:1%;
+  text-decoration: none;
+
 }
 .dropdown{
   position: absolute;

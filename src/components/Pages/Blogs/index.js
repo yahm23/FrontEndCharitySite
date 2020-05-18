@@ -41,7 +41,7 @@ const Blogs=()=> {
     return (
         <div>
           <Helmet>
-                <title>Stories</title>
+            <title>Stories</title>
           </Helmet>
           <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>  
 
@@ -57,16 +57,16 @@ const Blogs=()=> {
             {posts.map(post => (
               
               <Link key={post.id} to = {`/blogs/`+post.id}>
-              <div className="story">
-                {/* <div key={post.title} className="list"> */}
+                <div className="story">
+                  
 
-                <h2 className="exampleStory">{post.title}</h2>
+                  <h2 className="exampleStory">{post.title}</h2>
+                    
+                  <div className="readStory">
+                    <h3 className="padding" >Read the full story</h3>
+                    <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
+                  </div>
 
-                  {/* <div className="contentPreview"><p></p></div> */}
-                    <div className="readStory">
-                      <h3 className="padding" >Read the full story</h3>
-                      <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-                    </div>
                 </div >
 
               {/* </div> */}

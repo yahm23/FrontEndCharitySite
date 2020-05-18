@@ -343,6 +343,8 @@ a, a:visited, a:hover, a:active {
 
 .story {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-bottom: 5%;
   width: 340px;
   height: 460px;
@@ -351,7 +353,6 @@ a, a:visited, a:hover, a:active {
   background-position: 103% center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .exampleStory {
@@ -359,7 +360,6 @@ a, a:visited, a:hover, a:active {
   color: white;
   color: #84C632;
   margin: 10%;
-  width: 100%;
   font-size: 40px;
 }
 
@@ -371,7 +371,6 @@ a, a:visited, a:hover, a:active {
   font-size: 90%;
   font-weight: lighter;
   background-color: #84C632;
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -816,6 +815,7 @@ button#submit {
 
 #burger {
   left: 1%;
+  text-decoration: none;
 }
 
 .dropdown {
