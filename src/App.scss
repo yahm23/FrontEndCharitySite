@@ -8,6 +8,8 @@ body{
   src: url('./Media/Fonts/geon.ttf') format('truetype' );
 }
 $green:#84C632;
+$off-White:#cccccc;
+
 $font: 'Geon', Times, sans-serif;
 
 @mixin whiteFont {
@@ -428,7 +430,7 @@ hr.solid {
 }
 
 ::placeholder{
-  color:#cccccc; 
+  color:$off-White; 
 }
 
 .update{
@@ -439,9 +441,9 @@ hr.solid {
   align-items: center;
   // justify-content: space-between;
   position:relative;
-  border-color:#cccccc;
+  border-color:$off-White;
   border-style:solid; 
-  color:#cccccc; 
+  color:$off-White; 
   box-shadow: 2px 0px 5px 0px rgba(42,42,42,.11); 
   text-shadow:0px 0px 0px rgba(42,42,42,.35); 
   font-size:22px; 
@@ -457,7 +459,7 @@ hr.solid {
   border-color:white;
   border-style:none; 
   // height:100%;
-  color:#cccccc; 
+  color:$off-White; 
   font-size:22px; 
   display:inline-block;
 }
@@ -498,7 +500,7 @@ input{
 }
 
 .copyright{
-  color:#B2B3B6;
+  color:$off-White;
   margin-top: 4%;
   font-size: 110%;
 }
