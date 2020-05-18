@@ -1,5 +1,5 @@
 import React from 'react'
-import LightLogo from "../../../Media/Logos/JPG/logo-the.jpg"
+import LightLogo from "../../../Media/Logos/JPG/rsz_logo-the.jpg"
 import {BrowserRouter as  Route, Link, Switch} from "react-router-dom";
 import About from "../../Pages/About";
 import Blogs from "../../Pages/Blogs";
