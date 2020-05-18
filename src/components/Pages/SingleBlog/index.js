@@ -38,9 +38,9 @@ const SingleBlog = (props)=>{
 
 
     if(blog){
-        var avatarUrl='https://blog-back-end-green.herokuapp.com/uploads/default-avatar_e55c67cd0b.jpeg'
-        if(blog.author.avatar){
-        avatarUrl=`https://blog-back-end-green.herokuapp.com${blog.author.avatar.url}`}
+        // var avatarUrl='https://blog-back-end-green.herokuapp.com/uploads/default-avatar_e55c67cd0b.jpeg'
+        // if(blog.author.avatar){
+        // avatarUrl=`https://blog-back-end-green.herokuapp.com${blog.author.avatar.url}`}
     
         return(
             <div className="blogBanner">
@@ -52,8 +52,8 @@ const SingleBlog = (props)=>{
                     <div className={isMobile ?"Posts-mobile":"contactHeading"} >
                         <h1 className="noBottomPadding">{blog.title}</h1>
                         <h4 className="writtenBy">Written by {blog.author? blog.author.name:'Green'} </h4>
-                        <img alt="avatar" className="avatar" src={avatarUrl}></img>
-
+                        {/* <img alt="avatar" className="avatar" src={avatarUrl}></img> */}
+                        
                         <Wave></Wave>
                     </div>
 
