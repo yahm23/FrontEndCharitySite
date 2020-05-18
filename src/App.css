@@ -46,7 +46,7 @@ body {
 }
 
 .navbarright-mobile {
-  margin: 4%;
+  margin: 3%;
 }
 
 .navbarleft {
@@ -738,7 +738,7 @@ div .Bar {
 }
 
 #form.card {
-  width: 30%;
+  width: 25%;
   font-size: 130%;
   padding: 2%;
 }
@@ -813,9 +813,12 @@ button#submit {
   margin-bottom: 15%;
 }
 
-#burger {
+.burger {
   left: 1%;
   text-decoration: none;
+  outline: transparent;
+  border: none;
+  background-color: transparent;
 }
 
 .dropdown {
