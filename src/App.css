@@ -468,7 +468,6 @@ hr.solid {
 
 input {
   text-decoration: none;
-  outline-width: 0;
 }
 
 #chevron-email {
@@ -741,6 +740,7 @@ div .Bar {
 
 #form.card {
   width: 25%;
+  margin: 1%;
   font-size: 130%;
   padding: 2%;
 }
@@ -753,10 +753,6 @@ div .Bar {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-label, input {
-  display: block;
 }
 
 input {
@@ -851,6 +847,7 @@ button#submit {
 }
 
 input[type=text]#subdomaintwo {
+  -webkit-appearance: none !important;
   width: 100px;
   border: 1px solid gray;
   border-left: 0px;
@@ -859,6 +856,7 @@ input[type=text]#subdomaintwo {
 }
 
 input[type=text]#subdomain {
+  -webkit-appearance: none !important;
   border: 1px solid gray;
   border-right: 0px;
   outline: none;
