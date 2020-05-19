@@ -578,7 +578,7 @@ div .Bar {
 }
 
 .aboutcontainer {
-  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCLDark.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -588,7 +588,7 @@ div .Bar {
 }
 
 .contactContainer {
-  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCLDark.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -598,7 +598,7 @@ div .Bar {
 }
 
 .contactContainer-mobile {
-  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCLDark.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
