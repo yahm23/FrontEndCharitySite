@@ -78,31 +78,31 @@ constructor(props) {
             </div>
 
             <label>Amount</label>
-            <div className="donationAmount">
-                <ul onChange={this.handleAmountChange} class="donate-now">
+            <div className="donationAmount spaceDonate">
+                <ul onChange={this.handleAmountChange} className="donate-now">
                     <li>
                         <input value="25" type="radio" id="a25" name="amount" />
-                        <label for="a25">£25</label>
+                        <label htmlFor="a25">£25</label>
                     </li>
 
                     <li>
                         <input value="50" type="radio" id="a50" name="amount" />
-                        <label for="a50">£50</label>
+                        <label htmlFor="a50">£50</label>
                     </li>
 
                     <li>
                         <input value="75" type="radio" id="a75" name="amount" />
-                        <label for="a75">£75</label>
+                        <label htmlFor="a75">£75</label>
                     </li>
 
                     <li>
                         <input value="100" type="radio" id="a100" name="amount" />
-                        <label for="a100">£100</label>
+                        <label htmlFor="a100">£100</label>
                     </li>
 
                     <li>
                         <input value="other" type="radio" id="other" name="amount" />
-                        <label for="other">Other </label>
+                        <label htmlFor="other">Other </label>
                     </li>
 
                     {this.state.amount==="75"|| this.state.amount==="50"|| this.state.amount==="100"|| this.state.amount==="25"?
@@ -120,7 +120,7 @@ constructor(props) {
                 </ul>
             </div>
 
-            {/* <span class="currencyinput">£<input value={this.state.amount} onChange={this.handleMessageChange} type="number" id="amount" name="amount" required></input></span> */}
+            {/* <span Name="currencyinput">£<input value={this.state.amount} onChange={this.handleMessageChange} type="number" id="amount" name="amount" required></input></span> */}
 
 
 

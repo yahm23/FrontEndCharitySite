@@ -22,11 +22,12 @@ const Donation =()=> {
                     <h1>Donate</h1>
                     <Wave></Wave>
                 </div>
+                <div className="whiteBackground">
+                    <div className="descriptionContainer">
+                        <Form>
 
-                <div className="contactContent">
-                    <Form>
-
-                    </Form>
+                        </Form>
+                    </div>
                 </div>
                 
             </div>

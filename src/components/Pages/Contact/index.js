@@ -23,12 +23,14 @@ const Contact=()=>{
                     <h1>Contact</h1>
                     <Wave></Wave>
                 </div>
-
-                <div className="contactContent">
                 
-                    <Form isMobile={isMobile}></Form>
-                    <ContactInfo></ContactInfo>
+                <div className="whiteBackground">
+                    <div className="contactContent">
+                        <Form isMobile={isMobile}></Form>
+                        <ContactInfo></ContactInfo>
+                    </div>
                 </div>
+
             </div>
             
             <BottomBanner></BottomBanner>
