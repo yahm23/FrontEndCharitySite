@@ -89,9 +89,7 @@ class Form extends PureComponent {
                 
                     <div className="spaceDonate">
                         <label htmlFor="number">Phone Number</label>
-                        
-                        
-                        
+                               
                         <input value={this.state.number} onChange={this.handlePhoneChange} type="text" id="number" name="user_enumber" required></input>
                     </div>
                     

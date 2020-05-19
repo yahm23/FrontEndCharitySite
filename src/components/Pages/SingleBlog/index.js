@@ -56,11 +56,14 @@ const SingleBlog = (props)=>{
                         
                         <Wave></Wave>
                     </div>
-
-                    <div className="individualArticle">
-                        <div  dangerouslySetInnerHTML={{ __html: marked(blog.content)}}></div>
-                        <p>{blog.date}</p>
-                        <Link to={'/blogs'}><button className="donateButton2">Go back to all blogs</button></Link>
+                    <div className="whiteBackground">
+                        <div className="descriptionContainer">
+                            <div className="individualArticle">
+                                <div  dangerouslySetInnerHTML={{ __html: marked(blog.content)}}></div>
+                                <p>{blog.date}</p>
+                                <Link to={'/blogs'}><button className="donateButton2">Go back to all blogs</button></Link>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
