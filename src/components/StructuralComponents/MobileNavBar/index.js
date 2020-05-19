@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from "react-router-dom";
 import SmallLogo from "../../../Media/Logos/PNG/LighterLogo.png"
-import Hamburger from '../../../Media/hamburger.png'
 
 const MobileNavbar=()=>{
     var [toggle,setToggle] = useState(false);
@@ -48,10 +47,10 @@ const MobileNavbar=()=>{
                 <div className= "navbarright-mobile">
 
                     <button className="burger" onClick={switchToggle}>
-                        {/* <div className="Bar"></div>
                         <div className="Bar"></div>
-                        <div className="Bar"></div> */}
-                        <img height="40px" src={Hamburger}></img>
+                        <div className="Bar"></div>
+                        <div className="Bar"></div>
+                       
                     </button>
                 
                 </div>

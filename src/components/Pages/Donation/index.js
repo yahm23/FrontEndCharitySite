@@ -3,6 +3,7 @@ import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
+import Form from './form';
 
 
 const Donation =()=> {
@@ -12,21 +13,22 @@ const Donation =()=> {
         <div>
             <Helmet>
                 <title>Donate</title>
-             </Helmet>
+            </Helmet>
+
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
 
-                <div >      
-                    <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                        <h1>Donate</h1>
-                        <Wave></Wave>
-                    </div>
-
+                 
+                <div className={isMobile? "Posts-mobile":"contactHeading"}>
+                    <h1>Donate</h1>
+                    <Wave></Wave>
                 </div>
 
-            
+                <div className="contactContent">
+                    <Form>
 
-
-
+                    </Form>
+                </div>
+                
             </div>
             <BottomBanner></BottomBanner>
         </div>

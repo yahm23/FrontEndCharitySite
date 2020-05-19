@@ -83,10 +83,12 @@ body {
   text-decoration: none;
   width: 100%;
   height: 100%;
+  outline: transparent;
   font-size: 16px;
   padding: 8%;
   flex-grow: 1;
   margin-right: 4%;
+  white-space: nowrap;
 }
 
 .donateButton-mobile {
@@ -743,6 +745,12 @@ div .Bar {
   padding: 2%;
 }
 
+#donate.card {
+  width: 95%;
+  font-size: 130%;
+  padding: 2%;
+}
+
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -832,6 +840,28 @@ button#submit {
   font-weight: normal;
   border-radius: 14px;
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15), 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+#amount {
+  border: black 1px solid;
+}
+
+.spaceDonate {
+  margin-bottom: 10%;
+}
+
+input[type=text]#subdomaintwo {
+  width: 100px;
+  border: 1px solid gray;
+  border-left: 0px;
+  margin: 0 0 0 -7px;
+  background: white;
+}
+
+input[type=text]#subdomain {
+  border: 1px solid gray;
+  border-right: 0px;
+  outline: none;
 }
 
 /*# sourceMappingURL=App.css.map */

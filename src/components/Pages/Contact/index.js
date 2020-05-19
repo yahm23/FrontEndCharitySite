@@ -16,6 +16,7 @@ const Contact=()=>{
             <Helmet>
                 <title>Contact Us</title>
             </Helmet>
+            
             <div className="contactContainer" >
 
                 <div className="contactHeading" >
