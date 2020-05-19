@@ -77,7 +77,7 @@ constructor(props) {
                 <input value={this.state.number} onChange={this.handlePhoneChange} type="number" id="number" name="user_enumber" required></input>
             </div>
 
-            <label>Amount{this.state.amount}</label>
+            <label>Amount</label>
             <div className="donationAmount">
                 <ul onChange={this.handleAmountChange} class="donate-now">
                     <li>
