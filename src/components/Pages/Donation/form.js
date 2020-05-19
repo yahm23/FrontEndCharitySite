@@ -51,9 +51,9 @@ constructor(props) {
         alert('Your donation has been submitted');
 
         })
-        event.preventDefault();
+        // event.preventDefault();
     }
-    
+
     render(){
     return (
     <div className={this.props.isMobile? "card-mobile":"card"} id="donate">
