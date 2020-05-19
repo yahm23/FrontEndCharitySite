@@ -57,7 +57,7 @@ class Form extends PureComponent {
         })
         
 
-        // event.preventDefault();
+        event.preventDefault();
     }
     
 

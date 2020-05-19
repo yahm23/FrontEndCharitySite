@@ -1,103 +1,101 @@
 body{
   max-width: 1920px;
   margin: 0 auto;
-  
-}
-@font-face {
+  }
+  @font-face {
   font-family: 'Geon';
   src: url('./Media/Fonts/geon.ttf') format('truetype' );
-}
-$green:#84C632;
-$off-White:#cccccc;
-
-$font: 'Geon', Times, sans-serif;
-
-@mixin whiteFont {
+  }
+  $green:#84C632;
+  $off-White:#cccccc;
+  
+  $font: 'Geon', Times, sans-serif;
+  
+  @mixin whiteFont {
   font-family: $font;
   color: white;
-}
-@mixin blackFont {
+  }
+  @mixin blackFont {
   font-family: $font;
   color: black;
-}
-
-@mixin nav {
+  }
+  
+  @mixin nav {
   @include whiteFont();
   font-size: 15px;
-}
-.NavBarPadding{
- margin-top: 0;
- padding-top:35%;
-}
-
-@mixin navFlex{
+  }
+  .NavBarPadding{
+  margin-top: 0;
+  padding-top:35%;
+  }
+  
+  @mixin navFlex{
   display:flex;
   flex-direction: row;
   align-self: stretch;
-}
-
-@mixin navbar{
+  }
+  
+  @mixin navbar{
   position: absolute;
   width:100%;
   max-width: 1920px;
   display:flex;
   flex-direction: row;
   align-self: stretch;
-}
-.navbar {
+  }
+  .navbar {
   padding-top: 2%;
   @include navbar()
-}
-
-.navbar-mobile {
+  }
+  
+  .navbar-mobile {
   padding-top:4%;
   margin-bottom: 2%;
   @include navbar()
-}
-  
+  }
   /* Style the links inside the navigation bar */
-.navbarright{
+  .navbarright{
   @include navFlex();
   @include nav();
   flex-grow: 1;
   justify-content:space-around;
-}
-
-.navbarright-mobile{
+  }
+  
+  .navbarright-mobile{
   margin:3%;
-}
-
-.navbarleft{
+  }
+  
+  .navbarleft{
   @include nav();
   padding-left: 3%;
   flex-grow: 1;
-}
-
-#bigger{
-font: weight 6;;
-}
-
-#space{
+  }
+  
+  #bigger{
+  font: weight 6;;
+  }
+  
+  #space{
   flex-grow: 3;
   text-align: center;
   // margin-top: 4%;
-}
-#space-mobile{
+  }
+  #space-mobile{
   flex-grow: 3;
   padding-left: 12%;
   text-align: left;
   font-family: $font;
   margin-top: 8%;
-}
-
-@mixin donateButton {
+  }
+  
+  @mixin donateButton {
   @include whiteFont();
-  background-color: $green; 
+  background-color: $green;
   border: none;
   text-align: center;
   text-decoration: none;
-}
-.donateButton{
+  }
+  .donateButton{
   @include donateButton();
   width: 100%;
   height:100%;
@@ -107,177 +105,172 @@ font: weight 6;;
   flex-grow: 1;
   margin-right: 4%;
   white-space: nowrap;
-}
-.donateButton-mobile{
+  }
+  .donateButton-mobile{
   @include donateButton();
   font-size: 20px;
   padding:3%;
   flex-grow: 1;
   margin:5% 11%;
   display:block;
-}
-
-.buttons{
+  }
+  
+  .buttons{
   flex-wrap:wrap;
   align-content:space-around;
-}
-
-.buttons-mobile{
+  }
+  
+  .buttons-mobile{
   display: block;
   margin: 0%;
   width: 80%;
-}
-.donateButton2{
+  }
+  .donateButton2{
   @include donateButton();
   font-size: 22px;
   padding:20px 25px;
   flex-grow: 1;
   margin-right: 3%;
-}
-
-@mixin LearnButton {
+  }
+  
+  @mixin LearnButton {
   @include blackFont();
-  background-color: white; 
+  background-color: white;
   border: none;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
   padding:3% 9%;
-}
-
-.LearnButton{
+  }
+  
+  .LearnButton{
   @include LearnButton();
   margin: 5% 6%;
-}
-
-.LearnButton-mobile{
+  }
+  
+  .LearnButton-mobile{
   @include LearnButton();
   margin: 5% 0%;
-}
-
-
-
-a, a:visited, a:hover, a:active {
+  }
+  
+  
+  
+  a, a:visited, a:hover, a:active {
   color: inherit;
   text-decoration: none;
-}
-
-// // HOMEPAGE CSS
-
-@mixin main{
+  }
+  
+  // // HOMEPAGE CSS
+  
+  @mixin main{
   background-image: url('./Media/DesktopBackgrounds/bgrnd.jpg');
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
-
-}
-
-.main-container{
+  
+  }
+  
+  .main-container{
   @include main();
-  background-position: center 120%;  
-}
-.main-container-mobile{
+  background-position: center 120%;
+  }
+  .main-container-mobile{
   @include main();
-  background-position: 80% 140%;  
-}
-
-@mixin homeText {
+  background-position: 80% 140%;
+  }
+  
+  @mixin homeText {
   @include whiteFont();
   padding-top: 7%;
   padding-bottom: 13%;
   padding-left: 2%;
-}
-.homeText{
+  }
+  .homeText{
   @include homeText();
   margin-left: 10%;
   margin-right: 50%;
-}
-
-.homeText-mobile{
+  }
+  
+  .homeText-mobile{
   @include homeText();
   padding-top: 20%;
   margin-left: 5%;
   margin-right: 5%;
-}
-
-.localSmall{
+  }
+  
+  .localSmall{
   margin-bottom: 10%;
   font-size: 180%;
-  font-weight: 100;  
-}
-
-.local{
+  font-weight: 100;
+  }
+  
+  .local{
   font-size: 340%;
   font-weight: 100;
   color: white;
-}
-
-.local-mobile{
+  }
+  
+  .local-mobile{
   font-size: 250%;
   font-weight: 100;
   color: white;
+  }
   
-}
-
-.title{
+  .title{
   font-size: 190%;
   padding-bottom: 3%;
   font-weight: 190;
-}
-
-.wave-container{
+  }
+  
+  .wave-container{
   width: 100%;
-}
-
-.wave{
+  }
+  
+  .wave{
   width:100%;
   height:40%;
   display: block;
-}
-
-.descriptionContainer{
+  }
+  
+  .descriptionContainer{
   margin-left: 15%;
   margin-right: 15%;
-  
-  
-}
-.descriptionContainer-mobile{
+  }
+  .descriptionContainer-mobile{
   margin-left: 5%;
   margin-right: 5%;
+  }
   
-  
-}
-
-.white{
+  .white{
   padding-top: 30%;
   width:100%
-}
-
-@mixin black{
+  }
+  
+  @mixin black{
   @include blackFont();
   font-weight: 100;
   margin-bottom: 0%;
   margin-top: 10%;
   padding: 0% 6%;
   text-align: center;
-}
-.black{
+  }
+  .black{
   @include black();
   font-size: 330%;
-}
-.black-mobile{
+  }
+  .black-mobile{
   @include black();
   font-size: 230%;
-}
-.whiteBackground{
+  }
+  .whiteBackground{
   background-color: white;
   width: 100%;
   // height:100%
-}
-
-.boxes{
+  }
+  
+  .boxes{
   display: flex;
   justify-content: space-evenly;
   margin-top:5%;
@@ -285,65 +278,64 @@ a, a:visited, a:hover, a:active {
   flex-wrap:wrap;
   align-content:space-evenly;
   align-self: center;
-}
-@mixin numbers {
+  }
+  @mixin numbers {
   color:#E4BD0F;
   font-family: $font;
   font-size: 410%;
   text-align: center;
   margin-bottom: 0%;
   font-weight: 200;
-}
-.numbers{
+  }
+  .numbers{
   @include numbers()
-}
-
-.numbers-mobile{
+  }
+  
+  .numbers-mobile{
   @include numbers();
   font-size: 310%;
-}
-
-.itemName{
+  }
+  
+  .itemName{
   color:#C2C2C3;
   font-family: $font;
   text-align: center;
   margin-top: 0%;
-}
-
-@mixin blurb {
+  }
+  
+  @mixin blurb {
   font-family: $font;
   text-align: center;
   margin-bottom: 15%;
   font-weight: 200;
-}
-.blurb{
+  }
+  .blurb{
   @include blurb();
   font-size: 150%;
-}
-
-.blurb-mobile{
+  }
+  
+  .blurb-mobile{
   @include blurb();
   font-size: 120%;
-}
-.mini-title{
+  }
+  .mini-title{
   font-weight: bold;
-}
-.storyContainer{
+  }
+  .storyContainer{
   margin-left: 8%;
   margin-right: 8%;
-}
-
-.stories{
+  }
+  
+  .stories{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: space-around;
   // margin-left: 8%;
   // margin-right: 8%;
-}
-
-.story{
+  }
   
+  .story{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -357,19 +349,19 @@ a, a:visited, a:hover, a:active {
   background-size: cover;
   // opacity: 120%;
   // position: relative;
-
-}
-
-.exampleStory{
+  
+  }
+  
+  .exampleStory{
   @include whiteFont();
   color: $green;
   margin:10%;
   // width: 100%;
   font-size: 40px;
-
-}  
-
-.readStory{
+  
+  }
+  
+  .readStory{
   @include whiteFont();
   display: flex;
   justify-content: space-between;
@@ -382,18 +374,18 @@ a, a:visited, a:hover, a:active {
   width: 100%;
   bottom: 0;
   left: 0;
-}
-
-.padding{
+  }
+  
+  .padding{
   padding:5%;
   flex-grow: 4;
-}
-
-.chevron-right{
+  }
+  
+  .chevron-right{
   flex-grow: 1;
   align-self: center;
-}
-@mixin viewMore{
+  }
+  @mixin viewMore{
   font-family: "Geon", Times, serif;
   border: 1px solid #C2C2C1;
   box-shadow:1px 1px -8px -1px #C2C2C1 #C2C2C1;
@@ -405,136 +397,133 @@ a, a:visited, a:hover, a:active {
   width: 400px;
   margin:30px auto;
   display:block;
-}
-.viewMore{
+  }
+  .viewMore{
   @include viewMore()
-}
-
-.viewMore-mobile{
+  }
+  
+  .viewMore-mobile{
   @include viewMore();
   padding: 3%;
   width: 90%;
+  }
   
-}
-
-// // END OF HOMEPAGE CONTAINER CSS
-
-hr.solid {
+  // // END OF HOMEPAGE CONTAINER CSS
+  
+  hr.solid {
   border-top: 1px solid #F3F3F3;
   margin-bottom: 5%;
-}
-
-
-
-.logoBanner{
+  }
+  
+  
+  
+  .logoBanner{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 6%;
-}
-
-::placeholder{
-  color:$off-White; 
-}
-
-.update{
+  }
+  
+  ::placeholder{
+  color:$off-White;
+  }
+  
+  .update{
   float:right;
-}
-.email{
+  }
+  .email{
   display: flex;
   align-items: center;
   // justify-content: space-between;
   position:relative;
   border-color:$off-White;
-  border-style:solid; 
-  color:$off-White; 
-  box-shadow: 2px 0px 5px 0px rgba(42,42,42,.11); 
-  text-shadow:0px 0px 0px rgba(42,42,42,.35); 
-  font-size:22px; 
-  border-radius:0px; 
-  border-width:1px; 
+  border-style:solid;
+  color:$off-White;
+  box-shadow: 2px 0px 5px 0px rgba(42,42,42,.11);
+  text-shadow:0px 0px 0px rgba(42,42,42,.35);
+  font-size:22px;
+  border-radius:0px;
+  border-width:1px;
   width: 95%;
   padding:2%;
-}
-
-#email{
+  }
+  
+  #email{
   flex-basis: 90%;
   font-family:$font;
   border-color:white;
-  border-style:none; 
+  border-style:none;
   // height:100%;
-  color:$off-White; 
-  font-size:22px; 
+  color:$off-White;
+  font-size:22px;
   display:inline-block;
-}
-input{
+  }
+  input{
   text-decoration: none;
   // height: 100%;
   // outline-width: 0;
-}
-#chevron-email{
+  }
+  #chevron-email{
   flex-basis:10%;
   display:inline-block;
   width: 100%;
   height:100%;
   left:265px;
   top:2px;
+  }
   
-}
-
-.update{
+  .update{
   font-family: $font;
   font-size: 180%;
   font-weight: lighter;
-}
-
-.bottomBanner{
+  }
+  
+  .bottomBanner{
   margin: 5%;
-}
-
-#links{
-
+  }
+  
+  #links{
+  
   justify-content: space-between;
   width: 60%;
-  font-size: 110% ; 
+  font-size: 110% ;
   display: flex;
   flex-wrap: wrap;
   font-family: "Geon", Times, sans-serif;
   margin-bottom:2%;
-}
-
-.copyright{
+  }
+  
+  .copyright{
   color:$off-White;
   margin-top: 4%;
   font-size: 110%;
-}
-
-.blankSpace{
+  }
+  
+  .blankSpace{
   height:10px;
-}
-
-#icon {
+  }
+  
+  #icon {
   font-family: $font;
   align-items: center;
   background: none;
   border:0;
-}
-
-.blogs{
-display: flex;
-flex-wrap: wrap;
-}
-
-#icon:focus {outline:0;}
-div .Bar {
-  width: 35px;
+  }
   
+  .blogs{
+  display: flex;
+  flex-wrap: wrap;
+  }
+  
+  #icon:focus {outline:0;}
+  div .Bar {
+  width: 35px;
   height: 5px;
   background-color: white;
   margin: 6px 0;
-}
-
-.dropdown-menu.show{
+  }
+  
+  .dropdown-menu.show{
   background-color: white;
   padding:3%;
   width: 80%;
@@ -547,118 +536,118 @@ div .Bar {
   box-shadow: 0 15px 19px 0 rgba(0,0,0,0.2);
   // position: absolute;
   // margin: 2% 0%;
-}
-
-.container-mobile{
+  }
+  
+  .container-mobile{
   height:100%;
-}
-
-
-.list{
+  }
+  
+  
+  .list{
   height:200px;
   width: 300px;
-}
-
-.exampleStory #blogpage{
+  }
+  
+  .exampleStory #blogpage{
   position: relative;
   top: 400px;
-
-}
-.contentPreview  {
+  
+  }
+  .contentPreview {
   font-weight: lighter !important;
   color: black;
   margin: 8%;
   font-weight:normal;
   font-size: 70%;
-}
-@mixin backgroundSettings{
+  }
+  @mixin backgroundSettings{
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
-}
-
-.blogcontainer{
+  }
+  
+  .blogcontainer{
   background-image: url('./Media/DesktopBackgrounds/background4.jpg');
   @include backgroundSettings();
   background-position: center -150px;
-}
-
-.aboutcontainer{
+  }
+  
+  .aboutcontainer{
   background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
   background-position: center -415px;
-}
-
-.contactContainer{
+  }
+  
+  .contactContainer{
   background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
   background-position: center -350px;
-}
-
-.contactContainer-mobile{
+  }
+  
+  .contactContainer-mobile{
   background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
-}
-
-.donationContainer{
+  }
+  
+  .donationContainer{
   background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
   @include backgroundSettings();
   // background-size: 108%;
   background-position: center -261px;
-}
-.donationContainer-mobile{
+  }
+  .donationContainer-mobile{
   background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
   @include backgroundSettings();
   background-size: 208%;
   background-position: center -200px;
-}
-
-@mixin headings(){
+  }
+  
+  @mixin headings(){
   @include whiteFont();
   top: 1000px;
   padding-top: 10%;
   margin: 0% auto;
   text-align: center;
-
-}
-
-.Posts{
+  
+  }
+  
+  .Posts{
   @include headings();
   font-size: 200%;
   padding-top: 2%;
-}
-
-.Posts-mobile{
+  }
+  
+  .Posts-mobile{
   @include headings();
   font-size: 150%;
   padding-top: 15%;
-
-}
-
-.contactHeading{
+  
+  }
+  
+  .contactHeading{
   @include headings();
   font-size: 200%;
-
-}
-@mixin blogs{
+  
+  }
+  @mixin blogs{
   display: flex;
   background-color: white;
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.blogs{
+  }
+  
+  .blogs{
   @include blogs();
-}
-.blogs-mobile{
+  }
+  .blogs-mobile{
   @include blogs();
   padding-top: 20%;
-}
-
-.individualArticle{
+  }
+  
+  .individualArticle{
   @include blackFont();
   background-color: white;
   // padding: 5%;
@@ -666,57 +655,57 @@ div .Bar {
   font-size: 20px;
   margin-top: 0;
   text-align: justify;
-}
-@mixin bottomBanner{
+  }
+  @mixin bottomBanner{
   margin-top: 25px;
-}
-.keepUpdated{
+  }
+  .keepUpdated{
   @include bottomBanner();
   margin-bottom: 2%;
   color:#4E4E54;
-}
-
-.bottomLogo{
+  }
+  
+  .bottomLogo{
   @include bottomBanner();
-}
-.writtenBy{
+  }
+  .writtenBy{
   margin: 0;
   padding: 0%;
-
-}
-
-.noBottomPadding{
+  
+  }
+  
+  .noBottomPadding{
   margin-bottom: 0%;
   // margin-top: 15%;
   // padding-top: 1%;
-
-}
-
-.avatar {
+  
+  }
+  
+  .avatar {
   vertical-align: middle;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-}
-
-.contactContent{
+  }
+  
+  .contactContent{
   padding: 0% 4%;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-}
-
-
-
-.card{
+  }
+  
+  
+  
+  .card{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   font-family: $font;
-}
-
-#form.card-mobile{
+  }
+  
+  #form.card-mobile{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   font-family: $font;
@@ -724,133 +713,175 @@ div .Bar {
   font-size: 130%;
   margin:1%;
   padding: 7%;
-}
-#form.card{
+  }
+  #form.card{
   width: 25%;
   margin: 1%;
   font-size: 130%;
   padding: 2%;
-}
-#donate.card{
+  }
+  #donate.card{
   width: 95%;
   font-size: 130%;
   padding: 2%;
-}
-
-.card:hover {
+  }
+  
+  .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-
-
-label, input {
+  }
+  
+  
+  
+  label, input {
   // display: block;
-}
-@mixin inputLines {
+  }
+  @mixin inputLines {
   background: transparent;
   border: none;
-  width:100%;
   font-family: $font;
   font-size: 110%;
   border-bottom: 1px solid #000000;
-}
-input  {
+  }
+  input {
   @include inputLines();
-}
-
-#msg{
+  width:100%;
+  }
+  
+  #msg{
   @include inputLines();
-}
-
-button#submit{
+  }
+  
+  button#submit{
   @include whiteFont();
   height: 60px;
   width: 150px;
   background-color: $green;
   font-size: 120%;
-  margin:  0%;
-
-}
-.contactDetails.card{
+  margin: 0%;
+  
+  }
+  .contactDetails.card{
   display: flex;
   justify-content: space-around;
   margin-top: 1%;
   padding:4%;
-}
-
-
-
-.contactDetails-mobile.card{
+  }
+  
+  
+  
+  .contactDetails-mobile.card{
   // @include contactDetails();
   flex-direction: column;
   padding: 4%;
-}
-
-.contactPanel{
+  }
+  
+  .contactPanel{
   margin: 1%;
-}
-.contactPanel-mobile{
+  }
+  .contactPanel-mobile{
   margin: 1%;
   width:100%;
-}
-
-.message{
+  }
+  
+  .message{
   margin-bottom:15%;
-}
-
-.chevronButton{
+  }
+  
+  .chevronButton{
   background: none;
   border: none;
-}
-
-.space{
+  }
+  
+  .space{
   margin-bottom: 15%;
-}
-.burger{
+  }
+  .burger{
   left:1%;
   text-decoration: none;
   outline: transparent;
   border:none;
   background-color:transparent;
-}
-
-.dropdown{
+  }
+  
+  .dropdown{
   position: absolute;
   background-color: white;
-
+  
   top: 75px;
   left: 5%;
   width: 90%;
   font-size: 120%;
   max-width: 100%;
   font-weight:normal ;
-  
   border-radius: 14px;
   box-shadow: 0 6px 16px 0 rgba(0,0,0,.15), 0 3px 6px 0 rgba(0,0,0,.1);
-}
-
-#amount{
-  border: black 1px solid;
+  }
   
-}
-
-.spaceDonate{
+  #amount{
+  border: black 1px solid;
+  }
+  
+  .spaceDonate{
   margin-bottom: 10%;
-
-}
-
-input[type="text"]#subdomaintwo{
-  -webkit-appearance: none!important;
-
+  }
+  
+  .otherDonation{
+  // padding: 0%;
+  white-space: nowrap;
+  display: inline-flex;
+  }
+  
+  .inputAmount{
+  white-space: nowrap;
+  margin-top: 1em;
+  width: 60%;
+  }
+  
+  .donationAmount{
+  margin: 5% 0%;
+  }
+  
+  .donate-now {
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+  }
+  
+  .donate-now li {
+  float: left;
+  margin: 0 5px 0 0;
   width: 100px;
-  border: 1px solid gray;
-  border-left: 0px;
-  margin: 0 0 0 -7px;
-  background: white;
-}
-input[type="text"]#subdomain{
-  -webkit-appearance: none!important;
-  border: 1px solid gray;
-  border-right: 0px;
-  outline: none;
-}
+  height: 40px;
+  position: relative;
+  }
+  
+  .donate-now label,
+  .donate-now input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  }
+  
+  .donate-now input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+  }
+  
+  .donate-now input[type="radio"]:checked+label,
+  .Checked+label {
+  background: $green;
+  }
+  
+  .donate-now label {
+  padding: 5px;
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+  }
+  
+  .donate-now label:hover {
+  background: #DDD;
+  }
