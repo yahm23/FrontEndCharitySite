@@ -41,7 +41,7 @@ const Blogs=()=> {
     return (
         <div>
           <Helmet>
-            <title>Stories</title>
+            <title>Green Foundation - Stories</title>
           </Helmet>
           <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>  
           <div className="overlay"></div>

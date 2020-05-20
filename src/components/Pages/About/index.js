@@ -12,7 +12,7 @@ const About = ()=> {
     return (
         <div> 
             <Helmet>
-                <title>About Us</title>
+                <title>Green Foundation - About Us</title>
                 {/* <img  id="favicon" rel="icon" href="./Media/Logos/PNG/LighterLogo.png" /> */}
             </Helmet>
             <div className="aboutcontainer">        

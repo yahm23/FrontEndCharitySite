@@ -11,7 +11,7 @@ const Support =()=> {
     return (
         <div>
             <Helmet>
-                <title>Support Us</title>
+                <title>Green Foundation - Support Us</title>
             </Helmet>
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
 

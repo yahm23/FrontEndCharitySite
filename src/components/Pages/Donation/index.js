@@ -12,7 +12,7 @@ const Donation =()=> {
     return (
         <div>
             <Helmet>
-                <title>Donate</title>
+                <title>Green Foundation - Donate</title>
             </Helmet>
 
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>

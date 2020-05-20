@@ -11,7 +11,7 @@ const  PrivacyPolicy =()=> {
     return (
         <div>
             <Helmet>
-                <title>Privacy Policy</title>
+                <title>Green Foundation - Privacy Policy</title>
             </Helmet>
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
                 <div>      

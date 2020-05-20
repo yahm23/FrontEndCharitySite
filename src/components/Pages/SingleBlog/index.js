@@ -45,7 +45,7 @@ const SingleBlog = (props)=>{
         return(
             <div className="blogBanner">
                 <Helmet>
-                    <title>{blog.title}</title>
+                    <title>Green Foundation - {blog.title}</title>
                 </Helmet>
                 <div className="blogcontainer">
                 <div className="overlay"></div>
