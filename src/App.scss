@@ -867,10 +867,11 @@ button#submit{
 
 .otherAmount{
   border: 1px solid black ;
-  width:30%;
+  width:100px;
 }
 
 .donationAmounts{
+  text-align: right; 
   font-family: $font;
   font-size: 120%;
   margin:2% 2% 3% 0%;
