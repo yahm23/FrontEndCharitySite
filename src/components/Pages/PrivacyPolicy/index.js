@@ -15,7 +15,9 @@ const  PrivacyPolicy =()=> {
             </Helmet>
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
                 <div>      
+                    <div className="overlay"></div>
                     <div className={isMobile? "Posts-mobile":"contactHeading"}>
+                        
                         <h1>Our Privacy Policy</h1>
                         <Wave></Wave>
                     </div>

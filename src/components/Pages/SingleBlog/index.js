@@ -48,7 +48,7 @@ const SingleBlog = (props)=>{
                     <title>{blog.title}</title>
                 </Helmet>
                 <div className="blogcontainer">
-
+                <div className="overlay"></div>
                     <div className={isMobile ?"Posts-mobile":"contactHeading"} >
                         <h1 className="noBottomPadding">{blog.title}</h1>
                         <h4 className="writtenBy">Written by {blog.author? blog.author.name:'Green'} </h4>

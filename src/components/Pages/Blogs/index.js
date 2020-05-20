@@ -44,6 +44,7 @@ const Blogs=()=> {
             <title>Stories</title>
           </Helmet>
           <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>  
+          <div className="overlay"></div>
 
             <div className={isMobile ?"Posts-mobile":"contactHeading"}>
               <h1>Stories</h1>

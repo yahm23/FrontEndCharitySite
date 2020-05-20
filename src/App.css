@@ -87,7 +87,6 @@ body {
   height: 100%;
   outline: transparent;
   font-size: 16px;
-  margin-right: 4%;
   white-space: nowrap;
   padding: 0% 20%;
 }
@@ -493,7 +492,11 @@ input {
 }
 
 .bottomBanner {
-  margin: 5%;
+  position: relative;
+  background-color: white;
+  /* width: 100%; */
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
 #links {
@@ -592,7 +595,6 @@ div .Bar {
   background-size: cover;
   height: 100%;
   background-position: center -415px;
-  z-index: 0;
 }
 
 .overlay {
