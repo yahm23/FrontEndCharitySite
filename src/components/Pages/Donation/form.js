@@ -10,7 +10,7 @@ constructor(props) {
         name:'',
         email:'',
         number:'',
-        amount:''
+        amount:'none'
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -105,7 +105,7 @@ constructor(props) {
                         <label htmlFor="other">Other </label>
                     </li>
 
-                    {this.state.amount==="75"|| this.state.amount==="50"|| this.state.amount==="100"|| this.state.amount==="25"?
+                    {this.state.amount==="75"|| this.state.amount==="50"|| this.state.amount==="100"|| this.state.amount==="25"|| this.state.amount==="none"?
 
                     <li>
                     </li>

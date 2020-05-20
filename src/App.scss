@@ -869,9 +869,10 @@ body{
   }
   
   .donate-now {
-  list-style-type: none;
-  margin: 25px 0 0 0;
-  padding: 0;
+    display: flex;
+    list-style-type: none;
+    margin: 25px 0 0 0;
+    padding: 0;
   }
   
   .donate-now li {
