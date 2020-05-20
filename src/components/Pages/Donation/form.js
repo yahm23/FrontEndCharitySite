@@ -54,7 +54,7 @@ constructor(props) {
         })}
         else{
             alert('Please pick an amount to donate');
-            // event.preventDefault();
+            event.preventDefault();
         }
     }
 
