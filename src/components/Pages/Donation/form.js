@@ -29,6 +29,7 @@ constructor(props) {
         this.setState({number: event.target.value});
     }
     handleAmountChange(event) {
+        event.preventDefault();
         this.setState({amount: event.target.value});
     }
 
@@ -82,56 +83,25 @@ constructor(props) {
             </div>
 
             <label>Amount {this.state.amount}</label>
-            <div className="donationAmount spaceDonate">
-                <ul onChange={this.handleAmountChange} className="donate-now">
-                    <li>
-                        <input value="25" type="radio" id="a25" name="amount" />
-                        <label htmlFor="a25">£25</label>
-                    </li>
+            <p className="smallerText">Choose a custom or preset amount below</p>
+            <div className="">
+                <div >
 
-                    <li>
-                        <input value="50" type="radio" id="a50" name="amount" />
-                        <label htmlFor="a50">£50</label>
-                    </li>
-
-                    <li>
-                        <input value="75" type="radio" id="a75" name="amount" />
-                        <label htmlFor="a75">£75</label>
-                    </li>
-
-                    <li>
-                        <input value="100" type="radio" id="a100" name="amount" />
-                        <label htmlFor="a100">£100</label>
-                    </li>
-
-                    <li>
-                        <input value="other" type="radio" id="other" name="amount" />
-                        <label htmlFor="other">Other </label>
-                    </li>
-
-                    {this.state.amount==="75"|| this.state.amount==="50"|| this.state.amount==="100"|| this.state.amount==="25"|| this.state.amount===""?
-
-                    <li>
-                    </li>
                     
-                    :
+                    <button className="donationAmounts" onClick={this.handleAmountChange} value="25"   name="amount">£25</button>  
 
-                    <li>
-                        <input value={this.state.amount} onChange={this.handleAmountChange} type="number" id="otherAmount" min="0" name="numAmount" />
-                    </li>
-                    }
-
-                </ul>
-            </div>
-
-            {/* <span Name="currencyinput">£<input value={this.state.amount} onChange={this.handleMessageChange} type="number" id="amount" name="amount" required></input></span> */}
-
-
-
+                    <button className="donationAmounts" onClick={this.handleAmountChange} value="50"   name="amount">£50</button>
             
-            <br></br>
-            <br></br>
-            <br></br>
+                    <button className="donationAmounts" onClick={this.handleAmountChange} value="75"   name="amount">£75</button>
+ 
+                    <button className="donationAmounts" onClick={this.handleAmountChange} value="100"   name="amount">£100</button>
+                    <br>
+                    </br>
+                    <input className="donationAmounts otherAmount"  value={this.state.amount} onChange={this.handleAmountChange} type="number"  min="0" name="numAmount" />
+
+
+                    </div>
+            </div>
             <button id= "submit" type="submit">Submit</button>
 
         </form>
