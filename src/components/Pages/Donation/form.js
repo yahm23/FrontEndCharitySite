@@ -10,7 +10,7 @@ constructor(props) {
         name:'',
         email:'',
         number:'',
-        amount:'none'
+        amount:''
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -33,7 +33,7 @@ constructor(props) {
     }
 
     handleSubmit(event) {
-        if(this.state.amount!='none'){
+        if(this.state.amount!=''||this.state.amount!='other'){
         const postURL = "https://blog-back-end-green.herokuapp.com/donations"
         fetch(postURL, {
         method: 'POST',
@@ -54,8 +54,8 @@ constructor(props) {
         })}
         else{
             alert('Please pick an amount to donate');
+            // event.preventDefault();
         }
-        // event.preventDefault();
     }
 
     render(){
@@ -81,7 +81,7 @@ constructor(props) {
                 <input value={this.state.number} onChange={this.handlePhoneChange} type="number" id="number" name="user_enumber" required></input>
             </div>
 
-            <label>Amount</label>
+            <label>Amount {this.state.amount}</label>
             <div className="donationAmount spaceDonate">
                 <ul onChange={this.handleAmountChange} className="donate-now">
                     <li>
@@ -109,7 +109,7 @@ constructor(props) {
                         <label htmlFor="other">Other </label>
                     </li>
 
-                    {this.state.amount==="75"|| this.state.amount==="50"|| this.state.amount==="100"|| this.state.amount==="25"|| this.state.amount==="none"?
+                    {this.state.amount==="75"|| this.state.amount==="50"|| this.state.amount==="100"|| this.state.amount==="25"|| this.state.amount===""?
 
                     <li>
                     </li>
