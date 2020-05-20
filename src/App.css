@@ -355,7 +355,8 @@ a, a:visited, a:hover, a:active {
   margin-bottom: 5%;
   width: 340px;
   height: 460px;
-  box-shadow: -10px -10px 8px -9px #cccccc;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
   background-image: url("./Media/plants/plant.jpg");
   background-position: 103% center;
   background-repeat: no-repeat;
