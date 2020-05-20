@@ -33,7 +33,7 @@ constructor(props) {
     }
 
     handleSubmit(event) {
-        if(this.state.amount!=''||this.state.amount!='other'){
+        if(this.state.amount!=''&& this.state.amount!='other'){
         const postURL = "https://blog-back-end-green.herokuapp.com/donations"
         fetch(postURL, {
         method: 'POST',
