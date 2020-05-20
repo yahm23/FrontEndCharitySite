@@ -595,14 +595,14 @@ div .Bar {
 
 .overlay {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(104, 111, 122, 0.2);
   width: 100%;
   height: 100%;
   z-index: 0;
 }
 
 .contactContainer {
-  background-image: url("./Media/DesktopBackgrounds/NCLDark.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -612,7 +612,7 @@ div .Bar {
 }
 
 .contactContainer-mobile {
-  background-image: url("./Media/DesktopBackgrounds/NCLDark.jpg");
+  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
