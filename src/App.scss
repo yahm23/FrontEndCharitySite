@@ -100,15 +100,15 @@ body{
   }
   .donateButton{
   @include donateButton();
-  width: 100%;
+  width: 200px;
   height:100%;
   outline: transparent;
   font-size: 16px;
   
-  flex-grow: 1;
   margin-right: 4%;
   white-space: nowrap;
   padding: 0% 20%;
+
   }
   .donateButton-mobile{
   @include donateButton();

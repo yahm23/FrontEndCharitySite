@@ -11,7 +11,7 @@ function App() {
   
   //Checking platform the page is loaded on; phone/smaller screen or a Desktop
   const DesktopOrMobile = () => {
-    let isMobile = useMediaQuery({ maxWidth: 787 })
+    let isMobile = useMediaQuery({ maxWidth: 970 })
     return (
  
       <div className ={`container${isMobile ? "-mobile" : ""}`}>
