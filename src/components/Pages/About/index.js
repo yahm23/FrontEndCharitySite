@@ -15,11 +15,15 @@ const About = ()=> {
                 <title>About Us</title>
                 {/* <img  id="favicon" rel="icon" href="./Media/Logos/PNG/LighterLogo.png" /> */}
             </Helmet>
-            <div className="aboutcontainer">
-
+            <div className="aboutcontainer">        
+                <div className="overlay"></div>
+                
                 <div className={isMobile ?"Posts-mobile":"contactHeading"} >
                     <h1 className=""> About The Green Foundation</h1>
                     <Wave></Wave>
+                </div>
+
+
                     <div className="whiteBackground">
                         <div className="descriptionContainer">
 
@@ -43,13 +47,13 @@ const About = ()=> {
                                     ● Regeneration Projects - We accept applications from individuals, organisations, and communities to provide funding and grants towards regeneration projects and renewable energy projects. These will be submitted to Members of Green to vote to determine who receives funding.
                                 </p>
                             </div>
+            
+            </div>
                         
                         </div>
                     </div>
-                </div>
             
 
-            </div>
             <BottomBanner></BottomBanner>
 
         </div>

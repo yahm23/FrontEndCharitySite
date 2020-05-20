@@ -18,7 +18,7 @@ const Contact=()=>{
             </Helmet>
             
             <div className="contactContainer" >
-
+                <div className="overlay"></div>
                 <div className="contactHeading" >
                     <h1>Contact</h1>
                     <Wave></Wave>
