@@ -82,7 +82,7 @@ constructor(props) {
                 <input value={this.state.number} onChange={this.handlePhoneChange} type="number" id="number" name="user_enumber" required></input>
             </div>
 
-            <label>Amount {this.state.amount}</label>
+            <label>Amount  </label>
             <p className="smallerText">Choose a custom or preset amount below</p>
             <div className="">
                 <div >
