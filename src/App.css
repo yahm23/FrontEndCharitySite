@@ -792,6 +792,7 @@ input {
   font-family: "Geon", Times, sans-serif;
   font-size: 110%;
   border-bottom: 1px solid #000000;
+  width: 100%;
 }
 
 button#submit {
