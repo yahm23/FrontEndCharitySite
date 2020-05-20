@@ -82,7 +82,7 @@ constructor(props) {
                 <input value={this.state.number} onChange={this.handlePhoneChange} type="number" id="number" name="user_enumber" required></input>
             </div>
 
-            <label>Amount </label>
+            <label>Amount {this.state.amount}</label>
             <p className="smallerText">Choose a custom or preset amount below</p>
             <div className="">
                 <div >
@@ -97,7 +97,10 @@ constructor(props) {
                     <button className="donationAmounts" onClick={this.handleAmountChange} value="100"   name="amount">£100</button>
                     <br>
                     </br>
-                    <input className="donationAmounts otherAmount"  value={this.state.amount} onChange={this.handleAmountChange} type="number"  min="0" name="numAmount" />
+                    
+                    <div className="donationAmounts otherAmount">
+                        £<input className="inputLine"  value={this.state.amount} onChange={this.handleAmountChange} type="number"  min="0" name="numAmount" />
+                    </div>
 
 
                     </div>

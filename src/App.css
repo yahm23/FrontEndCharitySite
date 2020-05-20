@@ -873,6 +873,12 @@ button#submit {
 .otherAmount {
   border: 1px solid black;
   width: 100px;
+  white-space: nowrap;
+}
+
+.inputLine {
+  width: 80px;
+  border: none;
 }
 
 .donationAmounts {

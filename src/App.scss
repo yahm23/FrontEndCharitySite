@@ -868,8 +868,13 @@ button#submit{
 .otherAmount{
   border: 1px solid black ;
   width:100px;
-}
+  white-space: nowrap;
 
+}
+.inputLine{
+  width: 80px;
+  border: none;
+}
 .donationAmounts{
   text-align: right; 
   font-family: $font;
@@ -888,6 +893,7 @@ button#submit{
 
 .smallerText{
   font-size: 70%;
+  
 
 }
 
