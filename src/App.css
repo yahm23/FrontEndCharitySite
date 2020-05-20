@@ -496,6 +496,7 @@ input {
   background-color: white;
   /* width: 100%; */
   margin: 0 auto;
+  padding: 0% 4%;
   max-width: 1920px;
 }
 
@@ -751,7 +752,7 @@ div .Bar {
 }
 
 #form.card-mobile {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #cccccc;
   transition: 0.3s;
   font-family: "Geon", Times, sans-serif;
   width: 100%;
@@ -815,6 +816,7 @@ button#submit {
 .contactDetails-mobile.card {
   flex-direction: column;
   padding: 4%;
+  margin-top: 4%;
 }
 
 .contactPanel {
