@@ -33,6 +33,7 @@ constructor(props) {
     }
 
     handleSubmit(event) {
+        if(this.state.amount!='none'){
         const postURL = "https://blog-back-end-green.herokuapp.com/donations"
         fetch(postURL, {
         method: 'POST',
@@ -50,7 +51,10 @@ constructor(props) {
         .then(()=>{
         alert('Your donation has been submitted');
 
-        })
+        })}
+        else{
+            alert('Please pick an amount to donate');
+        }
         // event.preventDefault();
     }
 
