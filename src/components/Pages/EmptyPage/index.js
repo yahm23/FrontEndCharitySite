@@ -34,7 +34,7 @@ const EmptyPage = ()=> {
 
                             </div>
             
-            </div>
+                        </div>
                         
                         </div>
                     </div>
