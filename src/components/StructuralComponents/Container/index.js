@@ -14,6 +14,9 @@ import PrivacyPolicy from "../../Pages/PrivacyPolicy";
 import MobileNavBar from "../MobileNavBar";
 
 class Container extends Component {
+
+
+  
     render() {
       return(
     <div>
