@@ -1,4 +1,4 @@
-import React, { useState, useEffect, setErrors} from 'react'
+import React , { Component }  from "react";
 import { Route, Switch} from "react-router-dom";
 
 
@@ -13,22 +13,12 @@ import NavBar from "../NavBar";
 import PrivacyPolicy from "../../Pages/PrivacyPolicy";
 import MobileNavBar from "../MobileNavBar";
 
-const Container= (mobileClass)=> {
-
-  var [pages,setPages]=useState();
-
-  // componentDidMount() {
-  //   fetch('https://blog-back-end-green.herokuapp.com/pages/')
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ data }));
-  // }
-
-
-    
-      return(
+ const Container=(props)=>{
+  
+    return(
     <div>
-      <div className ={mobileClass==="mobile" ? "container-mobile" : "container"}>
-          {mobileClass==="mobile" ? <MobileNavBar></MobileNavBar>: <NavBar></NavBar>}
+      <div className ={props.mobileClass==="mobile" ? "container-mobile" : "container"}>
+          {props.mobileClass==="mobile" ? <MobileNavBar></MobileNavBar>: <NavBar></NavBar>}
         <nav className="app-container">
         </nav>
           <Switch>
