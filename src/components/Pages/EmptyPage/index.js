@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect, setErrors } from 'react'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
 
 
-const EmptyPage = ()=> {
+const EmptyPage = (props)=> {
+    var [posts,setPosts] = useState();
+
+    async function fetchData() {
+  
+      await fetch(`https://blog-back-end-green.herokuapp.com/pages/${props.match.params.url}`)
+      .then(response => response.json())
+      .then(response => {
+          setPosts(response);            
+      })
+  
+      .catch(err => setErrors(err));
+    }
+  
+    useEffect(() => {
+      fetchData();
+      return () => {
+          console.log('unmounting...') 
+      }
+    },[]);
+
     let isMobile = useMediaQuery({ maxWidth: 767 })
 
     return (
