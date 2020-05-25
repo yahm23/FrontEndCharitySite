@@ -709,6 +709,10 @@ div .Bar {
   text-align: justify;
 }
 
+.individualArticle img {
+  max-width: 100%;
+}
+
 .keepUpdated {
   margin-top: 25px;
   margin-bottom: 2%;

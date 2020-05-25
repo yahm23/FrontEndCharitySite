@@ -684,12 +684,17 @@ div .Bar {
 
 .individualArticle{
   @include blackFont();
+  
   background-color: white;
   // padding: 5%;
   padding-top: 1%;
   font-size: 20px;
   margin-top: 0;
   text-align: justify;
+}
+
+.individualArticle img{
+  max-width: 100%;
 }
 @mixin bottomBanner{
   margin-top: 25px;
