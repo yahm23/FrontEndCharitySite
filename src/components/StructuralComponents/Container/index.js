@@ -18,36 +18,36 @@ import PageNotFound from '../../Pages/PageNotFound';
 const Container=(props)=>{
 var [pages,setPages] = useState('');
 
-async function fetchData() {
+// async function fetchData() {
 
-  await fetch("https://blog-back-end-green.herokuapp.com/pages")
-  .then(response => response.json())
-  .then(response => {
-      setPages(response);
-      console.log(pages);
+//   await fetch("https://blog-back-end-green.herokuapp.com/pages")
+//   .then(response => response.json())
+//   .then(response => {
+//       setPages(response);
+//       console.log(pages);
                   
-  })
-  .catch(err => setErrors(err));
-}
+//   })
+//   .catch(err => setErrors(err));
+// }
 
-  useEffect(() => {
-    fetchData();
-    return () => {
-        console.log('unmounting...') 
-    }
-  },[]);
+//   useEffect(() => {
+//     fetchData();
+//     return () => {
+//         console.log('unmounting...') 
+//     }
+//   },[]);
 
-  const Pages = () => (
-    pages.map(page=>
+//   const Pages = () => (
+//     pages.map(page=>
       
-      <Route key={page.id} path={"/"+page.url}
-      render={(props) => <EmptyPage {...props} id={`${page.id}`} />}
-      />
-    )
+//       <Route key={page.id} path={"/"+page.url}
+//       render={(props) => <EmptyPage {...props} id={`${page.id}`} />}
+//       />
+//     )
 
-  )
+//   )
 
-  if(pages){
+  if(true){
     return(
     <div>
       <div className ={props.mobileClass==="mobile" ? "container-mobile" : "container"}>
@@ -66,9 +66,9 @@ async function fetchData() {
             
             <Route path='/privacy-policy' component ={PrivacyPolicy}/>
 
-            <Pages></Pages>
-            <Route exact path='*' render={()=><PageNotFound></PageNotFound>}/>
-            {/* <Route component ={PageNotFound}/> */}
+            {/* <Pages></Pages> */}
+            <Route exact path='/page-not-found' render={()=><PageNotFound></PageNotFound>}/>
+            <Route path='/:url' component ={EmptyPage}/>
           </Switch>
      </div>
     

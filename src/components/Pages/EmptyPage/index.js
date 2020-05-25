@@ -9,30 +9,32 @@ import {Helmet} from "react-helmet";
 
 
 const EmptyPage = (props)=> {
-    
-    let isMobile = useMediaQuery({ maxWidth: 767 })
-
+    var [pages,setPages] = useState('');
     var [page,setPage] = useState('');
-
-    async function fetchData() {
-      await fetch(`https://blog-back-end-green.herokuapp.com/pages/${props.id}`)
-
-      .then(response => response.json())
-      .then(response => {
-          setPage(response); 
-          console.log(props);    
-      })
-      
-  
-      .catch(err => setErrors(err));
-    }
-  
+    
     useEffect(() => {
       fetchData();
       return () => {
           console.log('unmounting...') 
       }
     },[props.id]);
+    
+    let isMobile = useMediaQuery({ maxWidth: 767 })
+
+
+    async function fetchData() {
+      await fetch(`https://blog-back-end-green.herokuapp.com/pages/`)
+
+      .then(response => response.json())
+      .then(response => { setPage(response.filter(singlePage =>{
+              return singlePage.url===props.match.params.url }
+          )) 
+      })
+      
+  
+      .catch(err => setErrors(err));
+    }
+  
 
     
     if(page){
@@ -40,14 +42,14 @@ const EmptyPage = (props)=> {
         return (
             <div> 
                 <Helmet>
-        <title> Green Foundation - {page.title}</title>
+                <title> Green Foundation - { }</title>
                     
                 </Helmet>
                 <div className="aboutcontainer">        
                     <div className="overlay"></div>
                     
                     <div className={isMobile ?"Posts-mobile":"contactHeading"} >
-                        <h1 className=""> {page.title} </h1>
+                        <h1 className=""> This the title {page[0].title } </h1>
                         <Wave></Wave>
                     </div>
 
@@ -57,7 +59,7 @@ const EmptyPage = (props)=> {
 
                                 <div className="individualArticle">
                                     
-                                <div  dangerouslySetInnerHTML={{ __html: marked(page.content)}}></div>
+                                <div  dangerouslySetInnerHTML={{ __html: marked(page[0].content)}}></div>
                                     
 
                                 </div>
