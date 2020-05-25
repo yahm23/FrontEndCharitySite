@@ -15,14 +15,16 @@ import MobileNavBar from "../MobileNavBar";
 import EmptyPage from "../../Pages/EmptyPage";
 
 const Container=(props)=>{
-var [pages,setPages] = useState();
+var [pages,setPages] = useState('');
 
 async function fetchData() {
 
   await fetch("https://blog-back-end-green.herokuapp.com/pages")
   .then(response => response.json())
   .then(response => {
-      setPages(response);            
+      setPages(response);
+      console.log(pages);
+                  
   })
   .catch(err => setErrors(err));
 }
@@ -33,6 +35,18 @@ async function fetchData() {
         console.log('unmounting...') 
     }
   },[]);
+
+  const Pages = () => (
+    pages.map(page=>
+      <Route key={page.id} path={"/"+page.url}
+    
+      render={(props) => <EmptyPage {...props} id={`${page.id}`} />}
+      />
+    )
+
+  )
+
+  if(pages){
     return(
     <div>
       <div className ={props.mobileClass==="mobile" ? "container-mobile" : "container"}>
@@ -48,20 +62,18 @@ async function fetchData() {
             <Route path='/support' component ={Support}/>
             <Route path='/blogs' component ={BlogMain}/>
             
-            {pages? 
-            
-            pages.map(page=>
-              <Route path={"/"+page.url} component ={EmptyPage}/>
-            )
-            
-            :null}
-
+            {/* <Pages></Pages> */}
             <Route path='/privacy-policy' component ={PrivacyPolicy}/>
+            <Pages></Pages>
             <Route render={()=><h1> 404: Page not found</h1>}/>
+            {/* <Route path='/:url' component ={EmptyPage}/> */}
           </Switch>
      </div>
     
     </div>)
+  }
+  else
+  {return null}
     
 }
 
@@ -72,11 +84,7 @@ const BlogMain = () => (
   </Switch>
 )
 
-// const Pages = () => (
-  
-    
-  
-// )
+
 
 
 

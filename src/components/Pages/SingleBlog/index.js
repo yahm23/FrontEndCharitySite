@@ -24,7 +24,9 @@ const SingleBlog = (props)=>{
             await fetch(`https://blog-back-end-green.herokuapp.com/blogs/${props.match.params.id}`)
             .then(response => response.json())
             .then(response => {
-                setBlog(response);            
+                setBlog(response);
+                console.log(props.match.params.id);
+                            
             })
             .catch(err => setErrors(err));
         }
