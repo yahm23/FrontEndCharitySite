@@ -1,6 +1,9 @@
 import React, { useState, useEffect, setErrors } from 'react'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
+import marked from 'marked';
+import showdown from 'showdown';
+
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
 
@@ -31,7 +34,10 @@ const EmptyPage = (props)=> {
       }
     },[props.id]);
 
+    
     if(page){
+        let converter = new showdown.Converter()
+        let html = converter.makeHtml('# hello, markdown!')
         return (
             <div> 
                 <Helmet>
@@ -51,10 +57,9 @@ const EmptyPage = (props)=> {
                             <div className="descriptionContainer">
 
                                 <div className="individualArticle">
-
-                                    <p>
-                                        {page.content}
-                                    </p>
+                                    
+                                <div  dangerouslySetInnerHTML={{ __html: marked(page.content)}}></div>
+                                    
 
                                 </div>
                 
