@@ -2,7 +2,7 @@ import React, { useState, useEffect, setErrors } from 'react'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import marked from 'marked';
-import showdown from 'showdown';
+ 
 
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
@@ -36,8 +36,7 @@ const EmptyPage = (props)=> {
 
     
     if(page){
-        let converter = new showdown.Converter()
-        let html = converter.makeHtml('# hello, markdown!')
+       
         return (
             <div> 
                 <Helmet>

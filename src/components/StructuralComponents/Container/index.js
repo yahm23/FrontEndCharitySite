@@ -13,6 +13,7 @@ import NavBar from "../NavBar";
 import PrivacyPolicy from "../../Pages/PrivacyPolicy";
 import MobileNavBar from "../MobileNavBar";
 import EmptyPage from "../../Pages/EmptyPage";
+import PageNotFound from '../../Pages/PageNotFound';
 
 const Container=(props)=>{
 var [pages,setPages] = useState('');
@@ -38,8 +39,8 @@ async function fetchData() {
 
   const Pages = () => (
     pages.map(page=>
+      
       <Route key={page.id} path={"/"+page.url}
-    
       render={(props) => <EmptyPage {...props} id={`${page.id}`} />}
       />
     )
@@ -62,11 +63,12 @@ async function fetchData() {
             <Route path='/support' component ={Support}/>
             <Route path='/blogs' component ={BlogMain}/>
             
-            {/* <Pages></Pages> */}
+            
             <Route path='/privacy-policy' component ={PrivacyPolicy}/>
+
             <Pages></Pages>
-            <Route render={()=><h1> 404: Page not found</h1>}/>
-            {/* <Route path='/:url' component ={EmptyPage}/> */}
+            <Route exact path='*' render={()=><PageNotFound></PageNotFound>}/>
+            {/* <Route component ={PageNotFound}/> */}
           </Switch>
      </div>
     
