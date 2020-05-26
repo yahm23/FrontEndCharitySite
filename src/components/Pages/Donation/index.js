@@ -7,7 +7,7 @@ import Form from './form';
 
 
 const Donation =()=> {
-    let isMobile = useMediaQuery({ maxWidth: 767 })
+    let isMobile = useMediaQuery({ maxWidth: 970 })
 
     return (
         <div>
