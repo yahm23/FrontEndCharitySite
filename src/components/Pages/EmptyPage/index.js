@@ -1,44 +1,55 @@
-import React, { useState, useEffect, setErrors } from 'react'
+import React, { useState, useEffect, setErrors, useRef } from 'react'
 import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
+import  { Redirect, useHistory } from 'react-router-dom'
 import marked from 'marked';
- 
+
 
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
 
 
 const EmptyPage = (props)=> {
-    var [pages,setPages] = useState('');
-    var [page,setPage] = useState('');
+    // const ref = useRef(false)
+    const history = useHistory(); 
+
+    var [page,setPage] = useState();
+    var [pages,setPages] = useState();
+    let isMobile = useMediaQuery({ maxWidth: 767 })
     
     useEffect(() => {
-      fetchData();
-      return () => {
-          console.log('unmounting...') 
-      }
-    },[props.id]);
-    
-    let isMobile = useMediaQuery({ maxWidth: 767 })
-
-
-    async function fetchData() {
-      await fetch(`https://blog-back-end-green.herokuapp.com/pages/`)
-
-      .then(response => response.json())
-      .then(response => { setPage(response.filter(singlePage =>{
-              return singlePage.url===props.match.params.url }
-          )) 
-      })
+        // ref.current = true;
+        async function fetchData() {
+          return await fetch(`https://blog-back-end-green.herokuapp.com/pages`)
+            .then((response) => response.json())
+            .then((response) => {
+              setPages(response);
+            })
+            .catch((err) => setErrors(err));
+        }
+        fetchData();
+        return () => {
+          console.log('unmounting...');
+          
+        };
+      }, [props.match.params.url]);
       
-  
-      .catch(err => setErrors(err));
-    }
-  
+      useEffect(() => {
+         
+        const url = props.match.params.url;
+        if (!pages || !url) return;
+        // Using Array#find here because I assume based on the name, you want one page rather than an array
+        const page = pages.find((singlepage) => { return singlepage.url === url})
+        if (!page) {
+          // This will change the route if a page isn't found.
+          history.push('/page-not-found');
+        }
+        setPage(page);
 
-    
+      }, [pages, props.match.params.url]);
+
+   
     if(page){
-       
         return (
             <div> 
                 <Helmet>
@@ -49,7 +60,7 @@ const EmptyPage = (props)=> {
                     <div className="overlay"></div>
                     
                     <div className={isMobile ?"Posts-mobile":"contactHeading"} >
-                        <h1 className=""> This the title {page[0].title } </h1>
+                        <h1 className=""> This the title {page.title} </h1>
                         <Wave></Wave>
                     </div>
 
@@ -59,7 +70,7 @@ const EmptyPage = (props)=> {
 
                                 <div className="individualArticle">
                                     
-                                <div  dangerouslySetInnerHTML={{ __html: marked(page[0].content)}}></div>
+                                <div  dangerouslySetInnerHTML={{ __html: marked(page.content)}}></div>
                                     
 
                                 </div>
@@ -74,10 +85,12 @@ const EmptyPage = (props)=> {
 
             </div>
         )
+    } else {
+      return null
     }
-    else{
-        return null
-    }
+
+   
+    
     
 }
 

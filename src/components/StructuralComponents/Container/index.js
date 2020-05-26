@@ -16,38 +16,9 @@ import EmptyPage from "../../Pages/EmptyPage";
 import PageNotFound from '../../Pages/PageNotFound';
 
 const Container=(props)=>{
-var [pages,setPages] = useState('');
 
-// async function fetchData() {
 
-//   await fetch("https://blog-back-end-green.herokuapp.com/pages")
-//   .then(response => response.json())
-//   .then(response => {
-//       setPages(response);
-//       console.log(pages);
-                  
-//   })
-//   .catch(err => setErrors(err));
-// }
-
-//   useEffect(() => {
-//     fetchData();
-//     return () => {
-//         console.log('unmounting...') 
-//     }
-//   },[]);
-
-//   const Pages = () => (
-//     pages.map(page=>
-      
-//       <Route key={page.id} path={"/"+page.url}
-//       render={(props) => <EmptyPage {...props} id={`${page.id}`} />}
-//       />
-//     )
-
-//   )
-
-  if(true){
+  
     return(
     <div>
       <div className ={props.mobileClass==="mobile" ? "container-mobile" : "container"}>
@@ -73,9 +44,7 @@ var [pages,setPages] = useState('');
      </div>
     
     </div>)
-  }
-  else
-  {return null}
+  
     
 }
 
