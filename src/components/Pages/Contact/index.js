@@ -9,7 +9,7 @@ import Form from './form';
 import {Helmet} from "react-helmet";
 
 const Contact=()=>{
-    let isMobile=useMediaQuery({ maxWidth: 767 });
+    let isMobile=useMediaQuery({ maxWidth: 970 });
     
     return (
         <div>

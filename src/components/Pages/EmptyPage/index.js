@@ -10,12 +10,13 @@ import {Helmet} from "react-helmet";
 
 
 const EmptyPage = (props)=> {
-    // const ref = useRef(false)
+
+    let isMobile = useMediaQuery({ maxWidth: 767 })
+
     const history = useHistory(); 
 
     var [page,setPage] = useState();
     var [pages,setPages] = useState();
-    let isMobile = useMediaQuery({ maxWidth: 767 })
     
     useEffect(() => {
         // ref.current = true;
@@ -34,33 +35,33 @@ const EmptyPage = (props)=> {
         };
       }, [props.match.params.url]);
       
-      useEffect(() => {
-         
-        const url = props.match.params.url;
-        if (!pages || !url) return;
-        // Using Array#find here because I assume based on the name, you want one page rather than an array
-        const page = pages.find((singlepage) => { return singlepage.url === url})
-        if (!page) {
-          // This will change the route if a page isn't found.
-          history.push('/page-not-found');
-        }
-        setPage(page);
+    useEffect(() => {
+        
+      const url = props.match.params.url;
+      if (!pages || !url) return;
+      // Using Array#find here because I assume based on the name, you want one page rather than an array
+      const page = pages.find((singlepage) => { return singlepage.url === url})
+      if (!page) {
+        // This will change the route if a page isn't found.
+        history.push('/page-not-found');
+      }
+      setPage(page);
 
-      }, [pages, props.match.params.url]);
+    }, [pages, props.match.params.url]);
 
    
     if(page){
         return (
             <div> 
                 <Helmet>
-                <title> Green Foundation - { }</title>
+                <title> Green Foundation - {page.title}</title>
                     
                 </Helmet>
-                <div className="aboutcontainer">        
+                <div className={isMobile ?"aboutcontainer-mobile":"aboutcontainer"}>        
                     <div className="overlay"></div>
                     
                     <div className={isMobile ?"Posts-mobile":"contactHeading"} >
-                        <h1 className=""> This the title {page.title} </h1>
+                        <h1 className=""> {page.title} </h1>
                         <Wave></Wave>
                     </div>
 

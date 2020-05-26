@@ -598,12 +598,22 @@ div .Bar {
   background-position: center -415px;
 }
 
+.aboutcontainer-mobile {
+  background-image: url("./Media/DesktopBackgrounds/NCL.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 100%;
+  background-position: center -115px;
+}
+
 .overlay {
   position: absolute;
   background-color: rgba(104, 111, 122, 0.2);
   width: 100%;
   max-width: 1920px;
-  height: 80%;
+  height: 35%;
   z-index: 0;
 }
 

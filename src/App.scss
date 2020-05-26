@@ -595,8 +595,13 @@ div .Bar {
   background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
   @include backgroundSettings();
   background-position: center -415px;
-  // position: relative;
-  // z-index: 0;
+
+}
+
+.aboutcontainer-mobile{
+  background-image: url('./Media/DesktopBackgrounds/NCL.jpg');
+  @include backgroundSettings();
+  background-position: center -115px;
 }
 
 
@@ -607,7 +612,7 @@ div .Bar {
   background-color: rgba(104, 111, 122,0.2);
   width: 100%;
   max-width: 1920px;
-  height: 80%;
+  height: 35%;
   z-index: 0;
 }
 
