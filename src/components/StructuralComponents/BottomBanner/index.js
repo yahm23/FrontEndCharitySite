@@ -18,7 +18,7 @@ const BottomBanner= ()=> {
                 <hr className="solid"></hr>
 
                     <div className="logoBanner">
-                        <img className="bottomLogo" alt="logo"  height="45px" src={LightLogo}></img>
+                        <img className="bottomLogo" alt="logo"  height="40px" src={LightLogo}></img>
                         <MailingList></MailingList>
                     </div>
 
