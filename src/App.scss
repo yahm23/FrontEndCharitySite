@@ -614,7 +614,7 @@ div .Bar {
   max-width: 1920px;
   height: 70%;
   z-index: 0;
-  
+
 }
 
 .contactContainer{
@@ -768,6 +768,15 @@ div .Bar {
   padding: 2%;
 }
 
+#donate.card-mobile{
+  border: 1px solid $off-White;
+  transition: 0.3s;
+  font-family: $font;
+  // width: 100%;
+  font-size: 130%;
+  // margin:1%;
+  padding: 7%;
+}
 #donate.card{
   width: 95%;
   font-size: 130%;

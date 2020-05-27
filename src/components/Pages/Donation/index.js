@@ -23,10 +23,8 @@ const Donation =()=> {
                     <Wave></Wave>
                 </div>
                 <div className="whiteBackground">
-                    <div className="descriptionContainer">
-                        <Form>
-
-                        </Form>
+                    <div className={isMobile? "descriptionContainer-mobile":"descriptionContainer"}>
+                        <Form isMobile={isMobile}></Form>
                     </div>
                 </div>
                 
