@@ -14,7 +14,7 @@ const Contact=()=>{
     return (
         <div>
             <Helmet>
-                <title> Green Foundation - Contact Us</title>
+                <title> Green Foundation - Contact Us </title>
             </Helmet>
             
             <div className="contactContainer" >

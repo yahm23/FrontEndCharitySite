@@ -16,7 +16,7 @@ const Donation =()=> {
             </Helmet>
 
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
-
+                <div className="overlay"></div>
                  
                 <div className={isMobile? "Posts-mobile":"contactHeading"}>
                     <h1>Donate</h1>
