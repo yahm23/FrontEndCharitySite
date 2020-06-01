@@ -200,7 +200,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .localSmall {
-  margin-bottom: 10%;
+  margin: 1% 0% 2% 0%;
   font-size: 180%;
   font-weight: 100;
 }
@@ -209,6 +209,7 @@ a, a:visited, a:hover, a:active {
   font-size: 340%;
   font-weight: 100;
   color: white;
+  margin: 15% 0 0 0;
 }
 
 .local-mobile {
