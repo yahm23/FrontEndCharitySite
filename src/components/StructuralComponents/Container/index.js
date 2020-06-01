@@ -13,6 +13,7 @@ import NavBar from "../NavBar";
 import PrivacyPolicy from "../../Pages/PrivacyPolicy";
 import MobileNavBar from "../MobileNavBar";
 import EmptyPage from "../../Pages/EmptyPage";
+import Funding from "../../Pages/Funding";
 import PageNotFound from '../../Pages/PageNotFound';
 
 const Container=(props)=>{
@@ -33,6 +34,7 @@ const Container=(props)=>{
             <Route path='/donation' component ={Donation}/>
             <Route path='/support' component ={Support}/>
             <Route path='/blogs' component ={BlogMain}/>
+            <Route path='/funding' component ={Funding}/>
             
             
             <Route path='/privacy-policy' component ={PrivacyPolicy}/>
@@ -40,6 +42,7 @@ const Container=(props)=>{
             {/* <Pages></Pages> */}
             <Route exact path='/page-not-found' render={()=><PageNotFound></PageNotFound>}/>
             <Route path='/:url' component ={EmptyPage}/>
+            
           </Switch>
      </div>
     
