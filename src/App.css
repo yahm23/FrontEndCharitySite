@@ -612,7 +612,7 @@ div .Bar {
 .overlay {
   position: absolute;
   background-color: rgba(104, 111, 122, 0.4);
-  width: 100%;
+  width: 70%;
   max-width: 1920px;
   height: 100%;
   z-index: 0;
