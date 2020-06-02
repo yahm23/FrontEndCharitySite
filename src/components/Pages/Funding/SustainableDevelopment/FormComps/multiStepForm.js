@@ -20,7 +20,7 @@ const steps = [
 ];
 
 const defaultData = {
-  outcomeOrBenefitOfProjec: "",
+  outcomeOrBenefitOfProject: "",
   projectName: "",
   organisationName: "",
   companyRegistrationOrCharityNumber: "",

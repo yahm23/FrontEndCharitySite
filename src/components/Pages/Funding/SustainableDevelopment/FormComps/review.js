@@ -1,30 +1,50 @@
 import React from "react";
 
 const Review = ({ setForm, formData, navigation }) => {
-  const {
-    outcomeOrBenefitOfProjec,
-    projectName,
-    organisationName,
-    companyRegistrationOrCharityNumber,
-    sourceOtherFunding,
-    position,
-    contactNumber,
-    contactName,
-    barriersAndChallenges,
-    projectNeeded,
-    publicDescriptionOfProject,
-    whoWillProjectImpact,
-    partnerOrganisations,
-    projectOverview,
-    communityImpactOfProject,
-    grantAmount,
-    projectMonitoredAndEvaluated,
-    projectDemonstratio,
-    emailAddress,
-    projectContinuedOnceFunding,
-    contactEmail,
-    existingFundsOrReserves
-  } = formData;
+
+    // const formDataToSubmit ={
+    //   outcomeOrBenefitOfProject:outcomeOrBenefitOfProject,
+    //   projectName: projectName,
+    //   organisationName: organisationName,
+    //   companyRegistrationOrCharityNumber:companyRegistrationOrCharityNumber,
+    //   sourceOtherFunding:sourceOtherFunding,
+    //   position: position,
+    //   contactNumber: 0,
+    //   contactName: "",
+    //   barriersAndChallenges: "",
+    //   projectNeeded: "",
+    //   publicDescriptionOfProject: "",
+    //   whoWillProjectImpact: "",
+    //   partnerOrganisations: "",
+    //   projectOverview: " ",
+    //   communityImpactOfProject: "",
+    //   grantAmount: 0,
+    //   projectMonitoredAndEvaluated: "",
+    //   projectDemonstratio: "",
+    //   emailAddress: "",
+    //   projectContinuedOnceFunding: "",
+    //   contactEmail: "",
+    //   existingFundsOrReserves: ""
+    // }
+    const formDataToSubmit = formData;
+
+
+  // const handleSubmission=()=>{
+  //       if(formData.forEach(entry => {
+  //           if (entry){
+  //               return true;
+  //           } else {
+  //               return false
+  //           }
+
+  //       }))
+  //       {
+  //        window.alert("Please make sure you've filled in all entries to the form") 
+  //       }else{
+  //           window.alert("Submitted technically")
+  //       }
+  // }
+
   const { go } = navigation;
 
   return (
@@ -36,14 +56,14 @@ const Review = ({ setForm, formData, navigation }) => {
         </h4>
         <div>
             {" "}
-            Contact Email: {`${contactEmail}`}<br />
-            Contact Name: {`${contactName}`}<br />
-            Position: {`${position}`}<br />
-            Organisation Name: {`${organisationName}`}<br />
-            Company Registration / Charity Number: {`${companyRegistrationOrCharityNumber}`}<br />
-            Contact Number: {`${contactNumber}`}<br />
-            Contact Number: {`${contactNumber}`}<br />
-            Contact Email: {`${contactEmail}`}<br />
+            Email Address: {`${formData.emailAddress}`}<br />
+            Contact Name: {`${formData.contactName}`}<br />
+            Position: {`${formData.position}`}<br />
+            Organisation Name: {`${formData.organisationName}`}<br />
+            Company Registration / Charity Number: {`${formData.companyRegistrationOrCharityNumber}`}<br />
+            Contact Number: {`${formData.contactNumber}`}<br />
+            Contact Number: {`${formData.contactNumber}`}<br />
+            Contact Email: {`${formData.contactEmail}`}<br />
         </div>
 
         <h4>
@@ -51,35 +71,36 @@ const Review = ({ setForm, formData, navigation }) => {
         <button onClick={() => go("projectDetails")}>Edit</button>
       </h4>
       <div>
-        Name of Project: {`${projectName}`} <br />
-        Why Is The Project Needed?  {`${projectNeeded}`} <br />
-        Who Will Be Impacted By The Project? {`${whoWillProjectImpact}`}<br />
-        What Is The Outcome Or Benefit Of The Project?  {`${outcomeOrBenefitOfProjec}`}<br />
-        What Is The Community Impact?  {`${communityImpactOfProject}`}<br />
-        How Does This Project Demonstrate Sustainability Or Conservation?  {`${projectDemonstratio}`}<br />
+        Name of Project: {`${formData.projectName}`} <br />
+        Full Overview of Project: {`${formData.projectOverview}`} <br />
+        Why Is The Project Needed?  {`${formData.projectNeeded}`} <br />
+        Who Will Be Impacted By The Project? {`${formData.whoWillProjectImpact}`}<br />
+        What Is The Outcome Or Benefit Of The Project?  {`${formData.outcomeOrBenefitOfProject}`}<br />
+        What Is The Community Impact?  {`${formData.communityImpactOfProject}`}<br />
+        How Does This Project Demonstrate Sustainability Or Conservation?  {`${formData.projectDemonstratio}`}<br />
       </div>
       <h4>
         Project in Practise
         <button onClick={() => go("projectInPractise")}>Edit</button>
       </h4>
       <div>
-        How Will You Source Other Funding Required? {`${sourceOtherFunding}`} <br />
-        What Are The Barriers And Challenges To The Project?  {`${barriersAndChallenges}`}<br />
-        How Will The Project Be Monitored And Evaluated? {`${projectMonitoredAndEvaluated}`}<br />
-        How Will The Project Continue Once The Funding Has Been Used? {`${projectContinuedOnceFunding}`}<br />
-        Are You Working With Any Partner Organisations? {`${partnerOrganisations}`}<br />
-        Outline Any Existing Funding Or Reserves {`${existingFundsOrReserves}`}<br />
+        How Will You Source Other Funding Required? {`${formData.sourceOtherFunding}`} <br />
+        What Are The Barriers And Challenges To The Project?  {`${formData.barriersAndChallenges}`}<br />
+        How Will The Project Be Monitored And Evaluated? {`${formData.projectMonitoredAndEvaluated}`}<br />
+        How Will The Project Continue Once The Funding Has Been Used? {`${formData.projectContinuedOnceFunding}`}<br />
+        Are You Working With Any Partner Organisations? {`${formData.partnerOrganisations}`}<br />
+        Outline Any Existing Funding Or Reserves {`${formData.existingFundsOrReserves}`}<br />
       </div>
       <h4>
         Grant Request
         <button onClick={() => go("grantRequest")}>Edit</button>
       </h4>
       <div>
-        Amount of Grant Requested(£): {`${grantAmount}`} <br />
-        Public Description of Project: {`${publicDescriptionOfProject}`}
+        Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />
+        Public Description of Project: {`${formData.publicDescriptionOfProject}`}
       </div>
       <div>
-        <button onClick={() => go("submit")}>Submit</button>
+        <button onClick={()=>go("submit")}>Submit</button>
       </div>
     </div>
   );

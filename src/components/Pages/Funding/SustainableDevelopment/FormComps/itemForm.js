@@ -9,9 +9,9 @@ const ItemForm = ({ label, children, type = "text", ...otherProps }) => (
       </>
     ) : (
       <>
-        <label />
+        <label>{label}</label>
         <input type={type} {...otherProps} />
-        {label}
+        
       </>
     )}
   </div>
