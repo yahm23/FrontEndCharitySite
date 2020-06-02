@@ -6,20 +6,20 @@ const ItemForm = ({ label, children, type = "text",required, ...otherProps }) =>
         {(() => {
             switch (type) {
                 case "text":
-                    return <>
+                    return <div className="space">
                             <label>{label}</label>
                             <input required type={type} {...otherProps} />
-                            </>    
+                            </div>   
                 case "email":
-                    return <>
+                    return <div className="space">
                                 <label>{label}</label>
                                 <input required type="email" {...otherProps} />
-                            </> 
+                            </div>
                 case "number":
-                    return <>
+                    return <div className="space">
                                 <label>{label}</label>
                                 <input required type="number" {...otherProps} />
-                            </> 
+                            </div>
                 default:
                     return null;
             }

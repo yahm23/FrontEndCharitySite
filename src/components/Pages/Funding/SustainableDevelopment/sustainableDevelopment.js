@@ -26,7 +26,9 @@ const SustainableDevelopment =()=> {
                 </div>
 
                 <div className="whiteBackground">
-                    <MultiStepForm></MultiStepForm>
+                    <div className="contactContent">
+                        <MultiStepForm></MultiStepForm>
+                    </div>
                 </div>
 
                 
