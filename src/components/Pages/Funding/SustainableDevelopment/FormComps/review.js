@@ -5,22 +5,25 @@ const Review = ({ setForm, formData, navigation }) => {
   const formDataToSubmit = formData;
 
   const fieldCheck=()=>{
-    let x =true;
+    let x =0;
     let entries = Object.values(formData)
-
+    console.log(entries);
+    
     entries.forEach(entry=>{
       if(entry===''){
-        x = false;
+        x += 1 ;
         console.log(x);
         
       }else{
-        x=true;
         console.log(x);
       }
     })
-    // console.log(x);
-    
-    return x;
+
+    if(x===0){
+      return true
+    }else{
+      return false
+    }
   }
 
   const handleSubmission=()=>{
