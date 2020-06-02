@@ -3,6 +3,7 @@ import BottomBanner from '../../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
+import MultiStepForm from './FormComps/multiStepForm';
 
 
 const SustainableDevelopment =()=> {
@@ -23,7 +24,7 @@ const SustainableDevelopment =()=> {
                 </div>
 
                 <div className="whiteBackground">
-
+                    <MultiStepForm></MultiStepForm>
                 </div>
 
                 
