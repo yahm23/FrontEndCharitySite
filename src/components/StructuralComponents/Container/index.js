@@ -15,6 +15,8 @@ import MobileNavBar from "../MobileNavBar";
 import EmptyPage from "../../Pages/EmptyPage";
 import Funding from "../../Pages/Funding";
 import PageNotFound from '../../Pages/PageNotFound';
+import FuelHardship from '../../Pages/Funding/FuelHardship/fuelHardship';
+import SustainableDevelopment from '../../Pages/Funding/SustainableDevelopment/sustainableDevelopment';
 
 const Container=(props)=>{
 
@@ -34,6 +36,9 @@ const Container=(props)=>{
             <Route path='/donation' component ={Donation}/>
             <Route path='/support' component ={Support}/>
             <Route path='/blogs' component ={BlogMain}/>
+
+            <Route path='/funding/sustainable-development-fund' component ={SustainableDevelopment}/>
+            <Route path='/funding/fuel-hardship-fund' component ={FuelHardship}/>
             <Route path='/funding' component ={Funding}/>
             
             

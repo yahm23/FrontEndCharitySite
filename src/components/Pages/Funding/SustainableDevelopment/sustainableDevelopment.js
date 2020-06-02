@@ -1,7 +1,7 @@
 import React from 'react'
-import BottomBanner from '../../StructuralComponents/BottomBanner'
+import BottomBanner from '../../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
-import Wave from '../../StructuralComponents/Wave';
+import Wave from '../../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
 
 
@@ -11,14 +11,14 @@ const SustainableDevelopment =()=> {
     return (
         <div>
             <Helmet>
-                <title>Green Foundation - SustainableDevelopment Us</title>
+                <title>Green Foundation - Sustainable Development</title>
             </Helmet>
             <div  className={isMobile? "donationContainer-mobile":"donationContainer"}>
 
                 <div className="overlay"></div>
         
                 <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                    <h1>SustainableDevelopment Us</h1>
+                    <h1>Sustainable Development</h1>
                     <Wave></Wave>
                 </div>
 

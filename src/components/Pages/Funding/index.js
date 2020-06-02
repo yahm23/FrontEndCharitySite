@@ -3,6 +3,7 @@ import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
+import { Link} from "react-router-dom";
 
 
 const Funding =()=> {
@@ -26,15 +27,21 @@ const Funding =()=> {
 
                     <div className="fundingForms">
 
-                        <div className="readStory" id="funding">
-                            <h3 className="padding" >Sustainable Development Fund</h3>
-                            <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-                        </div>
+                        <Link to='/funding/sustainable-development-fund'>
+                            <div className="readStory" id="funding">
+                                <h3 className="padding" >Sustainable Development Fund</h3>
+                                <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
+                            </div>
+                        </Link>
+
                             <br></br>
-                        <div className="readStory" id="funding">
-                            <h3 className="padding" >Fuel Hardship Fund</h3>
-                            <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-                        </div>
+
+                        <Link to='/funding/fuel-hardship-fund'>
+                            <div className="readStory" id="funding">
+                                <h3 className="padding" >Fuel Hardship Fund</h3>
+                                <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
+                            </div>
+                        </Link>
 
                     </div>
                 </div>
