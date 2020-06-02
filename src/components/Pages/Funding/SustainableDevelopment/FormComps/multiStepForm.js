@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, useStep } from "react-hooks-helper";
 
+
 import Details from "./details";
 import ProjectDetails from "./projectDetails";
 import ProjectInPractise from "./projectInPractise";
@@ -8,7 +9,7 @@ import GrantRequest from "./grantRequest";
 import Submit from "./submit";
 import Review from "./review";
 
-
+import { useMediaQuery } from 'react-responsive';
 
 const steps = [
   { id: "details" },
@@ -45,13 +46,18 @@ const defaultData = {
 };
 
 const MultiStepForm = ({  }) => {
+  let isMobile = useMediaQuery({ maxWidth: 970 })
+
   const [formData, setForm] = useForm(defaultData);
   const { step, navigation } = useStep({ initialStep: 0, steps });
   const { id } = step;
 
   const props = { formData, setForm, navigation };
   return(
-    <div>
+    <div  className={isMobile? "card-mobile":"card"} id="form" >
+      
+      <h2>Apply</h2>
+      <h3>Please ensure all fields are filled in</h3>
       {(() => {
 
         switch (id) {

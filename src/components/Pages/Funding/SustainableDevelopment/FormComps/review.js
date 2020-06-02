@@ -50,7 +50,7 @@ const Review = ({ setForm, formData, navigation }) => {
       go("submit")
 
     }else{
-      window.alert("Please make sure you've filled in all entries to the form") 
+      window.alert("Please make sure you've filled in all entries in the form") 
     }
   }
 

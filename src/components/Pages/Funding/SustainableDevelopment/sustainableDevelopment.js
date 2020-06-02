@@ -1,13 +1,15 @@
 import React from 'react'
 import BottomBanner from '../../../StructuralComponents/BottomBanner'
-import { useMediaQuery } from 'react-responsive';
 import Wave from '../../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
 import MultiStepForm from './FormComps/multiStepForm';
 
 
+import { useMediaQuery } from 'react-responsive';
+
+
 const SustainableDevelopment =()=> {
-    let isMobile = useMediaQuery({ maxWidth: 767 })
+    let isMobile = useMediaQuery({ maxWidth: 970 })
 
     return (
         <div>
@@ -19,7 +21,7 @@ const SustainableDevelopment =()=> {
                 <div className="overlay"></div>
         
                 <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                    <h1>Sustainable Development</h1>
+                    <h1>Sustainable Development Fund</h1>
                     <Wave></Wave>
                 </div>
 
