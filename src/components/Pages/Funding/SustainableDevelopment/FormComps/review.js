@@ -2,7 +2,7 @@ import React from "react";
 
 const Review = ({ setForm, formData, navigation }) => {
 
-  const formDataToSubmit = formData;
+  // const formDataToSubmit = formData;
   const { go } = navigation;
 
   const fieldCheck=()=>{
@@ -27,8 +27,26 @@ const Review = ({ setForm, formData, navigation }) => {
     }
   }
 
+  const submit = (formDataToSubmit)=>{
+    const postURL = "https://blog-back-end-green.herokuapp.com/sustainable-development-funds";
+
+    fetch(postURL, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataToSubmit)
+    })
+    .then(()=>{
+        console.log("shoud've posted");
+        
+    })
+  }
+
   const handleSubmission=()=>{
     if(fieldCheck()){
+      submit(formData);
       go("submit")
 
     }else{
