@@ -2,48 +2,34 @@ import React from "react";
 
 const Review = ({ setForm, formData, navigation }) => {
 
-    // const formDataToSubmit ={
-    //   outcomeOrBenefitOfProject:outcomeOrBenefitOfProject,
-    //   projectName: projectName,
-    //   organisationName: organisationName,
-    //   companyRegistrationOrCharityNumber:companyRegistrationOrCharityNumber,
-    //   sourceOtherFunding:sourceOtherFunding,
-    //   position: position,
-    //   contactNumber: 0,
-    //   contactName: "",
-    //   barriersAndChallenges: "",
-    //   projectNeeded: "",
-    //   publicDescriptionOfProject: "",
-    //   whoWillProjectImpact: "",
-    //   partnerOrganisations: "",
-    //   projectOverview: " ",
-    //   communityImpactOfProject: "",
-    //   grantAmount: 0,
-    //   projectMonitoredAndEvaluated: "",
-    //   projectDemonstratio: "",
-    //   emailAddress: "",
-    //   projectContinuedOnceFunding: "",
-    //   contactEmail: "",
-    //   existingFundsOrReserves: ""
-    // }
-    const formDataToSubmit = formData;
+  const formDataToSubmit = formData;
 
+  const fieldCheck=()=>{
+    let x =true;
+    let entries = Object.values(formData)
 
-  // const handleSubmission=()=>{
-  //       if(formData.forEach(entry => {
-  //           if (entry){
-  //               return true;
-  //           } else {
-  //               return false
-  //           }
+    entries.forEach(entry=>{
+      if(entry===''){
+        x = false;
+        console.log(x);
+        
+      }else{
+        x=true;
+        console.log(x);
+      }
+    })
+    // console.log(x);
+    
+    return x;
+  }
 
-  //       }))
-  //       {
-  //        window.alert("Please make sure you've filled in all entries to the form") 
-  //       }else{
-  //           window.alert("Submitted technically")
-  //       }
-  // }
+  const handleSubmission=()=>{
+        if(fieldCheck()){
+          window.alert("Submitted technically")
+        }else{
+          window.alert("Please make sure you've filled in all entries to the form") 
+        }
+  }
 
   const { go } = navigation;
 
@@ -77,7 +63,7 @@ const Review = ({ setForm, formData, navigation }) => {
         Who Will Be Impacted By The Project? {`${formData.whoWillProjectImpact}`}<br />
         What Is The Outcome Or Benefit Of The Project?  {`${formData.outcomeOrBenefitOfProject}`}<br />
         What Is The Community Impact?  {`${formData.communityImpactOfProject}`}<br />
-        How Does This Project Demonstrate Sustainability Or Conservation?  {`${formData.projectDemonstratio}`}<br />
+        How Does This Project Demonstrate Sustainability Or Conservation?  {`${formData.projectDemonstration}`}<br />
       </div>
       <h4>
         Project in Practise
@@ -100,7 +86,7 @@ const Review = ({ setForm, formData, navigation }) => {
         Public Description of Project: {`${formData.publicDescriptionOfProject}`}
       </div>
       <div>
-        <button onClick={()=>go("submit")}>Submit</button>
+        <button onClick={handleSubmission()}>Submit</button>
       </div>
     </div>
   );

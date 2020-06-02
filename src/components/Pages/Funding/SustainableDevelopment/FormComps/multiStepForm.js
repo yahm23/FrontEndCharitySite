@@ -37,7 +37,7 @@ const defaultData = {
   communityImpactOfProject: "",
   grantAmount: 0,
   projectMonitoredAndEvaluated: "",
-  projectDemonstratio: "",
+  projectDemonstration: "",
   emailAddress: "",
   projectContinuedOnceFunding: "",
   contactEmail: "",
