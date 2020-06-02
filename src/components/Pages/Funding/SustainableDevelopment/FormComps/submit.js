@@ -4,7 +4,7 @@ const Submit = ({ navigation, formData }) => {
   const {formDeets} = formData
   return (
     <div>
-      <h3>Thank you for submitting. We will be in touch</h3>
+      <h3>Thank you for for your submission, we'll be in touch shortly</h3>
       <button onClick={() => go("details")}>New Request</button>
     </div>
   );

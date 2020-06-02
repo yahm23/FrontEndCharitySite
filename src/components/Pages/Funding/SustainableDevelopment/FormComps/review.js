@@ -3,6 +3,7 @@ import React from "react";
 const Review = ({ setForm, formData, navigation }) => {
 
   const formDataToSubmit = formData;
+  const { go } = navigation;
 
   const fieldCheck=()=>{
     let x =0;
@@ -28,13 +29,13 @@ const Review = ({ setForm, formData, navigation }) => {
 
   const handleSubmission=()=>{
     if(fieldCheck()){
-      window.alert("Submitted technically")
+      go("submit")
+
     }else{
       window.alert("Please make sure you've filled in all entries to the form") 
     }
   }
 
-  const { go } = navigation;
 
   return (
     <div className="form">
@@ -50,7 +51,6 @@ const Review = ({ setForm, formData, navigation }) => {
             Position: {`${formData.position}`}<br />
             Organisation Name: {`${formData.organisationName}`}<br />
             Company Registration / Charity Number: {`${formData.companyRegistrationOrCharityNumber}`}<br />
-            Contact Number: {`${formData.contactNumber}`}<br />
             Contact Number: {`${formData.contactNumber}`}<br />
             Contact Email: {`${formData.contactEmail}`}<br />
         </div>

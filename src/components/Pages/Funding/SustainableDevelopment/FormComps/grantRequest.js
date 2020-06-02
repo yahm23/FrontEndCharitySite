@@ -17,6 +17,8 @@ return (
       name="grantAmount"
       value={grantAmount}
       onChange={setForm}
+      type="number"
+      required
     />
     <ItemForm
       label="Public Description Of Project *"

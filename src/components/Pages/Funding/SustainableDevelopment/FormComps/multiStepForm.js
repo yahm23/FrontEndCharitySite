@@ -26,7 +26,7 @@ const defaultData = {
   companyRegistrationOrCharityNumber: "",
   sourceOtherFunding: "",
   position: "",
-  contactNumber: 0,
+  contactNumber: "",
   contactName: "",
   barriersAndChallenges: "",
   projectNeeded: "",
@@ -35,7 +35,7 @@ const defaultData = {
   partnerOrganisations: "",
   projectOverview: " ",
   communityImpactOfProject: "",
-  grantAmount: 0,
+  grantAmount: "",
   projectMonitoredAndEvaluated: "",
   projectDemonstration: "",
   emailAddress: "",
@@ -50,23 +50,28 @@ const MultiStepForm = ({  }) => {
   const { id } = step;
 
   const props = { formData, setForm, navigation };
+  return(
+    <div>
+      {(() => {
 
-  switch (id) {
-    case "details":
-      return <Details {...props} />;
-    case "projectDetails":
-      return <ProjectDetails {...props} />;
-    case "projectInPractise":
-      return <ProjectInPractise {...props} />;
-    case "grantRequest":
-      return <GrantRequest {...props} />;
-    case "review":
-      return <Review {...props} />;
-    case "submit":
-      return <Submit {...props} />;
-    default:
-      return null;
-  }
+        switch (id) {
+          case "details":
+            return <Details {...props} />;
+          case "projectDetails":
+            return <ProjectDetails {...props} />;
+          case "projectInPractise":
+            return <ProjectInPractise {...props} />;
+          case "grantRequest":
+            return <GrantRequest {...props} />;
+          case "review":
+            return <Review {...props} />;
+          case "submit":
+            return <Submit {...props} />;
+          default:
+            return null;
+        }
+      })()}
+    </div>)
 };
 
 export default MultiStepForm;
