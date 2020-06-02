@@ -27,11 +27,11 @@ const Review = ({ setForm, formData, navigation }) => {
   }
 
   const handleSubmission=()=>{
-        if(fieldCheck()){
-          window.alert("Submitted technically")
-        }else{
-          window.alert("Please make sure you've filled in all entries to the form") 
-        }
+    if(fieldCheck()){
+      window.alert("Submitted technically")
+    }else{
+      window.alert("Please make sure you've filled in all entries to the form") 
+    }
   }
 
   const { go } = navigation;
@@ -89,7 +89,7 @@ const Review = ({ setForm, formData, navigation }) => {
         Public Description of Project: {`${formData.publicDescriptionOfProject}`}
       </div>
       <div>
-        <button onClick={handleSubmission()}>Submit</button>
+        <button onClick={handleSubmission}>Submit</button>
       </div>
     </div>
   );
