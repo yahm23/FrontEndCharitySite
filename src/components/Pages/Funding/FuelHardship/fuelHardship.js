@@ -3,6 +3,7 @@ import BottomBanner from '../../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import Wave from '../../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
+import MultiStepForm from './FormComps/multiStepForm';
 
 
 const FuelHardship =()=> {
@@ -18,15 +19,16 @@ const FuelHardship =()=> {
                 <div className="overlay"></div>
         
                 <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                    <h1>Fuel Hardship</h1>
+                    <h1>Fuel Hardship Fund</h1>
                     <Wave></Wave>
                 </div>
 
                 <div className="whiteBackground">
 
+                <div className="contactContent">
+                        <MultiStepForm></MultiStepForm>
+                    </div>
                 </div>
-
-                
 
             </div>
             <BottomBanner></BottomBanner>
