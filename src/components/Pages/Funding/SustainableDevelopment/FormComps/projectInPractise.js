@@ -11,7 +11,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
           existingFundsOrReserves
         } = formData;
 
-  const { next } = navigation;
+  const { next, previous } = navigation;
 
   return (
     <div className="">
@@ -53,6 +53,9 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
         value={existingFundsOrReserves}
         onChange={setForm}
       />
+      <div>
+        <button onClick={previous}>Back</button>
+      </div>
       <div>
         <button onClick={next}>Next</button>
       </div>

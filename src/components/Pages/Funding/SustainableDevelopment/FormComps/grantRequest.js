@@ -7,7 +7,7 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
         publicDescriptionOfProject
       } = formData;
 
-const { next } = navigation;
+const { next, previous } = navigation;
 
 return (
   <div className="form">
@@ -26,7 +26,9 @@ return (
       value={publicDescriptionOfProject}
       onChange={setForm}
     />
-    
+    <div>
+        <button onClick={previous}>Back</button>
+    </div>
     <div>
       <button onClick={next}>Next</button>
     </div>

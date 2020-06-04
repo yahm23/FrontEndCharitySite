@@ -2,7 +2,7 @@ import React from "react";
 
 const Review = ({ setForm, formData, navigation }) => {
 
-  const { go } = navigation;
+  const { go, previous } = navigation;
 
   const fieldCheck=()=>{
     let x =0;
@@ -105,6 +105,10 @@ const Review = ({ setForm, formData, navigation }) => {
       <div>
         Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />
         Public Description of Project: {`${formData.publicDescriptionOfProject}`}
+      </div>
+
+      <div>
+        <button onClick={previous}>Back</button>
       </div>
       <div>
         <button onClick={handleSubmission}>Submit</button>
