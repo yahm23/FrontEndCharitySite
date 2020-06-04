@@ -24,7 +24,7 @@ const Review = ({ formData, navigation }) => {
       return true
     }else{
       //  CHANGE BACK TO FALSE WHEN DONE TESTING
-      return true
+      return false
     }
   }
 
