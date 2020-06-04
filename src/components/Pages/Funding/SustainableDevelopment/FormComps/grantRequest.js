@@ -13,7 +13,7 @@ return (
   <div className="form">
     <h2>Apply - Grant Request</h2> <h3>Please ensure all fields are filled in</h3>
     <ItemForm
-      label="Amount of Grant Requested (£) *"
+      label="Amount of Grant Requested (£)"
       name="grantAmount"
       value={grantAmount}
       onChange={setForm}
@@ -21,7 +21,7 @@ return (
       required
     />
     <ItemForm
-      label="Public Description Of Project *"
+      label="Public Description Of Project"
       name="publicDescriptionOfProject"
       value={publicDescriptionOfProject}
       onChange={setForm}

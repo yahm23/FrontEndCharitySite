@@ -18,7 +18,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
       <h2>Apply - Project In Practise</h2> <h3>Please ensure all fields are filled in</h3>
 
       <ItemForm
-        label="How Will You Source Other Funding Required? (Max 300 Words) *"
+        label="How Will You Source Other Funding Required? (Max 300 Words)"
         name="sourceOtherFunding"
         value={sourceOtherFunding}
         onChange={setForm}
@@ -26,7 +26,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
 
       />
       <ItemForm
-        label="What Are The Barriers And Challenges To The Project? (Max 300 Words) *"
+        label="What Are The Barriers And Challenges To The Project? (Max 300 Words)"
         name="barriersAndChallenges"
         value={barriersAndChallenges}
         onChange={setForm}
@@ -34,7 +34,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
 
       />
       <ItemForm
-        label="How Will The Project Be Monitored And Evaluated? (Max 300 Words) *"
+        label="How Will The Project Be Monitored And Evaluated? (Max 300 Words)"
         name="projectMonitoredAndEvaluated"
         value={projectMonitoredAndEvaluated}
         onChange={setForm}
@@ -42,7 +42,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
 
       />
       <ItemForm
-        label="How Will The Project Continue Once The Funding Has Been Used? (Max 300 Words) *"
+        label="How Will The Project Continue Once The Funding Has Been Used? (Max 300 Words)"
         name="projectContinuedOnceFunding"
         value={projectContinuedOnceFunding}
         onChange={setForm}
@@ -50,7 +50,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
 
       />
       <ItemForm
-        label="Are You Working With Any Partner Organisations? (Max 300 Words) *"
+        label="Are You Working With Any Partner Organisations? (Max 300 Words)"
         name="partnerOrganisations"
         value={partnerOrganisations}
         onChange={setForm}
@@ -58,7 +58,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
 
       />
       <ItemForm
-        label="Please Outline Any Existing Funding Or Reserves (Max 300 Words) *"
+        label="Please Outline Any Existing Funding Or Reserves (Max 300 Words)"
         name="existingFundsOrReserves"
         value={existingFundsOrReserves}
         onChange={setForm}
