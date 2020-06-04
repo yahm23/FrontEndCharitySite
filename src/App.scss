@@ -915,10 +915,24 @@ button#submit{
 }
 
 #funding{
-  margin:5%;
+  width: 415px;
+  
+}
+#next{
+  width: 180px;
+  float: right;
+}
+#back{
+  width: 180px;
+  float: left;
+}
+
+.nextText{
+  flex-grow: 4;
+  text-align: center;
 }
 
 .fundingForms{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
