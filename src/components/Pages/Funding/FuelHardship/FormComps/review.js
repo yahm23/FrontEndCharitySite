@@ -55,6 +55,53 @@ const Review = ({ formData, navigation }) => {
     }
   }
 
+  const renderSwitch = (key) => {
+    switch(key) {
+      case 'driversLicense':
+        return <li>Proof Of Address - Drivers License</li>
+      case 'utility':
+        return <li>Proof Of Address - Utility Bill</li>
+      case 'contract':
+        return <li>Proof Of Income - Employment Contract</li>
+      case 'payslips':
+        return <li>Proof Of Income - 3 Months Payslips</li>
+      case 'HR':
+        return <li>Proof Of Income - Email From Employer HR Department</li>
+      case 'bankStatements':
+        return <li>Proof Of Income - Bank Statements</li>
+      case 'energySupplierStatement':
+        return <li>Energy Account - Energy Supplier Statement</li>
+      case 'energySupplierEmail':
+        return <li>Energy Account - Energy Supplier Emai</li>
+      default:
+        return null;
+    }
+  }
+  
+  const EvidenceProvider =() => {
+    let allEvidence= formData.evidenceProvided;
+    // console.log(formData.evidenceProvided);
+
+    
+    let evidenceKV = Object.entries(allEvidence)
+    // console.log(evidenceKV);
+    let array = [];
+    evidenceKV.forEach(evidence =>{
+      if(evidence[1]){
+        array.push(evidence[0])   
+      }
+    })
+    console.log(array);
+    
+
+    return (
+      <>
+      {array.map(key => (
+        renderSwitch(key)
+      ))}
+      </>
+    )
+  }
 
   return (
     <div className="form">
@@ -110,7 +157,9 @@ const Review = ({ formData, navigation }) => {
       <div>
         Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />
         Evidence to be Provided: 
-        {/* {`${formData.evidenceProvided}`} */}
+        <EvidenceProvider>
+
+        </EvidenceProvider>
       </div>
       <div>
         <button onClick={handleSubmission}>Submit</button>
