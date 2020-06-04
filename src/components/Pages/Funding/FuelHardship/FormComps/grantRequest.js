@@ -37,6 +37,16 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
   //   eval(event.target.value) = value
   }
 
+  const confirmationOfEnergyPaymentsOnly = ()=> {
+    console.log(formData.confirmGrantOnlyForEnergy.toString());
+    
+    if(formData.confirmGrantOnlyForEnergy){
+      next();
+    } else {
+      window.alert('You must confirm the grant will only be used for energy payments')
+    }
+  }
+
 
   return (
     <div className="form">
@@ -93,7 +103,7 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
       </div>
 
       <div>
-        <button onClick={next}>Next</button>
+        <button onClick={confirmationOfEnergyPaymentsOnly}>Next</button>
       </div>
     </div>
   );
