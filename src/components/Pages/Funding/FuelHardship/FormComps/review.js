@@ -23,6 +23,7 @@ const Review = ({ formData, navigation }) => {
     if(x===0){
       return true
     }else{
+      //  CHANGE BACK TO FALSE WHEN DONE TESTING
       return false
     }
   }
@@ -47,7 +48,7 @@ const Review = ({ formData, navigation }) => {
   const handleSubmission=()=>{
     if(fieldCheck()){
       submit(formData);
-        go("submit")
+      go("submit")
 
     }else{
       window.alert("Please make sure you've filled in all entries in the form") 

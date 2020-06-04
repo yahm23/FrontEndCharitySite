@@ -4,7 +4,11 @@ const Submit = ({ navigation }) => {
   return (
     <div>
       <h3>Thank you for your submission, we'll be in touch shortly</h3>
-      <button onClick={() => go("details")}>New Request</button>
+      <button onClick={() => {
+        window.location.reload(false);
+        go("details")
+        
+        }}>New Request</button>
     </div>
   );
 };
