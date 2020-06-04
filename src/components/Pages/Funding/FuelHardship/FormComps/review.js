@@ -24,7 +24,7 @@ const Review = ({ formData, navigation }) => {
       return true
     }else{
       //  CHANGE BACK TO FALSE WHEN DONE TESTING
-      return false
+      return true
     }
   }
 
@@ -79,7 +79,7 @@ const Review = ({ formData, navigation }) => {
       </h4>
       <div>
         Name of Impacted Individual: {`${formData.nameOfImpactedIndividual}`} <br />
-        Has The Individual Applied Before? {`${formData.appliedBefore}`} <br />
+        Has The Individual Applied Before? {`${formData.appliedBefore? "Yes":"No"}`} <br />
         Time Since Last Application (if applicable)  {`${formData.timeSinceLastApplication}`} <br />
         Full Address: {`${formData.fullAddress}`}<br />
         Contact Number:  {`${formData.impactedIndividualContactNumber}`}<br />
@@ -90,21 +90,28 @@ const Review = ({ formData, navigation }) => {
       </div>
         
         <h4>
-        Energy
+        Energy Accounts
         <button onClick={() => go("impactedIndividualDetails")}>Edit</button>
       </h4>
       <div>
-        Name of Impacted Individual: {`${formData.nameOfImpactedIndividual}`} <br />
-        Has The Individual Applied Before? {`${formData.appliedBefore}`} <br />
-        Time Since Last Application (if applicable)  {`${formData.timeSinceLastApplication}`} <br />
-        Full Address: {`${formData.fullAddress}`}<br />
-        Contact Number:  {`${formData.impactedIndividualContactNumber}`}<br />
-        Contact Email:  {`${formData.impactedIndividualContactEmail}`}<br />
-        Number of Children:  {`${formData.numberOfChildren}`}<br />
-        Current Employment Situation:  {`${formData.currentEmploymentSituation}`}<br />
-        Household Income Per Year:  {`${formData.householdIncomPerYear}`}<br />
+        Name of Electricity Supplier: {`${formData.nameOfElectricSupplier}`} <br />
+        Electricity Account Number: {`${formData.electricAccountNumber}`} <br />
+        Name of Gas Supplier: {`${formData.nameOfGasSupplier}`} <br />
+        Gas Account Number: {`${formData.gasAccountNumber}`} <br />
+        Credit Meter or Prepayment? {`${formData.creditOrPrepayment}`}<br />
+        Monthly Direct Debit Amount(£):  {`${formData.monthlyDirectDebitAmount}`}<br />
+        Current Balance on Account(£):  {`${formData.currentBalanceOnAccount}`}<br />
+        Has the Customer had a payment plan previously?  {`${formData.hasCustomerHadPaymentPlanPreviously ? "Yes":"No"}`}<br />
       </div>
-  
+      <h4>
+        Grant Request
+        <button onClick={() => go("grantRequest")}>Edit</button>
+      </h4>
+      <div>
+        Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />
+        Evidence to be Provided: 
+        {/* {`${formData.evidenceProvided}`} */}
+      </div>
       <div>
         <button onClick={handleSubmission}>Submit</button>
       </div>

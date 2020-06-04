@@ -60,7 +60,7 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
             name="creditOrPrepayment"
             value={creditOrPrepayment}
             onChange={setForm}>
-                <option value="Credit Meter">Credit Meter</option>
+                <option defaultValue value="Credit Meter">Credit Meter</option>
                 <option value="Prepayment Meter">Prepayment Meter</option>
             </select>
         </div>

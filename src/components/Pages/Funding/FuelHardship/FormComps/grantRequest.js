@@ -51,28 +51,28 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
       />
 
       <>
-          <input type="checkbox" setForm id="license" name="license" onChange={toggleBoolean} value="evidenceProvided.driversLicense"></input>
+          <input type="checkbox" checked={evidenceProvided.driversLicense} id="license" name="license" onChange={toggleBoolean} value="evidenceProvided.driversLicense"></input>
           <label htmlFor="license">{evidenceProvided.driversLicense.toString()} Proof Of Address - Drivers License</label><br></br>
 
-          <input type="checkbox" id="utlitity" name="utlitity" onChange={toggleBoolean} value="evidenceProvided.utilityBill"></input>
+          <input type="checkbox" checked={evidenceProvided.utilityBill} id="utlitity" name="utlitity" onChange={toggleBoolean} value="evidenceProvided.utilityBill"></input>
           <label htmlFor="utlitity">{evidenceProvided.utilityBill.toString()} Proof Of Address - Utility Bill</label><br></br>
 
-          <input type="checkbox" id="contract" name="contract" onChange={toggleBoolean} value="evidenceProvided.contract"></input>
+          <input type="checkbox" checked={evidenceProvided.contract} id="contract" name="contract" onChange={toggleBoolean} value="evidenceProvided.contract"></input>
           <label htmlFor="contract"> {evidenceProvided.contract.toString()} Proof Of Income - Employment Contract</label><br></br>
 
-          <input type="checkbox" id="payslips" name="payslips"  onChange={toggleBoolean} value="evidenceProvided.payslips"></input>
+          <input type="checkbox" checked={evidenceProvided.payslips} id="payslips" name="payslips"  onChange={toggleBoolean} value="evidenceProvided.payslips"></input>
           <label htmlFor="payslips"> {evidenceProvided.payslips.toString()} Proof Of Income - 3 Months Payslips</label><br></br>
 
-          <input type="checkbox" id="HR" name="HR"  onChange={toggleBoolean} value="evidenceProvided.emailHR"></input>
+          <input type="checkbox" checked={evidenceProvided.HR} id="HR" name="HR"  onChange={toggleBoolean} value="evidenceProvided.emailHR"></input>
           <label htmlFor="HR">{evidenceProvided.emailHR.toString()} Proof Of Income - Email From Employer HR Department</label><br></br>
 
-          <input type="checkbox" id="statements" name="statements" onChange={toggleBoolean} value="evidenceProvided.bankStatements"></input>
+          <input type="checkbox" checked={evidenceProvided.bankStatements} id="statements" name="statements" onChange={toggleBoolean} value="evidenceProvided.bankStatements"></input>
           <label htmlFor="statements">{evidenceProvided.bankStatements.toString()} Proof Of Income - Bank Statements</label><br></br>
 
-          <input type="checkbox" id="energy" name="energy" onChange={toggleBoolean} value="evidenceProvided.energySupplierStatement"></input>
+          <input type="checkbox" checked={evidenceProvided.energySupplierStatement} id="energy" name="energy" onChange={toggleBoolean} value="evidenceProvided.energySupplierStatement"></input>
           <label htmlFor="energy"> {evidenceProvided.energySupplierStatement.toString()}Energy Account - Energy Supplier Statement</label><br></br>
 
-          <input type="checkbox" id="energyemail" name="energyemail" onChange={toggleBoolean} value="evidenceProvided.energySupplierEmail"></input>
+          <input type="checkbox" checked={evidenceProvided.energySupplierEmail}id="energyemail" name="energyemail" onChange={toggleBoolean} value="evidenceProvided.energySupplierEmail"></input>
           <label htmlFor="energyemail"> {evidenceProvided.energySupplierEmail.toString()} Energy Account - Energy Supplier Email</label><br></br>
 
       </>
