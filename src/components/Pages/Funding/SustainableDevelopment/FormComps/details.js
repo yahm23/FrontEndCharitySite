@@ -16,6 +16,7 @@ const Details = ({ setForm, formData, navigation }) => {
 
   return (
     <div className="form">
+       <h3>Please ensure all fields are filled in</h3>
       <ItemForm
         label="Email Address"
         name="emailAddress"

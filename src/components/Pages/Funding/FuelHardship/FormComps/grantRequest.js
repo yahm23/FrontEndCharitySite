@@ -40,7 +40,8 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
 
   return (
     <div className="form">
-    
+       <h3>Please ensure all fields are filled in</h3>
+
       <ItemForm
         label="Amount of Grant Requested (£) *"
         name="grantAmount"
