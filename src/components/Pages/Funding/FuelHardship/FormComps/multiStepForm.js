@@ -4,18 +4,20 @@ import { useForm, useStep } from "react-hooks-helper";
 
 import Details from "../../SustainableDevelopment/FormComps/details";
 import ImpactedIndividualDetails from "./impactedIndividual";
+import EnergyAccounts from "./energyAccounts";
 import Review from "./review";
 import Submit from "../../SustainableDevelopment/FormComps/submit";
 // import ProjectInPractise from "./projectInPractise";
 // import GrantRequest from "./grantRequest";
 
 import { useMediaQuery } from 'react-responsive';
+import GrantRequest from "./grantRequest";
 
 const steps = [
   { id: "details" },
   { id: "impactedIndividualDetails" },
-  // { id: "projectInPractise" },
-  // { id: "grantRequest" },
+  { id: "energyAccounts" },
+  { id: "grantRequest" },
   { id: "review" },
   { id: "submit" }
 ];
@@ -42,12 +44,21 @@ const defaultData = {
   grantAmount: 12,
   emailAddress: "",
   electricAccountNumber: "",
-  evidenceProvided: "",
   impactedIndividualContactEmail: "",
   appliedBefore: false,
   contactEmail: "",
   gasAccountNumber: "",
-
+  timeSinceLastApplication:" ",
+  evidenceProvided: {
+    driversLicense:false,
+    utilityBill:false,
+    payslips:false,
+    contract:false,
+    emailHR:false,
+    bankStatements:false,
+    energySupplierStatement:false,
+    energySupplierEmail:false
+  }
 };
 
 const MultiStepForm = ({  }) => {
@@ -70,10 +81,10 @@ const MultiStepForm = ({  }) => {
             return <Details {...props} />;
           case "impactedIndividualDetails":
             return <ImpactedIndividualDetails {...props} />;
-          // case "projectInPractise":
-          //   return <ProjectInPractise {...props} />;
-          // case "grantRequest":
-          //   return <GrantRequest {...props} />;
+          case "energyAccounts":
+            return <EnergyAccounts {...props} />;
+          case "grantRequest":
+            return <GrantRequest {...props} />;
           case "review":
             return <Review {...props} />;
           case "submit":

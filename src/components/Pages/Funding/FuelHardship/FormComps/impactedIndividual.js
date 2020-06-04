@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import ItemForm from "../../SustainableDevelopment/FormComps/itemForm";
 import DropdownForm from "./dropdownForm";
@@ -17,6 +17,14 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
 
   const { next } = navigation;
 
+  let [selectedBoolean,setBoolean] = useState(false);
+
+  const booleanChange =(event)=>{
+    setBoolean(event.target.value);
+    formData.appliedBefore = event.target.value;
+    
+  }
+
   return (
     <div className="form">
       <ItemForm
@@ -25,12 +33,17 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         value={nameOfImpactedIndividual}
         onChange={setForm}
       />
-      <ItemForm
-        label="Has The Individual Applied Before?"
-        name="appliedBefore"
-        value={appliedBefore}
-        onChange={setForm}
-      />
+   
+        <>
+        <label>Has The Individual Applied Before?</label>
+            <br></br>
+            <label htmlFor="yes">Yes</label>
+            <input id="yes" name="applied" type="radio" value={true} onChange={booleanChange}></input>
+                
+            <label htmlFor="no">No</label>
+            <input id="no" name="applied" type="radio" value={false} defaultChecked onChange={booleanChange}></input>
+            
+       </>
       <ItemForm
         label="Time Since Last Application (if applicable)"
         name="timeSinceLastApplication"

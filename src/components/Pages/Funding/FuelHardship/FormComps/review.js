@@ -41,7 +41,6 @@ const Review = ({ formData, navigation }) => {
     .then(()=>{
         console.log("shoud've posted");
         console.log(formDataToSubmit);
-        
     })
   }
 
@@ -76,7 +75,7 @@ const Review = ({ formData, navigation }) => {
 
         <h4>
         Impacted Individual Details
-        <button onClick={() => go("projectDetails")}>Edit</button>
+        <button onClick={() => go("impactedIndividualDetails")}>Edit</button>
       </h4>
       <div>
         Name of Impacted Individual: {`${formData.nameOfImpactedIndividual}`} <br />
