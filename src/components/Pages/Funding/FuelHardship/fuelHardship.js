@@ -7,7 +7,7 @@ import MultiStepForm from './FormComps/multiStepForm';
 
 
 const FuelHardship =()=> {
-    let isMobile = useMediaQuery({ maxWidth: 767 })
+    let isMobile = useMediaQuery({ maxWidth: 194 })
 
     return (
         <div>
