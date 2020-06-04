@@ -922,11 +922,13 @@ button#submit {
 
 #funding {
   margin: 5%;
+  width: 380px;
+
 }
 
 .fundingForms {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=App.css.map */
