@@ -15,7 +15,7 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
           numberOfChildren
         } = formData;
 
-  const { next } = navigation;
+  const { next , previous } = navigation;
 
   let [selectedBoolean,setBoolean] = useState(false);
 
@@ -114,7 +114,9 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         </select>
     </div>
 
-      
+      <div>
+        <button onClick={previous}>Back</button>
+      </div>
       <div>
         <button onClick={next}>Next</button>
       </div>

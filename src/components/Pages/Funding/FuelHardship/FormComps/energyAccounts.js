@@ -14,7 +14,7 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
       hasCustomerHadPaymentPlanPreviously
         } = formData;
 
-  const { next } = navigation;
+  const { next, previous } = navigation;
 
   let [selectedBoolean,setBoolean] = useState(false);
 
@@ -91,7 +91,10 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
             
        </>
       
-      
+       <div>
+        <button onClick={previous}>Back</button>
+      </div>
+
       <div>
         <button onClick={next}>Next</button>
       </div>

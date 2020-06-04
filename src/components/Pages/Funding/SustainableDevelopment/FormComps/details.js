@@ -12,7 +12,7 @@ const Details = ({ setForm, formData, navigation }) => {
           contactEmail 
         } = formData;
 
-  const { next } = navigation;
+  const { next, back } = navigation;
 
   return (
     <div className="form">
@@ -61,6 +61,7 @@ const Details = ({ setForm, formData, navigation }) => {
         onChange={setForm}
         type="email"
       />
+     
       <div>
         <button onClick={next}>Next</button>
       </div>

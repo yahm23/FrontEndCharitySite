@@ -3,7 +3,7 @@ import React from "react";
 const Review = ({ formData, navigation }) => {
 
   // const formDataToSubmit = formData;
-  const { go } = navigation;
+  const { go , previous } = navigation;
 
   const fieldCheck=()=>{
     let x =0;
@@ -154,6 +154,10 @@ const Review = ({ formData, navigation }) => {
         Evidence to be Provided: 
         <EvidenceProvider>
         </EvidenceProvider>
+      </div>
+
+      <div>
+        <button onClick={previous}>Back</button>
       </div>
       <div>
         <button onClick={handleSubmission}>Submit</button>
