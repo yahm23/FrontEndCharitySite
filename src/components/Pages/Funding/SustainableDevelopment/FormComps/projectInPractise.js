@@ -15,7 +15,8 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
 
   return (
     <div className="">
-      
+      <h2>Apply - Project In Practise</h2> <h3>Please ensure all fields are filled in</h3>
+
       <ItemForm
         label="How Will You Source Other Funding Required? (Max 300 Words) *"
         name="sourceOtherFunding"

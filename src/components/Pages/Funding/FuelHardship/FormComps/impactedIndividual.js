@@ -27,7 +27,7 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
 
   return (
     <div className="form">
-       <h3>Please ensure all fields are filled in</h3>
+       <h2>Apply - Impacted Individual's Details</h2> <h3>Please ensure all fields are filled in</h3>
       <ItemForm
         label="Name of Impacted Individual"
         name="nameOfImpactedIndividual"

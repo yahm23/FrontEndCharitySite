@@ -11,7 +11,7 @@ const { next } = navigation;
 
 return (
   <div className="form">
-   
+    <h2>Apply - Grant Request</h2> <h3>Please ensure all fields are filled in</h3>
     <ItemForm
       label="Amount of Grant Requested (£) *"
       name="grantAmount"

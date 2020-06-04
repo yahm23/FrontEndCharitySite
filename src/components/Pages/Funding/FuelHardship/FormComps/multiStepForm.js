@@ -72,7 +72,6 @@ const MultiStepForm = ({  }) => {
   return(
     <div  className="card-mobile" id="form" >
       
-      <h2>Apply</h2>
      
       {(() => {
 

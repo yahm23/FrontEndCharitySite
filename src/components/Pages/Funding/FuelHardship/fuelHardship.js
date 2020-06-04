@@ -27,7 +27,7 @@ const FuelHardship =()=> {
 
                 <div className="contactContent">
                         <MultiStepForm></MultiStepForm>
-                    </div>
+                     </div>
                 </div>
 
             </div>

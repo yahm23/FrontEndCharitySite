@@ -16,7 +16,7 @@ const { next } = navigation;
 
 return (
   <div className="form">
-    
+    <h2>Apply - Project Details</h2> <h3>Please ensure all fields are filled in</h3>
     <ItemForm
       label="Name of Project"
       name="projectName"

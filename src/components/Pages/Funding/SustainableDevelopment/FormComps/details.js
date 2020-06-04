@@ -12,11 +12,13 @@ const Details = ({ setForm, formData, navigation }) => {
           contactEmail 
         } = formData;
 
-  const { next, back } = navigation;
+  const { next, previous } = navigation;
 
   return (
     <div className="form">
-       <h3>Please ensure all fields are filled in</h3>
+       <span>
+         <h2>Apply - Your Details</h2> <h3>Please ensure all fields are filled in</h3>
+        </span>
       <ItemForm
         label="Email Address"
         name="emailAddress"

@@ -100,7 +100,7 @@ const Review = ({ formData, navigation }) => {
 
   return (
     <div className="form">
-      <h3>Review your data</h3>
+      <h2>Review Your Data</h2>
         <h4>
             Your Details
             <button onClick={() => go("details")}>Edit</button>
