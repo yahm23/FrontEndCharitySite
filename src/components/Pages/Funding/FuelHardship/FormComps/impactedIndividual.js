@@ -114,18 +114,6 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
     </div>
 
       
-      {/* <ItemForm
-        label="Current Employment Status"
-        name="companyRegistrationOrCharityNumber"
-        value={companyRegistrationOrCharityNumber}
-        onChange={setForm}
-      />
-      <ItemForm
-        label="Household Income Per Year"
-        name="companyRegistrationOrCharityNumber"
-        value={companyRegistrationOrCharityNumber}
-        onChange={setForm}
-      /> */}
       <div>
         <button onClick={next}>Next</button>
       </div>

@@ -49,13 +49,6 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
         type="number"
         required
       />
-      {/* <ItemForm
-        label="Public Description Of Project *"
-        name="evidenceProvided,
-        "
-        value={evidenceProvided}
-        onChange={setForm}
-      /> */}
 
       <>
           <input type="checkbox" setForm id="license" name="license" onChange={toggleBoolean} value="evidenceProvided.driversLicense"></input>

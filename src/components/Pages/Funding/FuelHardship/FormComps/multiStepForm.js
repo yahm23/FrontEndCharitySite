@@ -48,7 +48,7 @@ const defaultData = {
   appliedBefore: false,
   contactEmail: "",
   gasAccountNumber: "",
-  timeSinceLastApplication:" ",
+  timeSinceLastApplication:"N/A",
   evidenceProvided: {
     driversLicense:false,
     utilityBill:false,

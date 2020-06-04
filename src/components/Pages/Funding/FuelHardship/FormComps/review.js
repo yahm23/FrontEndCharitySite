@@ -5,27 +5,27 @@ const Review = ({ formData, navigation }) => {
   // const formDataToSubmit = formData;
   const { go } = navigation;
 
-//   const fieldCheck=()=>{
-//     let x =0;
-//     let entries = Object.values(formData)
-//     console.log(entries);
+  const fieldCheck=()=>{
+    let x =0;
+    let entries = Object.values(formData)
+    console.log(entries);
     
-//     entries.forEach(entry=>{
-//       if(entry===''){
-//         x += 1 ;
-//         console.log(x);
+    entries.forEach(entry=>{
+      if(entry===''){
+        x += 1 ;
+        console.log(x);
         
-//       }else{
-//         console.log(x);
-//       }
-//     })
+      }else{
+        console.log(x);
+      }
+    })
 
-//     if(x===0){
-//       return true
-//     }else{
-//       return false
-//     }
-//   }
+    if(x===0){
+      return true
+    }else{
+      return false
+    }
+  }
 
   const submit = (formDataToSubmit)=>{
     const postURL = "https://blog-back-end-green.herokuapp.com/fuel-hardship-funds";
@@ -45,14 +45,13 @@ const Review = ({ formData, navigation }) => {
   }
 
   const handleSubmission=()=>{
+    if(fieldCheck()){
       submit(formData);
-      go("submit")
-      
-    // if(fieldCheck()){
+        go("submit")
 
-    // }else{
-    //   window.alert("Please make sure you've filled in all entries in the form") 
-    // }
+    }else{
+      window.alert("Please make sure you've filled in all entries in the form") 
+    }
   }
 
 
@@ -88,26 +87,23 @@ const Review = ({ formData, navigation }) => {
         Current Employment Situation:  {`${formData.currentEmploymentSituation}`}<br />
         Household Income Per Year:  {`${formData.householdIncomPerYear}`}<br />
       </div>
-      {/* <h4>
-        Project in Practise
-        <button onClick={() => go("projectInPractise")}>Edit</button>
+        
+        <h4>
+        Energy
+        <button onClick={() => go("impactedIndividualDetails")}>Edit</button>
       </h4>
       <div>
-        How Will You Source Other Funding Required? {`${formData.sourceOtherFunding}`} <br />
-        What Are The Barriers And Challenges To The Project?  {`${formData.barriersAndChallenges}`}<br />
-        How Will The Project Be Monitored And Evaluated? {`${formData.projectMonitoredAndEvaluated}`}<br />
-        How Will The Project Continue Once The Funding Has Been Used? {`${formData.projectContinuedOnceFunding}`}<br />
-        Are You Working With Any Partner Organisations? {`${formData.partnerOrganisations}`}<br />
-        Outline Any Existing Funding Or Reserves {`${formData.existingFundsOrReserves}`}<br />
+        Name of Impacted Individual: {`${formData.nameOfImpactedIndividual}`} <br />
+        Has The Individual Applied Before? {`${formData.appliedBefore}`} <br />
+        Time Since Last Application (if applicable)  {`${formData.timeSinceLastApplication}`} <br />
+        Full Address: {`${formData.fullAddress}`}<br />
+        Contact Number:  {`${formData.impactedIndividualContactNumber}`}<br />
+        Contact Email:  {`${formData.impactedIndividualContactEmail}`}<br />
+        Number of Children:  {`${formData.numberOfChildren}`}<br />
+        Current Employment Situation:  {`${formData.currentEmploymentSituation}`}<br />
+        Household Income Per Year:  {`${formData.householdIncomPerYear}`}<br />
       </div>
-      <h4>
-        Grant Request
-        <button onClick={() => go("grantRequest")}>Edit</button>
-      </h4>
-      <div>
-        Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />
-        Public Description of Project: {`${formData.publicDescriptionOfProject}`}
-      </div> */}
+  
       <div>
         <button onClick={handleSubmission}>Submit</button>
       </div>
