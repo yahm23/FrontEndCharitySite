@@ -929,6 +929,11 @@ button#submit {
   float: right;
 }
 
+#newReq {
+  width: 180px;
+  margin: 0 auto;
+}
+
 #back {
   width: 180px;
   float: left;

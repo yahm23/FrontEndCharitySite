@@ -3,12 +3,17 @@ const Submit = ({ navigation }) => {
   const { go } = navigation;
   return (
     <div>
-      <h3>Thank you for your submission, we'll be in touch shortly</h3>
-      <button onClick={() => {
+      <h3 style="text-align:center" >Thank you for your submission, we'll be in touch shortly</h3>
+
+        <a href="javascript:void(0);">
+          <div onClick={() => {
         window.location.reload(false);
         go("details")
         
-        }}>New Request</button>
+        }} className="readStory" id="newReq">
+              <h4 className="nextText" >New Request</h4>
+          </div>
+        </a>
     </div>
   );
 };
