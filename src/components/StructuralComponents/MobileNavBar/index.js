@@ -20,7 +20,7 @@ const MobileNavbar=()=>{
                     
                     <p id="space-mobile"><Link onClick={switchToggle} to='/blogs'>Success Stories</Link></p>
                 
-                    <p id="space-mobile"><Link onClick={switchToggle} to='/support'> Support Us</Link></p>
+                    <p id="space-mobile"><Link onClick={switchToggle} to='/funding'> Apply to Funding</Link></p>
                 
                     <p id="space-mobile"><Link onClick={switchToggle} to='/contact'>Contact</Link></p>
                     
@@ -50,7 +50,6 @@ const MobileNavbar=()=>{
                         <div className="Bar"></div>
                         <div className="Bar"></div>
                         <div className="Bar"></div>
-                       
                     </button>
                 
                 </div>
