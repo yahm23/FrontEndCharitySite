@@ -921,8 +921,14 @@ button#submit {
 }
 
 #funding {
+  font-size: 120%;
+  width: 400px;
+}
+
+#fundingNavButtons {
   display: block;
   font-size: 138%;
+  height: 80px;
 }
 
 #next {
