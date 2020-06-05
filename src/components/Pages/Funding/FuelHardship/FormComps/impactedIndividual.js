@@ -65,6 +65,7 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         name="impactedIndividualContactNumber"
         value={impactedIndividualContactNumber}
         onChange={setForm}
+        type="tel"
         />
     <ItemForm
         label="Contact Email"

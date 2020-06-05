@@ -109,21 +109,16 @@ const Review = ({ setForm, formData, navigation }) => {
 
 
 
-      <div>
-      <a href="javascript:void(0);">
-        <div onClick={previous} className="readStory" id="back">
-            <svg  transform="scale(-1, -1)" height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-            <h4 className="nextText" >Back</h4>
+      <div className="fundingNavDiv"> 
+        <div onClick={previous} id="back">
+          <input  id="fundingNavButtons" value="Back" ></input>
         </div>
-        </a>
-        <a href="javascript:void(0);">
-          <div onClick={handleSubmission} className="readStory" id="next">
+        
+        <div id="next">
+            <input onClick={handleSubmission} id="fundingNavButtons" type="submit" value="Next" ></input>
+        </div>
 
-              <h4 className="nextText" >Submit</h4>
-              <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-          </div>
-        </a>
-    </div>
+      </div>
 
 
     </div>

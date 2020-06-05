@@ -60,7 +60,7 @@ const Details = ({ setForm, formData, navigation }) => {
           name="contactNumber"
           value={contactNumber}
           onChange={setForm}
-          type="number"
+          type="tel"
           />
         <ItemForm
           label="Contact Email"

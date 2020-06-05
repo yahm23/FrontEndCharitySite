@@ -74,6 +74,7 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
             name="monthlyDirectDebitAmount"
             value={monthlyDirectDebitAmount}
             onChange={setForm}
+            type="number"
             />
 
         <ItemForm
@@ -81,6 +82,7 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
         name="currentBalanceOnAccount"
         value={currentBalanceOnAccount}
         onChange={setForm}
+        type="number"
         />
         <>
         <label>Has The Customer Had A Payment Plan Previously?</label>
@@ -94,11 +96,11 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
        </>
       <div className="fundingNavDiv"> 
         <div onClick={previous} id="back">
-          <input  className="" id="fundingNavButtons" value="Back" ></input>
+          <input id="fundingNavButtons" value="Back" ></input>
         </div>
         
         <div   id="next">
-            <input  className="" id="fundingNavButtons" type="submit" value="Next" ></input>
+            <input id="fundingNavButtons" type="submit" value="Next" ></input>
         </div>
       </div>
 
