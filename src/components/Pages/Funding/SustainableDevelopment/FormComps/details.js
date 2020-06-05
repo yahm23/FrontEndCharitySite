@@ -72,8 +72,8 @@ const Details = ({ setForm, formData, navigation }) => {
          />
       
       
-        <div  className="readStory" id="next">
-          <input  className="readStory" id="fundingNavButtons" type="submit" value="Next" ></input>
+        <div  id="next">
+          <input  className="fundingNavButtons" id="fundingNavButtons" type="submit" value="Next" ></input>
         </div>
       
       </form>

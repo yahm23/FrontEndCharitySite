@@ -921,17 +921,19 @@ button#submit{
 }
 
 #fundingNavButtons{
-  display: block;
   font-size: 138%;
   height: 80px;
-}
-#next{
-  width: 180px;
-  float: right;
+  text-align: center;
+  background-color: $green;
+  color: white;
 }
 #newReq{
   width: 180px;
   margin:0 auto;
+}
+#next{
+  width: 180px;
+  float: right;
 }
 #back{
   width: 180px;
@@ -947,6 +949,9 @@ button#submit{
   display: flex;
   justify-content: space-around;
 }
-input[type="submit"] {
+input#fundingNavButtons {
 border: none;
+}
+.fundingNavDiv{
+  margin-top:6%;
 }

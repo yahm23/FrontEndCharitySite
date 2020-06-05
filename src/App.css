@@ -926,19 +926,21 @@ button#submit {
 }
 
 #fundingNavButtons {
-  display: block;
   font-size: 138%;
   height: 80px;
-}
-
-#next {
-  width: 180px;
-  float: right;
+  text-align: center;
+  background-color: #84C632;
+  color: white;
 }
 
 #newReq {
   width: 180px;
   margin: 0 auto;
+}
+
+#next {
+  width: 180px;
+  float: right;
 }
 
 #back {
@@ -956,8 +958,12 @@ button#submit {
   justify-content: space-around;
 }
 
-input[type=submit] {
+input#fundingNavButtons {
   border: none;
+}
+
+.fundingNavDiv {
+  margin-top: 6%;
 }
 
 /*# sourceMappingURL=App.css.map */
