@@ -915,7 +915,8 @@ button#submit{
 }
 
 #funding{
-  width: 415px;
+  display: block;
+  font-size: 138%;
   
 }
 #next{
@@ -939,4 +940,7 @@ button#submit{
 .fundingForms{
   display: flex;
   justify-content: space-around;
+}
+input[type="submit"] {
+border: none;
 }

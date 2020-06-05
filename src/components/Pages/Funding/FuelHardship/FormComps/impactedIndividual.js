@@ -28,12 +28,14 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
   return (
     <div className="form">
        <h2>Apply - Impacted Individual's Details</h2> <h3>Please ensure all fields are filled in</h3>
+      <form>
+
       <ItemForm
         label="Name of Impacted Individual"
         name="nameOfImpactedIndividual"
         value={nameOfImpactedIndividual}
         onChange={setForm}
-      />
+        />
    
         <>
         <label>Has The Individual Applied Before?</label>
@@ -50,26 +52,26 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         name="timeSinceLastApplication"
         value={timeSinceLastApplication}
         onChange={setForm}
-      />
+        />
       <ItemForm
         label="Full Address"
         name="fullAddress"
         value={fullAddress}
         onChange={setForm}
-      />
+        />
       <ItemForm
         label="Contact Number"
         name="impactedIndividualContactNumber"
         value={impactedIndividualContactNumber}
         onChange={setForm}
-      />
+        />
     <ItemForm
         label="Contact Email"
         name="impactedIndividualContactEmail"
         value={impactedIndividualContactEmail}
         onChange={setForm}
         type="email"
-    />
+        />
     <div>
         <label>Number of Children</label>
         <select
@@ -122,13 +124,11 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
       </div>
     </a>
       
-    <a href="javascript:void(0);">
-      <div onClick={next} className="readStory" id="next">
-        <h4 className="nextText" >Next</h4>
-        <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-      </div>
-    </a>
+    <div  className="readStory" id="next">
+          <input  className="readStory" id="funding" type="submit" value="Next" ></input>
+    </div>
 
+    </form>
     </div>
   );
 };
