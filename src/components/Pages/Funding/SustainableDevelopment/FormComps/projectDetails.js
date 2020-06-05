@@ -16,7 +16,7 @@ const { next, previous } = navigation;
 
 return (
   <div className="form">
-    <h2>Apply - Project Details</h2> <h3>Please ensure all fields are filled in</h3>
+    <h2>Apply - Project Details</h2><h3>Please ensure all fields are filled in</h3>
     
     <form  onSubmit={()=>{next()}}>
 
