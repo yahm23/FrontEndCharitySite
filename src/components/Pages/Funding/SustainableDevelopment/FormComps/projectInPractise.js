@@ -59,6 +59,7 @@ const ProjectInPractise = ({ setForm, formData, navigation }) => {
         type="textarea"
         
         />
+        
       <ItemForm
         label="Please Outline Any Existing Funding Or Reserves (Max 300 Words)"
         name="existingFundsOrReserves"

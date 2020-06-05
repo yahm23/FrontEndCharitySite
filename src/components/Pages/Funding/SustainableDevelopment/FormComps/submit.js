@@ -3,9 +3,9 @@ const Submit = ({ navigation }) => {
   const { go } = navigation;
   return (
     <div>
-      <h3 style="text-align:center" >Thank you for your submission, we'll be in touch shortly</h3>
+      <h3 className="nextText" >Thank you for your submission, we'll be in touch shortly</h3>
 
-        <a href="javascript:void(0);">
+        <a>
           <div onClick={() => {
         window.location.reload(false);
         go("details")

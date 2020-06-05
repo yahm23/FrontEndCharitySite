@@ -20,6 +20,11 @@ const ItemForm = ({ label, children, type = "text",required, ...otherProps }) =>
                                 <label>{label}</label>
                                 <input  type="number" required {...otherProps} />
                             </div>
+                case "tel":
+                    return <div className="space">
+                                <label>{label}</label>
+                                <input  type="tel" required {...otherProps} />
+                            </div>
                 case "textarea":
                     return <div className="space">
                                 <label>{label}</label>
