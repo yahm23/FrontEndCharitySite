@@ -54,7 +54,7 @@ const MultiStepForm = ({  }) => {
 
   const props = { formData, setForm, navigation };
   return(
-    <div  className="card-mobile" id="form" >
+    <div  className="fundCard" id="form" >
       
       {(() => {
 

@@ -986,4 +986,14 @@ select#funding {
   margin: 5px 0% 25px 0%;
 }
 
+#form.fundCard {
+  border: 1px solid #cccccc;
+  transition: 0.3s;
+  font-family: "Geon", Times, sans-serif;
+  width: 600px;
+  font-size: 130%;
+  margin: 1%;
+  padding: 5%;
+}
+
 /*# sourceMappingURL=App.css.map */
