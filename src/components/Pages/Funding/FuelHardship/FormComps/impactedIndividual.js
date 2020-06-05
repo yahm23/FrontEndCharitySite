@@ -38,16 +38,16 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         onChange={setForm}
         />
    
-        <>
-        <label>Has The Individual Applied Before?</label>
-            <br></br>
-            <label htmlFor="yes">Yes</label>
-            <input id="yes" name="applied" type="radio" value={true} onChange={booleanChange}></input>
-                
-            <label htmlFor="no">No</label>
-            <input id="no" name="applied" type="radio" value={false} defaultChecked onChange={booleanChange}></input>
-            
-       </>
+        <div className="spacex">
+          <label>Has The Individual Applied Before?</label>
+              <br></br>
+              <input id="yes" name="applied" className="radioButton" type="radio" value={true} onChange={booleanChange}></input>
+              <label htmlFor="yes">Yes</label>
+                  <br></br>
+              <input id="no" name="applied" className="radioButton" type="radio" value={false} defaultChecked onChange={booleanChange}></input>
+          <label htmlFor="no">No</label>
+       </div>
+
       <ItemForm
         label="Time Since Last Application (if applicable)"
         name="timeSinceLastApplication"
@@ -76,7 +76,9 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         />
     <div>
         <label>Number of Children</label>
+        <br></br>
         <select
+        id="funding"
         name="numberOfChildren"
         value={numberOfChildren}
         onChange={setForm}>
@@ -90,10 +92,13 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
       
     <div>
         <label>Current Employment Status</label>
+        <br></br>
         <select
+        id="funding"
         name="currentEmploymentSituation"
         value={currentEmploymentSituation}
-        onChange={setForm}>
+        onChange={setForm}
+       >
             {/* <option defaultValue >Select Amount</option> */}
             <option value="Full Time Empoyment">Full Time Empoyment</option>
             <option value="Part Time Empoyment">Part Time Empoyment</option>
@@ -103,9 +108,11 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         </select>
     </div>
       
-    <div>
+    <div >
         <label>Household Income Per Year</label>
+        <br></br>
         <select
+        id="funding"
         name="householdIncomPerYear"
         value={householdIncomPerYear}
         onChange={setForm}>

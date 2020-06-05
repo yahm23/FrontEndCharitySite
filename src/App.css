@@ -860,6 +860,10 @@ button#submit {
   margin-bottom: 15%;
 }
 
+.spacex {
+  margin-bottom: 75px;
+}
+
 .burger {
   left: 1%;
   text-decoration: none;
@@ -964,6 +968,22 @@ input#fundingNavButtons {
 
 .fundingNavDiv {
   margin-top: 6%;
+}
+
+.radioButton {
+  width: 35px;
+  margin: 15px;
+}
+
+input#checkboxes {
+  width: auto;
+}
+
+select#funding {
+  -moz-appearance: none;
+  font-size: 100%;
+  font-family: "Geon", Times, sans-serif;
+  margin: 5px 0% 25px 0%;
 }
 
 /*# sourceMappingURL=App.css.map */

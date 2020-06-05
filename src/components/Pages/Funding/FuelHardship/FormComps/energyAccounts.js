@@ -60,7 +60,9 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
 
         <div>
             <label>Credit Meter or Prepayment?</label>
+            <br></br>
             <select
+            id="funding"
             name="creditOrPrepayment"
             value={creditOrPrepayment}
             onChange={setForm}>
@@ -84,16 +86,16 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
         onChange={setForm}
         type="number"
         />
-        <>
+        <div className="spacex">
         <label>Has The Customer Had A Payment Plan Previously?</label>
             <br></br>
-            <label htmlFor="yes">Yes</label>
-            <input id="yes" name="applied" type="radio" value={true} onChange={booleanChange}></input>
-                
+            <input id="yes" className="radioButton" name="applied" type="radio" value={true} onChange={booleanChange}></input>
+            <label htmlFor="yes">Yes</label>   
+            <br></br>
+            <input id="no" className="radioButton" name="applied" type="radio" value={false} defaultChecked onChange={booleanChange}></input>
             <label htmlFor="no">No</label>
-            <input id="no" name="applied" type="radio" value={false} defaultChecked onChange={booleanChange}></input>
             
-       </>
+       </div>
       <div className="fundingNavDiv"> 
         <div onClick={previous} id="back">
           <input id="fundingNavButtons" value="Back" ></input>

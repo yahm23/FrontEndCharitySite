@@ -854,6 +854,9 @@ button#submit{
 .space{
   margin-bottom: 15%;
 }
+.spacex{
+  margin-bottom:75px;
+}
 .burger{
   left:1%;
   text-decoration: none;
@@ -954,4 +957,19 @@ border: none;
 }
 .fundingNavDiv{
   margin-top:6%;
+}
+.radioButton{
+  width:35px;
+  margin: 15px;
+  // margin-bottom: 30px;
+}
+input#checkboxes{
+  width: auto;
+}
+select#funding {
+  // -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 100%;
+  font-family: $font;
+  margin:5px 0% 25px 0%
 }

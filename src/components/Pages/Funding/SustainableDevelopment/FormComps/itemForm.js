@@ -6,27 +6,27 @@ const ItemForm = ({ label, children, type = "text",required, ...otherProps }) =>
         {(() => {
             switch (type) {
                 case "text":
-                    return <div className="space">
+                    return <div className="spacex">
                             <label>{label}</label>
                             <input  type={type} required {...otherProps} />
                             </div>   
                 case "email":
-                    return <div className="space">
+                    return <div className="spacex">
                                 <label>{label}</label>
                                 <input  type="email" required {...otherProps} />
                             </div>
                 case "number":
-                    return <div className="space">
+                    return <div className="spacex">
                                 <label>{label}</label>
                                 <input  type="number" required {...otherProps} />
                             </div>
                 case "tel":
-                    return <div className="space">
+                    return <div className="spacex">
                                 <label>{label}</label>
                                 <input  type="tel" required {...otherProps} />
                             </div>
                 case "textarea":
-                    return <div className="space">
+                    return <div className="spacex">
                                 <label>{label}</label>
                                 <br></br>
                                 <textarea id="msg" rows="1" cols="33"  type="number" required {...otherProps} />

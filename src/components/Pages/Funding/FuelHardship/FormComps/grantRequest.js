@@ -68,41 +68,46 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
         />
 
       <>
-          <input type="checkbox" defaultChecked={evidenceProvided.driversLicense} id="license" name="license" onChange={toggleBoolean} value="evidenceProvided.driversLicense"></input>
-          <label htmlFor="license">{evidenceProvided.driversLicense.toString()} Proof Of Address - Drivers License</label><br></br>
+        <label>What Evidence Will Be Provided? </label>
+        <br></br>
+        <br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.driversLicense} id="checkboxes" onChange={toggleBoolean} value="evidenceProvided.driversLicense"></input>
+          <label htmlFor="license"> Proof Of Address - Drivers License</label><br></br>
 
-          <input type="checkbox" defaultChecked={evidenceProvided.utilityBill} id="utlitity" name="utlitity" onChange={toggleBoolean} value="evidenceProvided.utilityBill"></input>
-          <label htmlFor="utlitity">{evidenceProvided.utilityBill.toString()} Proof Of Address - Utility Bill</label><br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.utilityBill} id="checkboxes" onChange={toggleBoolean} value="evidenceProvided.utilityBill"></input>
+          <label htmlFor="utlitity"> Proof Of Address - Utility Bill</label><br></br>
 
-          <input type="checkbox" defaultChecked={evidenceProvided.contract} id="contract" name="contract" onChange={toggleBoolean} value="evidenceProvided.contract"></input>
-          <label htmlFor="contract"> {evidenceProvided.contract.toString()} Proof Of Income - Employment Contract</label><br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.contract} id="checkboxes" onChange={toggleBoolean} value="evidenceProvided.contract"></input>
+          <label htmlFor="contract"> Proof Of Income - Employment Contract</label><br></br>
 
-          <input type="checkbox" defaultChecked={evidenceProvided.payslips} id="payslips" name="payslips"  onChange={toggleBoolean} value="evidenceProvided.payslips"></input>
-          <label htmlFor="payslips"> {evidenceProvided.payslips.toString()} Proof Of Income - 3 Months Payslips</label><br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.payslips} id="checkboxes"  onChange={toggleBoolean} value="evidenceProvided.payslips"></input>
+          <label htmlFor="payslips">  Proof Of Income - 3 Months Payslips</label><br></br>
 
-          <input type="checkbox" defaultChecked={evidenceProvided.emailHR} id="HR" name="HR"  onChange={toggleBoolean} value="evidenceProvided.emailHR"></input>
-          <label htmlFor="HR">{evidenceProvided.emailHR.toString()} Proof Of Income - Email From Employer's HR Department</label><br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.emailHR} id="checkboxes"  onChange={toggleBoolean} value="evidenceProvided.emailHR"></input>
+          <label htmlFor="HR"> Proof Of Income - Email From Employer's HR Department</label><br></br>
 
-          <input type="checkbox" defaultChecked={evidenceProvided.bankStatements} id="statements" name="statements" onChange={toggleBoolean} value="evidenceProvided.bankStatements"></input>
-          <label htmlFor="statements">{evidenceProvided.bankStatements.toString()} Proof Of Income - Bank Statements</label><br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.bankStatements} id="checkboxes" onChange={toggleBoolean} value="evidenceProvided.bankStatements"></input>
+          <label htmlFor="statements"> Proof Of Income - Bank Statements</label><br></br>
 
-          <input type="checkbox" defaultChecked={evidenceProvided.energySupplierStatement} id="energy" name="energy" onChange={toggleBoolean} value="evidenceProvided.energySupplierStatement"></input>
-          <label htmlFor="energy"> {evidenceProvided.energySupplierStatement.toString()}Energy Account - Energy Supplier Statement</label><br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.energySupplierStatement} id="checkboxes" onChange={toggleBoolean} value="evidenceProvided.energySupplierStatement"></input>
+          <label htmlFor="energy"> Energy Account - Energy Supplier Statement</label><br></br>
 
-          <input type="checkbox" defaultChecked={evidenceProvided.energySupplierEmail}id="energyemail" name="energyemail" onChange={toggleBoolean} value="evidenceProvided.energySupplierEmail"></input>
-          <label htmlFor="energyemail"> {evidenceProvided.energySupplierEmail.toString()} Energy Account - Energy Supplier Email</label><br></br>
+          <input id="checkboxes" type="checkbox" defaultChecked={evidenceProvided.energySupplierEmail}id="checkboxes" onChange={toggleBoolean} value="evidenceProvided.energySupplierEmail"></input>
+          <label htmlFor="energyemail">  Energy Account - Energy Supplier Email</label><br></br>
+        <br></br>
 
       </>
 
-      <>
+      <div className="spacex">
           <label>Please Confirm The Full Grant Will Be Used For Energy Payments Only </label>
               <br></br>
+              <input id="yes" name="applied" type="radio" className="radioButton" value={true} defaultChecked={formData.confirmGrantOnlyForEnergy===true} onChange={booleanChange}></input>
               <label htmlFor="yes">Yes</label>
-              <input id="yes" name="applied" type="radio" value={true} defaultChecked={formData.confirmGrantOnlyForEnergy===true} onChange={booleanChange}></input>
                   
+              <br></br>
+              <input id="no" name="applied" type="radio" className="radioButton" value={false} defaultChecked={formData.confirmGrantOnlyForEnergy===false} onChange={booleanChange}></input>
               <label htmlFor="no">No</label>
-              <input id="no" name="applied" type="radio" value={false} defaultChecked={formData.confirmGrantOnlyForEnergy===false} onChange={booleanChange}></input>
-        </>
+        </div>
       <div className="fundingNavDiv"> 
         <div onClick={previous} id="back">
           <input  id="fundingNavButtons" value="Back" ></input>
