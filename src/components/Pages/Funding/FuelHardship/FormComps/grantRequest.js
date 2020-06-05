@@ -16,7 +16,9 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
 
   const booleanChange =(event)=>{
     setBoolean(event.target.value);
-    formData.confirmGrantOnlyForEnergy = event.target.value;
+    var isTrueSet = (event.target.value == 'true');
+    formData.confirmGrantOnlyForEnergy = isTrueSet;
+    console.log("is true set is currently at"+isTrueSet);
   }
 
   const toggleBoolean =(event)=>{
@@ -38,12 +40,14 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
   }
 
   const confirmationOfEnergyPaymentsOnly = (event)=> {
-    console.log(formData.confirmGrantOnlyForEnergy.toString());
+    console.log(formData.confirmGrantOnlyForEnergy);
     
-    event.preventDefault()
-    if(formData.confirmGrantOnlyForEnergy){
+    if(formData.confirmGrantOnlyForEnergy===true){
+      console.log('This is the current bool' + formData.confirmGrantOnlyForEnergy);
+      
       next();
     } else {
+      event.preventDefault()
       window.alert('You must confirm the grant will only be used for energy payments')
     }
   }
@@ -53,7 +57,7 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
     <div className="form">
       <h2>Apply - Grant Request</h2> <h3>Please ensure all fields are filled in</h3>
       
-      <form onSubmit={(event)=>{confirmationOfEnergyPaymentsOnly(event)}}>
+      <form onSubmit={confirmationOfEnergyPaymentsOnly}>
       <ItemForm
         label="Amount of Grant Requested (£) *"
         name="grantAmount"
@@ -94,11 +98,10 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
           <label>Please Confirm The Full Grant Will Be Used For Energy Payments Only </label>
               <br></br>
               <label htmlFor="yes">Yes</label>
-              <input id="yes" name="applied" type="radio" value={true} onChange={booleanChange}></input>
+              <input id="yes" name="applied" type="radio" value={true} defaultChecked={formData.confirmGrantOnlyForEnergy===true} onChange={booleanChange}></input>
                   
               <label htmlFor="no">No</label>
-              <input id="no" name="applied" type="radio" value={false} defaultChecked onChange={booleanChange}></input>
-              
+              <input id="no" name="applied" type="radio" value={false} defaultChecked={formData.confirmGrantOnlyForEnergy===false} onChange={booleanChange}></input>
         </>
       <div className="fundingNavDiv"> 
         <div onClick={previous} id="back">
