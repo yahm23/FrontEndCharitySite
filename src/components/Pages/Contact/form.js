@@ -49,11 +49,9 @@ class Form extends PureComponent {
                 message:this.state.message
             })
         })
-        .then(()=>{
-            
-            
-            alert('Your message has been submitted');
-        })
+        .then(            
+            alert('Your message has been submitted')
+        )
 
     }
     
