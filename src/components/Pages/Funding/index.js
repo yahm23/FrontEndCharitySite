@@ -25,23 +25,29 @@ const Funding =()=> {
 
                 <div className="whiteBackground">
 
-                    <div className="fundingForms">
-
-                        <Link to='/funding/sustainable-development-fund'>
-                            <div className="readStory" id="funding">
-                                <h3 className="padding" >Sustainable Development Fund</h3>
-                                <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-                            </div>
-                        </Link>
-
-                            <br></br>
-
-                        <Link to='/funding/fuel-hardship-fund'>
-                            <div className="readStory" id="funding">
-                                <h3 className="padding" >Fuel Hardship Fund</h3>
-                                <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
-                            </div>
-                        </Link>
+                    <div className="fundingForms">    
+                        <div>    
+                            <Link to='/funding/sustainable-development-fund'>
+                            <div className="fundingBanners">
+                                <h2 className="fundingTitles">Sustainable Development Fund</h2>                  
+                                <div className="readStory">
+                                    <h3 className="padding"> Apply here</h3>
+                                    <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
+                                </div>
+                            </div >
+                            </Link>
+                        </div>    
+                        <div >    
+                            <Link to='/funding/fuel-hardship-fund'>
+                            <div className="fundingBanners">
+                                <h2 className="fundingTitles">Fuel Hardship Fund</h2>                  
+                                <div className="readStory">
+                                    <h3 className="padding"> Apply here</h3>
+                                    <svg height="32" fill="white"className="chevron-right" viewBox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>
+                                </div>
+                            </div >
+                            </Link>
+                        </div>    
 
                     </div>
                 </div>

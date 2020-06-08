@@ -925,6 +925,7 @@ button#submit {
 }
 
 #funding {
+  bottom: 0;
   font-size: 120%;
   width: 400px;
 }
@@ -957,11 +958,6 @@ button#submit {
 .nextText {
   flex-grow: 4;
   text-align: center;
-}
-
-.fundingForms {
-  display: flex;
-  justify-content: space-around;
 }
 
 input#fundingNavButtons {
@@ -1008,6 +1004,35 @@ select#funding {
   font-size: 130%;
   margin: 1%;
   padding: 5%;
+}
+
+.fundingBanners {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("./Media/planthold.jpg");
+}
+
+.fundingForms {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fundingTitles {
+  margin: 10px;
+  font-size: 130%;
+  margin: 30px;
+  text-align: center;
+  font-size: 350%;
+  font-family: "Geon", Times, sans-serif;
+  color: white;
 }
 
 /*# sourceMappingURL=App.css.map */

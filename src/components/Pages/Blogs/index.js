@@ -87,8 +87,8 @@ const Blogs=()=> {
           <BottomBanner></BottomBanner>
         </div>
     )
-    } else {
-      
+    
+    } else {  
       return (
       <Helmet>
         <title>Stories</title>
