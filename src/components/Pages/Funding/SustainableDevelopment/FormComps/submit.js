@@ -11,7 +11,7 @@ const Submit = ({ navigation }) => {
         go("details")
         
         }} className="readStory" id="newReq">
-              <h4 className="nextText" >New Request</h4>
+              <h4 className="nextText" >New Application</h4>
           </div>
         </a>
     </div>
