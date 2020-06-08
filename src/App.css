@@ -655,7 +655,7 @@ div .Bar {
   background-size: cover;
   height: 100%;
   background-size: 208%;
-  background-position: center -200px;
+  background-position: center -130px;
 }
 
 .Posts {
@@ -1018,6 +1018,22 @@ select#funding {
   background-size: cover;
   background-position: 50% 50%;
   background-image: url("./Media/planthold.jpg");
+}
+
+.fundingBanners-mobile {
+  width: 90vw;
+  height: 400px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("./Media/planthold.jpg");
+  font-size: 70%;
 }
 
 .fundingForms {

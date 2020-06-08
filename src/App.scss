@@ -639,7 +639,7 @@ div .Bar {
   background-image: url('./Media/DesktopBackgrounds/meeting.jpg');
   @include backgroundSettings();
   background-size: 208%;
-  background-position: center -200px;
+  background-position: center -130px;
 }
 
 @mixin headings(){
@@ -995,9 +995,7 @@ select#funding {
   padding: 5%;
 }
 
-.fundingBanners{
-  width: 500px;
-  height: 600px;
+@mixin fundingBanners {
   border: 1px solid #cccccc;
   border-radius: 4px;
   
@@ -1008,7 +1006,22 @@ select#funding {
 
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url('./Media/planthold.jpg');}
+  background-image: url('./Media/planthold.jpg');
+}
+.fundingBanners{
+  width: 500px;
+  height: 600px;
+  @include fundingBanners();
+}
+  
+.fundingBanners-mobile{
+  width: 90vw;
+  height: 400px;
+  margin-bottom: 20px;
+  @include fundingBanners();
+  font-size: 70%;
+}
+  
 
 .fundingForms{
   flex-wrap: wrap;

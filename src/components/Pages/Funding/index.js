@@ -28,7 +28,7 @@ const Funding =()=> {
                     <div className="fundingForms">    
                         <div>    
                             <Link to='/funding/sustainable-development-fund'>
-                            <div className="fundingBanners">
+                            <div className={isMobile? "fundingBanners-mobile":"fundingBanners"}>
                                 <h2 className="fundingTitles">Sustainable Development Fund</h2>                  
                                 <div className="readStory">
                                     <h3 className="padding"> Apply here</h3>
@@ -39,7 +39,7 @@ const Funding =()=> {
                         </div>    
                         <div >    
                             <Link to='/funding/fuel-hardship-fund'>
-                            <div className="fundingBanners">
+                            <div className={isMobile? "fundingBanners-mobile":"fundingBanners"}>
                                 <h2 className="fundingTitles">Fuel Hardship Fund</h2>                  
                                 <div className="readStory">
                                     <h3 className="padding"> Apply here</h3>
