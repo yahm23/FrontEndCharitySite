@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import backendURL from '../../backendURLs.js'
 
 
 
@@ -35,7 +36,7 @@ constructor(props) {
 
     handleSubmit(event) {
         if(this.state.amount!==''){
-        const postURL = "https://blog-back-end-green.herokuapp.com/donations"
+        const postURL = `${backendURL}/donations`
         fetch(postURL, {
         method: 'POST',
         headers: {
@@ -49,10 +50,10 @@ constructor(props) {
             number:this.state.number
         })
         })
-        .then(()=>{
-        alert('Your donation has been submitted');
+        .then(
+        alert('Your donation has been submitted')
 
-        })}
+       )}
         else{
             alert('Please pick an amount to donate');
             event.preventDefault();
