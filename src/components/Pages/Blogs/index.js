@@ -1,7 +1,5 @@
 import React, { useState, useEffect, setErrors} from 'react'
-// import Strapi from "strapi-sdk-javascript/build/main";
-// import marked from 'marked';
-// import Article from '../Article';
+
 
 import { Link } from "react-router-dom";
 import { useMediaQuery } from 'react-responsive';
@@ -11,7 +9,6 @@ import {Helmet} from "react-helmet";
 import backendURL from '../../backendURLs.js'
 
 
-// const strapi = new Strapi('https://blog-back-end-green.herokuapp.com/');
 
 
 const Blogs=()=> {

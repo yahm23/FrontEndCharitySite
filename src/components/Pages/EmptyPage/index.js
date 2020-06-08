@@ -3,6 +3,7 @@ import BottomBanner from '../../StructuralComponents/BottomBanner'
 import { useMediaQuery } from 'react-responsive';
 import  { Redirect, useHistory } from 'react-router-dom'
 import marked from 'marked';
+import backendURL from '../../backendURLs.js'
 
 
 import Wave from '../../StructuralComponents/Wave';
@@ -21,7 +22,7 @@ const EmptyPage = (props)=> {
     useEffect(() => {
         // ref.current = true;
         async function fetchData() {
-          return await fetch(`https://blog-back-end-green.herokuapp.com/pages`)
+          return await fetch(`${backendURL}/pages`)
             .then((response) => response.json())
             .then((response) => {
               setPages(response);
