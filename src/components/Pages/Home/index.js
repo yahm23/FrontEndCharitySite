@@ -6,6 +6,7 @@ import { useMediaQuery } from 'react-responsive';
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
 
+import backendURL from '../../backendURLs.js'
 
 
 
@@ -32,7 +33,7 @@ const Story = ()=>{
 
     async function fetchData() {
 
-        await fetch("https://blog-back-end-green.herokuapp.com/blogs")
+        await fetch(`${backendURL}/blogs`)
         .then(response => response.json())
         .then(response => {
             setStory(response);            

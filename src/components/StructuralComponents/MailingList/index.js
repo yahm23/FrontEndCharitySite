@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import backendURL from '../../backendURLs.js'
 
 export class MailingList extends Component {
 
@@ -17,7 +18,7 @@ export class MailingList extends Component {
     }
 
     handleSubmit(event) {
-        const postURL = "https://blog-back-end-green.herokuapp.com/mailing-lists/"
+        const postURL = `${backendURL}/mailing-lists/`
         fetch(postURL, {
             method: 'POST',
             headers: {

@@ -1,4 +1,5 @@
 import React from "react";
+import backendURL from '../../../../backendURLs.js'
 
 const Review = ({ setForm, formData, navigation }) => {
 
@@ -27,7 +28,7 @@ const Review = ({ setForm, formData, navigation }) => {
   }
 
   const submit = (formDataToSubmit)=>{
-    const postURL = "https://blog-back-end-green.herokuapp.com/sustainable-development-funds";
+    const postURL =`${backendURL}/sustainable-development-funds`;
 
     fetch(postURL, {
         method: 'POST',

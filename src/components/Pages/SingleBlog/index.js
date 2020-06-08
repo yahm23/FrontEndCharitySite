@@ -5,6 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import BottomBanner from "../../StructuralComponents/BottomBanner"
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
+import backendURL from '../../backendURLs.js'
 
 
 
@@ -21,7 +22,7 @@ const SingleBlog = (props)=>{
 
         async function fetchData() {
     
-            await fetch(`https://blog-back-end-green.herokuapp.com/blogs/${props.match.params.id}`)
+            await fetch(`${backendURL}/blogs/${props.match.params.id}`)
             .then(response => response.json())
             .then(response => {
                 setBlog(response);
