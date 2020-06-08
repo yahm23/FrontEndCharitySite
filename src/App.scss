@@ -1011,6 +1011,7 @@ select#funding {
   background-image: url('./Media/planthold.jpg');}
 
 .fundingForms{
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
 }

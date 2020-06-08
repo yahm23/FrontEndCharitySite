@@ -1021,6 +1021,7 @@ select#funding {
 }
 
 .fundingForms {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
 }
