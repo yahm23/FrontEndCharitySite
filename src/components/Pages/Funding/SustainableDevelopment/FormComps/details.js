@@ -1,8 +1,10 @@
 import React from "react";
+import { useMediaQuery } from 'react-responsive';
 
 import ItemForm from "./itemForm";
 
 const Details = ({ setForm, formData, navigation }) => {
+  let isMobile = useMediaQuery({ maxWidth: 767 });
   const { emailAddress,
           contactName,
           position,
@@ -71,9 +73,8 @@ const Details = ({ setForm, formData, navigation }) => {
           required
          />
       
-      
-        <div  id="next">
-          <input  className="fundingNavButtons" id="fundingNavButtons" type="submit" value="Next" ></input>
+        <div>
+          <input id={isMobile? "next-mobile":"next"} className="fundingNavButtons" type="submit" value="Next" ></input>
         </div>
         {/* Code below is to test pages wihtout having to fill out entire form */}
         {/* <div onClick={go('review')} id="back">

@@ -1,8 +1,11 @@
 import React from "react";
+import { useMediaQuery } from 'react-responsive';
 
 import ItemForm from "./itemForm";
 
 const ProjectDetails = ({ setForm, formData, navigation }) => {
+    let isMobile = useMediaQuery({ maxWidth: 767 });
+
     const { projectName,
         projectOverview,
         projectNeeded,
@@ -71,12 +74,12 @@ return (
       type="textarea"
       />
       <div className="fundingNavDiv"> 
-        <div onClick={previous} id="back">
-          <input  id="fundingNavButtons" value="Back" ></input>
+        <div onClick={previous} >
+          <input id={isMobile? "back-mobile":"back"}  className="fundingNavButtons" value="Back" ></input>
         </div>
         
-        <div id="next">
-            <input id="fundingNavButtons" type="submit" value="Next" ></input>
+        <div >
+            <input id={isMobile? "next-mobile":"next"} className="fundingNavButtons" type="submit" value="Next" ></input>
         </div>
       </div>
 

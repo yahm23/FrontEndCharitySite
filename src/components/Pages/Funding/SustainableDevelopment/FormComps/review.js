@@ -1,7 +1,10 @@
 import React from "react";
+import { useMediaQuery } from 'react-responsive';
+
 import backendURL from '../../../../backendURLs.js'
 
 const Review = ({ setForm, formData, navigation }) => {
+  let isMobile = useMediaQuery({ maxWidth: 767 });
 
   const { go, previous } = navigation;
 
@@ -110,14 +113,13 @@ const Review = ({ setForm, formData, navigation }) => {
 
 
       <div className="fundingNavDiv"> 
-        <div onClick={previous} id="back">
-          <input  id="fundingNavButtons" value="Back" ></input>
+      <div onClick={previous} >
+          <input id={isMobile? "back-mobile":"back"}  className="fundingNavButtons" value="Back" ></input>
         </div>
         
-        <div id="next">
-            <input onClick={handleSubmission} id="fundingNavButtons" type="submit" value="Submit" ></input>
+        <div >
+            <input id={isMobile? "next-mobile":"next"} onClick={handleSubmission} className="fundingNavButtons" type="submit" value="Submit" ></input>
         </div>
-
       </div>
 
 

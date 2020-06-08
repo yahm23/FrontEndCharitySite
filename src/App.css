@@ -931,14 +931,14 @@ button#submit {
   width: 400px;
 }
 
-#fundingNavButtons {
-  font-size: 138%;
-  height: 80px;
+.fundingNavButtons {
   text-align: center;
   background-color: #84C632;
   color: white;
   font-family: "Geon", Times, sans-serif;
   border: none;
+  font-size: 138%;
+  height: 80px;
 }
 
 #newReq {
@@ -951,8 +951,20 @@ button#submit {
   float: right;
 }
 
+#next-mobile {
+  float: right;
+  width: 120px;
+  height: 70px;
+}
+
 #back {
   width: 180px;
+  float: left;
+}
+
+#back-mobile {
+  width: 120px;
+  height: 70px;
   float: left;
 }
 

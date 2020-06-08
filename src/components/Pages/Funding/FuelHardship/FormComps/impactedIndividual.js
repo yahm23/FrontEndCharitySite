@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 
 import ItemForm from "../../SustainableDevelopment/FormComps/itemForm";
-import DropdownForm from "./dropdownForm";
+// import DropdownForm from "./dropdownForm";
+import { useMediaQuery } from 'react-responsive';
+
 
 const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
+  let isMobile = useMediaQuery({ maxWidth: 767 });
   const { nameOfImpactedIndividual,
           appliedBefore,
           timeSinceLastApplication,
@@ -127,11 +130,11 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
     
       <div className="fundingNavDiv"> 
         <div onClick={previous} id="back">
-          <input  className="" id="fundingNavButtons" value="Back" ></input>
+          {isMobile? <svg  height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>:<input className="" id="fundingNavButtons" value="Back"></input> }
         </div>
         
         <div   id="next">
-            <input  className="" id="fundingNavButtons" type="submit" value="Next" ></input>
+        {isMobile? <svg  height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>:<input  className="" id="fundingNavButtons" type="submit" value="Next" ></input>}
         </div>
       </div>
 

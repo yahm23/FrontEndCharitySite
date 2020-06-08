@@ -924,26 +924,50 @@ button#submit{
   font-size: 120%;
   width:400px
 }
-
-#fundingNavButtons{
-  font-size: 138%;
-  height: 80px;
+@mixin fundingNavButtons{
   text-align: center;
   background-color: $green;
   color: white;
   font-family: $font;
   border: none;
 }
+.fundingNavButtons{
+  @include fundingNavButtons();
+  font-size: 138%;
+  height: 80px;
+  
+}
+// .fundingNavButtons-mobile{
+//   @include fundingNavButtons();
+//   font-size: 95%;
+//   height: 50px;
+//   float: right;
+//   width: 75px;
+// }
+
+
 #newReq{
   width: 180px;
   margin:0 auto;
 }
+
 #next{
   width: 180px;
   float: right;
 }
+#next-mobile{
+  float: right;
+  width: 120px;
+  height: 70px;
+}
+
 #back{
   width: 180px;
+  float: left;
+}
+#back-mobile{
+  width: 120px;
+  height: 70px;
   float: left;
 }
 
