@@ -114,7 +114,7 @@ const Review = ({ setForm, formData, navigation }) => {
         </div>
         
         <div id="next">
-            <input onClick={handleSubmission} id="fundingNavButtons" type="submit" value="Next" ></input>
+            <input onClick={handleSubmission} id="fundingNavButtons" type="submit" value="Submit" ></input>
         </div>
 
       </div>

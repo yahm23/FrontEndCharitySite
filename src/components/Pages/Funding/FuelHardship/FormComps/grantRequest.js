@@ -18,32 +18,23 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
     setBoolean(event.target.value);
     var isTrueSet = (event.target.value == 'true');
     formData.confirmGrantOnlyForEnergy = isTrueSet;
-    console.log("is true set is currently at"+isTrueSet);
   }
 
   const toggleBoolean =(event)=>{
     setCheckbox(event.target.value)
     
-    console.log("value at start of click "+ eval(event.target.value).toString());
-    
     let value = eval(event.target.value);
     let opposite = !value;
 
-    console.log("The opposite of that initial value "+ opposite);
-
-    console.log("opposite "+opposite);
-    //try checking this below
     var fn = eval(`${event.target.value} = ${opposite}`);
-  //   fn = opposite;
-    console.log("the changed field of object is now "+eval(event.target.value.toString()));
-  //   eval(event.target.value) = value
+
   }
 
   const confirmationOfEnergyPaymentsOnly = (event)=> {
-    console.log(formData.confirmGrantOnlyForEnergy);
+    // console.log(formData.confirmGrantOnlyForEnergy);
     
     if(formData.confirmGrantOnlyForEnergy===true){
-      console.log('This is the current bool' + formData.confirmGrantOnlyForEnergy);
+      // console.log('This is the current bool' + formData.confirmGrantOnlyForEnergy);
       
       next();
     } else {
