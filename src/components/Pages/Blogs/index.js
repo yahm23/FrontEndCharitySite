@@ -8,7 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 import BottomBanner from '../../StructuralComponents/BottomBanner';
 import Wave from '../../StructuralComponents/Wave';
 import {Helmet} from "react-helmet";
-
+import backendURL from '../../backendURLs.js'
 
 
 // const strapi = new Strapi('https://blog-back-end-green.herokuapp.com/');
@@ -19,7 +19,7 @@ const Blogs=()=> {
 
   async function fetchData() {
 
-    await fetch("https://blog-back-end-green.herokuapp.com/blogs")
+    await fetch(`${backendURL}/blogs`)
     .then(response => response.json())
     .then(response => {
         setPosts(response);            
