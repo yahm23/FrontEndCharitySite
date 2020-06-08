@@ -103,7 +103,7 @@ const Review = ({ formData, navigation }) => {
       <h2>Review Your Data</h2>
         <h4>
             Your Details
-            <button onClick={() => go("details")}>Edit</button>
+            <button className="editFunding" onClick={() => go("details")}>Edit</button>
         </h4>
         <div>
             Email Address: {`${formData.emailAddress}`}<br />
@@ -117,7 +117,7 @@ const Review = ({ formData, navigation }) => {
 
         <h4>
         Impacted Individual Details
-        <button onClick={() => go("impactedIndividualDetails")}>Edit</button>
+        <button  className="editFunding" onClick={() => go("impactedIndividualDetails")}>Edit</button>
       </h4>
       <div>
         Name of Impacted Individual: {`${formData.nameOfImpactedIndividual}`} <br />
@@ -133,7 +133,7 @@ const Review = ({ formData, navigation }) => {
         
         <h4>
         Energy Accounts
-        <button onClick={() => go("impactedIndividualDetails")}>Edit</button>
+        <button className="editFunding" onClick={() => go("impactedIndividualDetails")}>Edit</button>
       </h4>
       <div>
         Name of Electricity Supplier: {`${formData.nameOfElectricSupplier}`} <br />
@@ -147,7 +147,7 @@ const Review = ({ formData, navigation }) => {
       </div>
       <h4>
         Grant Request
-        <button onClick={() => go("grantRequest")}>Edit</button>
+        <button className="editFunding" onClick={() => go("grantRequest")}>Edit</button>
       </h4>
       <div>
         Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />

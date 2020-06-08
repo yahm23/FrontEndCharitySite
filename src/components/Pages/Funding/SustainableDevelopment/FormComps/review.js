@@ -58,9 +58,9 @@ const Review = ({ setForm, formData, navigation }) => {
   return (
     <div className="form">
       <h2>Review Your Data</h2>        
-        <h4>
+        <h4 className="detailTitle" >
             Your Details
-            <button onClick={() => go("details")}>Edit</button>
+            <button className="editFunding" onClick={() => go("details")}>Edit</button>
         </h4>
         <div>
             {" "}
@@ -75,7 +75,7 @@ const Review = ({ setForm, formData, navigation }) => {
 
         <h4>
         Project Details
-        <button onClick={() => go("projectDetails")}>Edit</button>
+        <button  className="editFunding" onClick={() => go("projectDetails")}>Edit</button>
       </h4>
       <div>
         Name of Project: {`${formData.projectName}`} <br />
@@ -88,7 +88,7 @@ const Review = ({ setForm, formData, navigation }) => {
       </div>
       <h4>
         Project in Practise
-        <button onClick={() => go("projectInPractise")}>Edit</button>
+        <button  className="editFunding"  onClick={() => go("projectInPractise")}>Edit</button>
       </h4>
       <div>
         How Will You Source Other Funding Required? {`${formData.sourceOtherFunding}`} <br />
@@ -100,7 +100,7 @@ const Review = ({ setForm, formData, navigation }) => {
       </div>
       <h4>
         Grant Request
-        <button onClick={() => go("grantRequest")}>Edit</button>
+        <button className="editFunding" onClick={() => go("grantRequest")}>Edit</button>
       </h4>
       <div>
         Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />

@@ -929,6 +929,8 @@ button#submit{
   text-align: center;
   background-color: $green;
   color: white;
+  font-family: $font;
+  border: none;
 }
 #newReq{
   width: 180px;
@@ -972,6 +974,17 @@ select#funding {
   font-size: 100%;
   font-family: $font;
   margin:5px 0% 25px 0%
+}
+.editFunding{
+  font-size: 90%;
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  background-color: $green;
+  color: white;
+  font-family: $font;
+  border: none;
+  float: right;
 }
 
 #form.fundCard{

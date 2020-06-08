@@ -16,10 +16,10 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
 
   const { next, previous } = navigation;
 
-  let [selectedBoolean,setBoolean] = useState(false);
+  // let [selectedBoolean,setBoolean] = useState(false);
 
   const booleanChange =(event)=>{
-    setBoolean(event.target.value);
+    // setBoolean(event.target.value);
     formData.hasCustomerHadPaymentPlanPreviously = event.target.value;
     
   }

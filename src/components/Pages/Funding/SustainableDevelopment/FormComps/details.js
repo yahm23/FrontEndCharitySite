@@ -75,7 +75,8 @@ const Details = ({ setForm, formData, navigation }) => {
         <div  id="next">
           <input  className="fundingNavButtons" id="fundingNavButtons" type="submit" value="Next" ></input>
         </div>
-        {/* <div onClick={go('grantRequest')} id="back">
+        {/* Code below is to test pages wihtout having to fill out entire form */}
+        {/* <div onClick={go('review')} id="back">
           <input  id="fundingNavButtons" value="Back" ></input>
         </div> */}
         

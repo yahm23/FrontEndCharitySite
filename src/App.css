@@ -935,6 +935,8 @@ button#submit {
   text-align: center;
   background-color: #84C632;
   color: white;
+  font-family: "Geon", Times, sans-serif;
+  border: none;
 }
 
 #newReq {
@@ -984,6 +986,18 @@ select#funding {
   font-size: 100%;
   font-family: "Geon", Times, sans-serif;
   margin: 5px 0% 25px 0%;
+}
+
+.editFunding {
+  font-size: 90%;
+  width: 70px;
+  height: 35px;
+  text-align: center;
+  background-color: #84C632;
+  color: white;
+  font-family: "Geon", Times, sans-serif;
+  border: none;
+  float: right;
 }
 
 #form.fundCard {
