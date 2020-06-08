@@ -1006,12 +1006,19 @@ select#funding {
 
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url('./Media/planthold.jpg');
+  // background-image: url('./Media/planthold.jpg');
 }
 .fundingBanners{
   width: 500px;
   height: 600px;
   @include fundingBanners();
+}
+#sustainableDev{
+  background-image: url('./Media/planthold.jpg');
+}
+#fuelHardship{
+  background-image: url('./Media/treeholders.jpg');
+
 }
   
 .fundingBanners-mobile{

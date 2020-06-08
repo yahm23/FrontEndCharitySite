@@ -57,54 +57,53 @@ const Review = ({ setForm, formData, navigation }) => {
 
   return (
     <div className="form">
-      <h2>Review Your Data</h2>        
-        <h4 className="detailTitle" >
-            Your Details
+      <h2>Review Your Application</h2>        
+        <h3 className="detailTitle" >
+          <strong>Your Details</strong>
             <button className="editFunding" onClick={() => go("details")}>Edit</button>
-        </h4>
+        </h3>
         <div>
-            {" "}
-            Email Address: {`${formData.emailAddress}`}<br />
-            Contact Name: {`${formData.contactName}`}<br />
-            Position: {`${formData.position}`}<br />
-            Organisation Name: {`${formData.organisationName}`}<br />
-            Company Registration / Charity Number: {`${formData.companyRegistrationOrCharityNumber}`}<br />
-            Contact Number: {`${formData.contactNumber}`}<br />
-            Contact Email: {`${formData.contactEmail}`}<br />
+          <b>Email Address:</b> {`${formData.emailAddress}`}<br />
+          <b>Contact Name:</b> {`${formData.contactName}`}<br />
+          <b>Position:</b>  {`${formData.position}`}<br />
+          <b>Organisation Name:</b> {`${formData.organisationName}`}<br />
+          <b>Company Registration / Charity Number: </b>{`${formData.companyRegistrationOrCharityNumber}`}<br />
+          <b>Contact Number: </b>{`${formData.contactNumber}`}<br />
+          <b>Contact Email:</b> {`${formData.contactEmail}`}<br />
         </div>
 
-        <h4>
+        <h3>
         Project Details
         <button  className="editFunding" onClick={() => go("projectDetails")}>Edit</button>
-      </h4>
+      </h3>
       <div>
-        Name of Project: {`${formData.projectName}`} <br />
-        Full Overview of Project: {`${formData.projectOverview}`} <br />
-        Why Is The Project Needed?  {`${formData.projectNeeded}`} <br />
-        Who Will Be Impacted By The Project? {`${formData.whoWillProjectImpact}`}<br />
-        What Is The Outcome Or Benefit Of The Project?  {`${formData.outcomeOrBenefitOfProject}`}<br />
-        What Is The Community Impact?  {`${formData.communityImpactOfProject}`}<br />
-        How Does This Project Demonstrate Sustainability Or Conservation?  {`${formData.projectDemonstration}`}<br />
+        <b>Name of Project:</b>{`${formData.projectName}`} <br />
+        <b>Full Overview of Project: </b>{`${formData.projectOverview}`} <br />
+        <b>Why Is The Project Needed?  </b>{`${formData.projectNeeded}`} <br />
+        <b>Who Will Be Impacted By The Project? </b>{`${formData.whoWillProjectImpact}`}<br />
+        <b>What Is The Outcome Or Benefit Of The Project?</b> {`${formData.outcomeOrBenefitOfProject}`}<br />
+        <b>What Is The Community Impact?</b> {`${formData.communityImpactOfProject}`}<br />
+        <b>How Does This Project Demonstrate Sustainability Or Conservation?</b>  {`${formData.projectDemonstration}`}<br />
       </div>
-      <h4>
+      <h3>
         Project in Practise
         <button  className="editFunding"  onClick={() => go("projectInPractise")}>Edit</button>
-      </h4>
+      </h3>
       <div>
-        How Will You Source Other Funding Required? {`${formData.sourceOtherFunding}`} <br />
-        What Are The Barriers And Challenges To The Project?  {`${formData.barriersAndChallenges}`}<br />
-        How Will The Project Be Monitored And Evaluated? {`${formData.projectMonitoredAndEvaluated}`}<br />
-        How Will The Project Continue Once The Funding Has Been Used? {`${formData.projectContinuedOnceFunding}`}<br />
-        Are You Working With Any Partner Organisations? {`${formData.partnerOrganisations}`}<br />
-        Outline Any Existing Funding Or Reserves {`${formData.existingFundsOrReserves}`}<br />
+        <b>How Will You Source Other Funding Required?</b> {`${formData.sourceOtherFunding}`} <br />
+        <b>What Are The Barriers And Challenges To The Project?</b>{`${formData.barriersAndChallenges}`}<br />
+        <b>How Will The Project Be Monitored And Evaluated? </b>{`${formData.projectMonitoredAndEvaluated}`}<br />
+        <b>How Will The Project Continue Once The Funding Has Been Used? </b>{`${formData.projectContinuedOnceFunding}`}<br />
+        <b>Are You Working With Any Partner Organisations? </b>{`${formData.partnerOrganisations}`}<br />
+        <b>Outline Any Existing Funding Or Reserves </b>{`${formData.existingFundsOrReserves}`}<br />
       </div>
-      <h4>
+      <h3>
         Grant Request
         <button className="editFunding" onClick={() => go("grantRequest")}>Edit</button>
-      </h4>
+      </h3>
       <div>
-        Amount of Grant Requested(£): {`${formData.grantAmount}`} <br />
-        Public Description of Project: {`${formData.publicDescriptionOfProject}`}
+        <b>Amount of Grant Requested(£):</b> {`${formData.grantAmount}`} <br />
+        <b>Public Description of Project:</b>{`${formData.publicDescriptionOfProject}`}
       </div>
 
 

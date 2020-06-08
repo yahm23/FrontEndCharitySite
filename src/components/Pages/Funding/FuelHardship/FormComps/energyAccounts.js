@@ -43,6 +43,7 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
         name="electricAccountNumber"
         value={electricAccountNumber}
         onChange={setForm}
+        type="tel"
         />
 
       <ItemForm
@@ -56,6 +57,7 @@ const EnergyAccounts = ({ setForm, formData, navigation }) => {
         name="gasAccountNumber"
         value={gasAccountNumber}
         onChange={setForm}
+        type="tel"
         />
 
         <div>
