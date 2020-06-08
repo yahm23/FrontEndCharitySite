@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-
+import backendURL from '../../backendURLs.js'
 
 
 class Form extends PureComponent {
@@ -34,9 +34,8 @@ class Form extends PureComponent {
     }
 
     handleSubmit(event) {
-  
         
-        const postURL = "https://blog-back-end-green.herokuapp.com/contact-submissions"
+        const postURL = `${backendURL}/contact-submissions`
         fetch(postURL, {
             method: 'POST',
             headers: {
@@ -55,9 +54,7 @@ class Form extends PureComponent {
             
             alert('Your message has been submitted');
         })
-        
 
-        // event.preventDefault();
     }
     
 
