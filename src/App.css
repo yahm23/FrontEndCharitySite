@@ -820,6 +820,7 @@ button#submit {
   color: white;
   height: 60px;
   width: 150px;
+  border: none;
   background-color: #84C632;
   font-size: 120%;
   margin: 0%;

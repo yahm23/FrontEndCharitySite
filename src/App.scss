@@ -812,7 +812,7 @@ button#submit{
   @include whiteFont();
   height: 60px;
   width: 150px;
-  
+  border:none;
   background-color: $green;
   font-size: 120%;
   margin: 0%;
