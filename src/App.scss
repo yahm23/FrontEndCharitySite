@@ -1011,6 +1011,8 @@ select#funding {
 .fundingBanners{
   width: 500px;
   height: 600px;
+  margin-bottom: 20px;
+
   @include fundingBanners();
 }
 #sustainableDev{
