@@ -19,7 +19,7 @@ const FuelHardship =()=> {
                 <div className="overlay"></div>
         
                 <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                    <h1>Fuel Hardship Fund</h1>
+                    <h1 className={isMobile? "headingSizes-mobile":"headingSizes"}>Fuel Hardship Fund</h1>
                     <Wave></Wave>
                 </div>
 

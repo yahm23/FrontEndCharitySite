@@ -20,7 +20,7 @@ const Contact=()=>{
             <div className="contactContainer" >
                 <div className="overlay"></div>
                 <div className={isMobile? "Posts-mobile":"contactHeading"} >
-                    <h1>Contact</h1>
+                    <h1 className={isMobile? "headingSizes-mobile":"headingSizes"}>Contact</h1>
                     <Wave></Wave>
                 </div>
                 

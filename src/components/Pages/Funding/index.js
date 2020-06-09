@@ -19,7 +19,7 @@ const Funding =()=> {
                 <div className="overlay"></div>
         
                 <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                    <h1>Funding</h1>
+                    <h1 className={isMobile? "headingSizes-mobile":"headingSizes"}>Funding</h1>
                     <Wave></Wave>
                 </div>
 

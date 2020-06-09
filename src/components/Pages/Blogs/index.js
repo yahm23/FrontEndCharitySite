@@ -44,7 +44,7 @@ const Blogs=()=> {
           <div className="overlay"></div>
 
             <div className={isMobile ?"Posts-mobile":"contactHeading"}>
-              <h1>Stories</h1>
+              <h1 className={isMobile? "headingSizes-mobile":"headingSizes"}>Stories</h1>
               <Wave></Wave>
             </div>
             <div className="">

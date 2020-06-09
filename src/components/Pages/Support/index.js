@@ -18,7 +18,7 @@ const Support =()=> {
                 <div className="overlay"></div>
         
                 <div className={isMobile? "Posts-mobile":"contactHeading"}>
-                    <h1>Support Us</h1>
+                    <h1 className={isMobile? "headingSizes-mobile":"headingSizes"}>Support Us</h1>
                     <Wave></Wave>
                 </div>
 

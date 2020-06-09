@@ -73,6 +73,18 @@ body {
   text-align: center;
 }
 
+.headingSizes {
+  font-size: 60px;
+}
+
+.headingSizes-mobile {
+  margin-top: 10%;
+  margin-right: 4%;
+  margin-left: 4%;
+  font-weight: 600;
+  font-size: 45px;
+}
+
 #space-mobile {
   flex-grow: 3;
   padding-left: 12%;

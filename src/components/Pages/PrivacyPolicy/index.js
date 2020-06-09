@@ -18,7 +18,7 @@ const  PrivacyPolicy =()=> {
                     <div className="overlay"></div>
                     <div className={isMobile? "Posts-mobile":"contactHeading"}>
                         
-                        <h1>Our Privacy Policy</h1>
+                        <h1 className={isMobile? "headingSizes-mobile":"headingSizes"}>Our Privacy Policy</h1>
                         <Wave></Wave>
                     </div>
                 </div>

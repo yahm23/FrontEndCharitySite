@@ -18,7 +18,7 @@ const PageNotFound = ()=> {
                 <div className="overlay"></div>
                 
                 <div className={isMobile ?"Posts-mobile":"contactHeading"} >
-                    <h1 className=""> 404 Page Not Found</h1>
+                    <h1 className={isMobile? "headingSizes-mobile":"headingSizes"}> 404 Page Not Found</h1>
                     <Wave></Wave>
                 </div>
 
