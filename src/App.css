@@ -1,4 +1,5 @@
 body {
+  width: 100%;
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -61,6 +62,10 @@ body {
 
 #bigger {
   font: weight 6;
+}
+
+.navTitles {
+  font-size: 60%;
 }
 
 #space {
@@ -559,6 +564,10 @@ div .Bar {
 
 .container-mobile {
   height: 100%;
+}
+
+.containero {
+  position: relative;
 }
 
 .list {

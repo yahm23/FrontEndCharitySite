@@ -18,12 +18,12 @@ const NavBar = () => {
         </div>
 
         <div id="space" className= "navbarright">
-          <h3><Link to='/'>Home</Link> </h3>
-          <h3><Link to='/about'>About us</Link></h3>
-          <h3><Link to='/blogs'>Stories</Link></h3>
-          <h3><NavLink to='/funding'> Apply to Funding</NavLink></h3>
-          <h3><Link to='/contact'>Contact</Link></h3>
-          <Link to='/donation'><button className="donateButton"> Make a donation</button></Link>
+          <h3><Link className="navTitles" to='/'>Home</Link> </h3>
+          <h3><Link className="navTitles" to='/about'>About us</Link></h3>
+          <h3><Link className="navTitles" to='/blogs'>Stories</Link></h3>
+          <h3><NavLink className="navTitles" to='/funding'> Apply to Funding</NavLink></h3>
+          <h3><Link className="navTitles" to='/contact'>Contact</Link></h3>
+          <Link className="navTitles" to='/donation'><button className="donateButton"> Make a donation</button></Link>
           
           
         </div>

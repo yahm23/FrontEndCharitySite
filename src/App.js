@@ -14,7 +14,7 @@ function App() {
     let isMobile = useMediaQuery({ maxWidth: 970 })
     return (
  
-      <div className ={`container${isMobile ? "-mobile" : ""}`}>
+      <div className ={`containero${isMobile ? "-mobile" : ""}`}>
         <Container mobileClass={`${isMobile ? "mobile" : ""}`}></Container>
       </div>
     )

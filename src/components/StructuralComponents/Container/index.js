@@ -24,7 +24,7 @@ const Container=(props)=>{
   
     return(
     <div>
-      <div className ={props.mobileClass==="mobile" ? "container-mobile" : "container"}>
+      <div className ={props.mobileClass==="mobile" ? "container-mobile" : "containero"}>
           {props.mobileClass==="mobile" ? <MobileNavBar></MobileNavBar>: <NavBar></NavBar>}
         <nav className="app-container">
         </nav>

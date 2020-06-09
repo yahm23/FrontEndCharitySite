@@ -1,4 +1,5 @@
 body{
+  width: 100%;
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -79,11 +80,15 @@ $font: 'Geon', Times, sans-serif;
   font: weight 6;;
   }
   
+.navTitles{
+  font-size: 60%;
+}
 #space{
   flex-grow: 0.8;
   text-align: center;
   // margin-top: 4%;
 }
+
 #space-mobile{
   flex-grow: 3;
   padding-left: 12%;
@@ -558,6 +563,9 @@ div .Bar {
 
 .container-mobile{
   height:100%;
+}
+.containero{
+  position: relative;
 }
 
 
