@@ -918,11 +918,10 @@ button#submit{
 }
 
 #funding{
-  // display: block;
-  // margin-top: 100%;
+
   bottom: 0;
   font-size: 120%;
-  width:400px
+  // width:400px
 }
 @mixin fundingNavButtons{
   text-align: center;
@@ -990,12 +989,28 @@ input#fundingNavButtons {
 input#checkboxes{
   width: auto;
 }
+@mixin dropdownFunding{
+  -moz-appearance: none;
+  font-size: 100%;
+  font-family: $font;
+  margin:5px 0% 25px 0%;
+}
+select#funding {
+  // -webkit-appearance: none;
+  @include dropdownFunding();
+  width: 400px;
+}
+select#funding-mobile {
+  @include dropdownFunding();
+  width: 75vw;
+}
 select#funding {
   // -webkit-appearance: none;
   -moz-appearance: none;
   font-size: 100%;
   font-family: $font;
-  margin:5px 0% 25px 0%
+  margin:5px 0% 25px 0%;
+  width: 400px;
 }
 .editFunding{
   font-size: 90%;

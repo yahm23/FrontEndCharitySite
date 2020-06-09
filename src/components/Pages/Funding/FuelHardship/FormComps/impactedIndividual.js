@@ -81,7 +81,7 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         <label>Number of Children</label>
         <br></br>
         <select
-        id="funding"
+        id={isMobile? "funding-mobile":"funding"}
         name="numberOfChildren"
         value={numberOfChildren}
         onChange={setForm}>
@@ -97,7 +97,7 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         <label>Current Employment Status</label>
         <br></br>
         <select
-        id="funding"
+        id={isMobile? "funding-mobile":"funding"} 
         name="currentEmploymentSituation"
         value={currentEmploymentSituation}
         onChange={setForm}
@@ -115,7 +115,7 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         <label>Household Income Per Year</label>
         <br></br>
         <select
-        id="funding"
+        id={isMobile? "funding-mobile":"funding"} 
         name="householdIncomPerYear"
         value={householdIncomPerYear}
         onChange={setForm}>
@@ -128,13 +128,13 @@ const ImpactedIndividualDetails = ({ setForm, formData, navigation }) => {
         </select>
     </div>
     
-      <div className="fundingNavDiv"> 
-        <div onClick={previous} id="back">
-          {isMobile? <svg  height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>:<input className="" id="fundingNavButtons" value="Back"></input> }
+      <div> 
+        <div onClick={previous}>
+          <input id={isMobile? "back-mobile":"back"} className="fundingNavButtons" value="Back"></input> 
         </div>
         
-        <div   id="next">
-        {isMobile? <svg  height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>:<input  className="" id="fundingNavButtons" type="submit" value="Next" ></input>}
+        <div >
+        <input id={isMobile? "next-mobile":"next"} className="fundingNavButtons" type="submit" value="Next" ></input>
         </div>
       </div>
 

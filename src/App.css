@@ -928,7 +928,6 @@ button#submit {
 #funding {
   bottom: 0;
   font-size: 120%;
-  width: 400px;
 }
 
 .fundingNavButtons {
@@ -995,6 +994,23 @@ select#funding {
   font-size: 100%;
   font-family: "Geon", Times, sans-serif;
   margin: 5px 0% 25px 0%;
+  width: 400px;
+}
+
+select#funding-mobile {
+  -moz-appearance: none;
+  font-size: 100%;
+  font-family: "Geon", Times, sans-serif;
+  margin: 5px 0% 25px 0%;
+  width: 75vw;
+}
+
+select#funding {
+  -moz-appearance: none;
+  font-size: 100%;
+  font-family: "Geon", Times, sans-serif;
+  margin: 5px 0% 25px 0%;
+  width: 400px;
 }
 
 .editFunding {

@@ -61,9 +61,9 @@ const Details = ({ setForm, formData, navigation }) => {
         onChange={setForm}
         type="email"
       />
-      <div id="next">
+      <div >
         
-        {isMobile? <svg height="32" fill="#B2B3B6"id="chevron-email" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"/></svg>:<button onClick={next}>Next</button>}
+        <button id={isMobile? "next-mobile":"next"} className="fundingNavButtons" onClick={next}>Next</button>}
 
       </div>
       
