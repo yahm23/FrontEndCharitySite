@@ -1,5 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { useMediaQuery } from 'react-responsive';
+import Modal from 'react-bootstrap/Modal'
+import ModalTitle from 'react-bootstrap/ModalTitle'
+import ModalHeader from 'react-bootstrap/ModalHeader'
+import ModalBody from 'react-bootstrap/ModalBody'
+import ModalFooter from 'react-bootstrap/ModalFooter'
+import Button from 'react-bootstrap/Button'
 
 import backendURL from '../../../../backendURLs.js'
 
@@ -7,7 +13,34 @@ const Review = ({ setForm, formData, navigation }) => {
   let isMobile = useMediaQuery({ maxWidth: 767 });
 
   const { go, previous } = navigation;
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => {setShow(false)};
+  const handleShow = () => setShow(true)
 
+  const PopUp =()=>{
+    return(
+        <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <ModalHeader closeButton>
+          <ModalTitle>Incomplete Fields</ModalTitle>
+        </ModalHeader>
+        <ModalBody>
+          You must ensure all fields are filled in before submission.
+        </ModalBody>
+        <ModalFooter>
+          <Button variant="secondary" onClick={handleClose}>
+            Ok
+          </Button>
+          {/* <Button variant="primary">Ok</Button> */}
+        </ModalFooter>
+      </Modal> 
+    )
+}
   const fieldCheck=()=>{
     let x =0;
     let entries = Object.values(formData)
@@ -54,7 +87,7 @@ const Review = ({ setForm, formData, navigation }) => {
       go("submit")
 
     }else{
-      window.alert("Please make sure you've filled in all entries in the form") 
+      handleShow();
     }
   }
 
@@ -63,6 +96,7 @@ const Review = ({ setForm, formData, navigation }) => {
     <div className="form">
       <h2>Review Your Application</h2>        
         <h3 className="detailTitle" >
+          <PopUp></PopUp>
           <strong>Your Details</strong>
             <button className="editFunding" onClick={() => go("details")}>Edit</button>
         </h3>
