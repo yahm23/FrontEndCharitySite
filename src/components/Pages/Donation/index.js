@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 import Form from './form';
 
 
-const Donation =()=> {
+const Donation = () => {
     let isMobile = useMediaQuery({ maxWidth: 970 })
 
     return (

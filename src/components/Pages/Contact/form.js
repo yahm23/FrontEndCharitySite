@@ -16,8 +16,7 @@ const Form = (props)=> {
     const [show, setShow] = useState(false);
 
     const handleClose = () => {setShow(false); window.location.reload()};
-    const handleShow = () => {setShow(true); console.log('show is'+show); 
-};
+    const handleShow = () => setShow(true)
 
     const PopUp =()=>{
         return(

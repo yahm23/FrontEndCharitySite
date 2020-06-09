@@ -1,14 +1,29 @@
 import React, { useState } from 'react'
 import backendURL from '../../backendURLs.js'
+import Modal from 'react-bootstrap/Modal'
+import ModalTitle from 'react-bootstrap/ModalTitle'
+import ModalHeader from 'react-bootstrap/ModalHeader'
+import ModalBody from 'react-bootstrap/ModalBody'
+import ModalFooter from 'react-bootstrap/ModalFooter'
+import Button from 'react-bootstrap/Button' 
 
 
 
 const Form=(props)=>{
+
     const [name,setName]=useState();
     const [email,setEmail]=useState();
     const [number,setNumber]=useState();
     const [amount,setAmount]=useState();
 
+    const [showIt, setShow] = useState(false);
+    const [alert, setAlert] = useState(false);
+
+    const handleClose = () => {setShow(false); window.location.reload()};
+    const handleShow = () => setShow(true)
+    
+    const handleAlertClose = () => {setAlert(false)};
+    const handleAlertOpen = () => setAlert(true)
 
     const handleNameChange=(event)=> {
        setName(event.target.value);
@@ -24,29 +39,77 @@ const Form=(props)=>{
         setAmount(event.target.value);
     }
 
-    const handleSubmit=(event)=> {
-        if(amount!==''){
-        const postURL = `${backendURL}/donations`
-        fetch(postURL, {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            name:name,
-            amount:amount,
-            email:email,
-            number:number
-        })
-        })
-        .then(
-        alert('Your donation has been submitted')
+    const PopUpAccepted =()=>{
+        return(
+            <Modal
+            show={showIt}
+            onHide={handleClose}
+            backdrop="static"
+            keyboard={false}
+          >
+            <ModalHeader closeButton>
+              <ModalTitle>Donation Accepted!</ModalTitle>
+            </ModalHeader>
+            <ModalBody>
+                Your donation has been accepted. Thank you for your contribution!
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="secondary" onClick={handleClose}>
+                Ok
+              </Button>
+              {/* <Button variant="primary">Ok</Button> */}
+            </ModalFooter>
+          </Modal> 
+        )
+    }
+    const PopUpAlert =()=>{
+        return(
+            <Modal
+            show={alert}
+            onHide={handleAlertClose}
+            backdrop="static"
+            keyboard={false}
+          >
+            <ModalHeader closeButton>
+              <ModalTitle>Incomplete Field</ModalTitle>
+            </ModalHeader>
+            <ModalBody>
+                Please make sure to include a donation amount.
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="secondary" onClick={handleAlertClose}>
+                Ok
+              </Button>
+              {/* <Button variant="primary">Ok</Button> */}
+            </ModalFooter>
+          </Modal> 
+        )
+    }
 
-       )}
-        else{
-            alert('Please pick an amount to donate');
-            event.preventDefault();
+    const handleSubmit=(event)=> {
+        event.preventDefault();
+        if(amount!==undefined){
+            console.log('amount is ' + amount);
+            const postURL = `${backendURL}/donations`
+            fetch(postURL, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name:name,
+                amount:amount,
+                email:email,
+                number:number
+            })
+            })
+            .then(handleShow())
+        } else {
+        console.log('amount is ' + amount);
+        
+        event.preventDefault();
+        handleAlertOpen();
         }
     }
 
@@ -56,6 +119,8 @@ const Form=(props)=>{
         <div className="spaceDonate">
             <h2>Donate</h2>
         </div>
+        <PopUpAccepted></PopUpAccepted>
+        <PopUpAlert></PopUpAlert>
 
         <form className="formComponents" onSubmit={handleSubmit} >
             
