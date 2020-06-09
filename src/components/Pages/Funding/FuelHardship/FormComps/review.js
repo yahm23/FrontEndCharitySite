@@ -1,12 +1,46 @@
-import React from "react";
+import React, {useState} from "react";
 import backendURL from '../../../../backendURLs.js'
 import { useMediaQuery } from 'react-responsive';
+import Modal from 'react-bootstrap/Modal'
+import ModalTitle from 'react-bootstrap/ModalTitle'
+import ModalHeader from 'react-bootstrap/ModalHeader'
+import ModalBody from 'react-bootstrap/ModalBody'
+import ModalFooter from 'react-bootstrap/ModalFooter'
+import Button from 'react-bootstrap/Button'
 
 const Review = ({ formData, navigation }) => {
   let isMobile = useMediaQuery({ maxWidth: 767 });
 
   // const formDataToSubmit = formData;
   const { go , previous } = navigation;
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => {setShow(false)};
+  const handleShow = () => setShow(true)
+
+  const PopUp =()=>{
+    return(
+        <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <ModalHeader closeButton>
+          <ModalTitle>Incomplete Fields</ModalTitle>
+        </ModalHeader>
+        <ModalBody>
+          You must ensure all fields are filled in before submission.
+        </ModalBody>
+        <ModalFooter>
+          <Button variant="secondary" onClick={handleClose}>
+            Ok
+          </Button>
+          {/* <Button variant="primary">Ok</Button> */}
+        </ModalFooter>
+      </Modal> 
+    )
+}
 
   const fieldCheck=()=>{
     let x =0;
@@ -54,28 +88,28 @@ const Review = ({ formData, navigation }) => {
       go("submit")
 
     }else{
-      window.alert("Please make sure you've filled in all entries in the form") 
+      handleShow()
     }
   }
 
   const renderSwitch = (key) => {
     switch(key) {
       case 'driversLicense':
-        return <li key={key}>Proof Of Address - Drivers License</li>
+        return <li key={key}> Proof Of Address - Drivers License</li>
       case 'utilityBill':
-        return <li key={key}>Proof Of Address - Utility Bill</li>
+        return <li key={key}> Proof Of Address - Utility Bill</li>
       case 'contract':
-        return <li key={key}>Proof Of Income - Employment Contract</li>
+        return <li key={key}> Proof Of Income - Employment Contract</li>
       case 'payslips':
-        return <li key={key}>Proof Of Income - 3 Months Payslips</li>
+        return <li key={key}> Proof Of Income - 3 Months Payslips</li>
       case 'emailHR':
-        return <li key={key}>Proof Of Income - Email From Employer's HR Department</li>
+        return <li key={key}> Proof Of Income - Email From Employer's HR Department</li>
       case 'bankStatements':
-        return <li key={key}>Proof Of Income - Bank Statements</li>
+        return <li key={key}> Proof Of Income - Bank Statements</li>
       case 'energySupplierStatement':
-        return <li key={key}>Energy Account - Energy Supplier Statement</li>
+        return <li key={key}> Energy Account - Energy Supplier Statement</li>
       case 'energySupplierEmail':
-        return <li key={key}>Energy Account - Energy Supplier Emai</li>
+        return <li key={key}> Energy Account - Energy Supplier Emai</li>
       default:
         return null;
     }
@@ -104,6 +138,7 @@ const Review = ({ formData, navigation }) => {
   return (
     <div className="form">
       <h2>Review Your Application</h2>
+      <PopUp></PopUp>
         <h3>
             Your Details
             <button className="editFunding" onClick={() => go("details")}>Edit</button>

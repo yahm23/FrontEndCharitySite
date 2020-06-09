@@ -10,9 +10,10 @@ import Button from 'react-bootstrap/Button'
 
 const GrantRequest = ({ setForm, formData, navigation }) => {
     let isMobile = useMediaQuery({ maxWidth: 767 });
-    const { grantAmount,
-        evidenceProvided,
-        confirmGrantOnlyForEnergy
+    const { 
+      grantAmount,
+      evidenceProvided,
+      confirmGrantOnlyForEnergy
 
       } = formData;
 
