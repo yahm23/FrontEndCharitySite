@@ -1,41 +1,31 @@
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 import backendURL from '../../backendURLs.js'
 
 
 
-class Form extends PureComponent {
+const Form=(props)=>{
+    const [name,setName]=useState();
+    const [email,setEmail]=useState();
+    const [number,setNumber]=useState();
+    const [amount,setAmount]=useState();
 
-constructor(props) {
-    super(props);
-    this.state ={
-        name:'',
-        email:'',
-        number:'',
-        amount:''
-    };
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePhoneChange = this.handlePhoneChange.bind(this);
-    this.handleAmountChange = this.handleAmountChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-}
 
-    handleNameChange(event) {
-        this.setState({name: event.target.value});
+    const handleNameChange=(event)=> {
+       setName(event.target.value);
     }
-    handleEmailChange(event) {
-        this.setState({email: event.target.value});
+    const handleEmailChange=(event)=> {
+       setEmail(event.target.value);
     }
-    handlePhoneChange(event) {
-        this.setState({number: event.target.value});
+    const handlePhoneChange=(event)=> {
+        setNumber(event.target.value)
     }
-    handleAmountChange(event) {
+    const handleAmountChange=(event)=> {
         event.preventDefault();
-        this.setState({amount: event.target.value});
+        setAmount(event.target.value);
     }
 
-    handleSubmit(event) {
-        if(this.state.amount!==''){
+    const handleSubmit=(event)=> {
+        if(amount!==''){
         const postURL = `${backendURL}/donations`
         fetch(postURL, {
         method: 'POST',
@@ -44,10 +34,10 @@ constructor(props) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            name:this.state.name,
-            amount:this.state.amount,
-            email:this.state.email,
-            number:this.state.number
+            name:name,
+            amount:amount,
+            email:email,
+            number:number
         })
         })
         .then(
@@ -60,27 +50,27 @@ constructor(props) {
         }
     }
 
-    render(){
+  
     return (
-    <div className={this.props.isMobile? "card-mobile":"card"} id="donate">
+    <div className={props.isMobile? "card-mobile":"card"} id="donate">
         <div className="spaceDonate">
             <h2>Donate</h2>
         </div>
 
-        <form className="formComponents" onSubmit={this.handleSubmit} >
+        <form className="formComponents" onSubmit={handleSubmit} >
             
 
             <div className="spaceDonate">
                 <label htmlFor="name">Name</label>
-                <input value={this.state.name} onChange={this.handleNameChange} type="text" id="name" name="user_name" required></input>
+                <input value={name} onChange={handleNameChange} type="text" id="name" name="user_name" required></input>
             </div>
             <div className="spaceDonate">
                 <label htmlFor="mail">E-mail</label>
-                <input value={this.state.email} onChange={this.handleEmailChange} type="email" id="mail" name="user_email" required></input>
+                <input value={email} onChange={handleEmailChange} type="email" id="mail" name="user_email" required></input>
             </div>
             <div className="spaceDonate">
                 <label htmlFor="number">Phone Number</label>
-                <input value={this.state.number} onChange={this.handlePhoneChange} type="number" id="number" name="user_enumber" required></input>
+                <input value={number} onChange={handlePhoneChange} type="number" id="number" name="user_enumber" required></input>
             </div>
 
             <label>Amount  </label>
@@ -89,18 +79,18 @@ constructor(props) {
                 <div >
 
                     
-                    <button className="donationAmounts" onClick={this.handleAmountChange} value="25"   name="amount">£25</button>  
+                    <button className="donationAmounts" onClick={handleAmountChange} value="25"   name="amount">£25</button>  
 
-                    <button className="donationAmounts" onClick={this.handleAmountChange} value="50"   name="amount">£50</button>
+                    <button className="donationAmounts" onClick={handleAmountChange} value="50"   name="amount">£50</button>
             
-                    <button className="donationAmounts" onClick={this.handleAmountChange} value="75"   name="amount">£75</button>
+                    <button className="donationAmounts" onClick={handleAmountChange} value="75"   name="amount">£75</button>
  
-                    <button className="donationAmounts" onClick={this.handleAmountChange} value="100"   name="amount">£100</button>
+                    <button className="donationAmounts" onClick={handleAmountChange} value="100"   name="amount">£100</button>
                     <br>
                     </br>
                     
                     <div className="donationAmounts otherAmount">
-                        £<input className="inputLine"  value={this.state.amount} onChange={this.handleAmountChange} type="number"  min="0" name="numAmount" />
+                        £<input className="inputLine"  value={amount} onChange={handleAmountChange} type="number"  min="0" name="numAmount" />
                     </div>
 
 
@@ -111,7 +101,7 @@ constructor(props) {
         </form>
 
     </div>
-    )}
+    )
 }
 
 export default Form

@@ -9,7 +9,8 @@ class Form extends PureComponent {
             name:'',
             email:'',
             number:'',
-            message:''
+            message:'',
+            
         };
     
         this.handleNameChange = this.handleNameChange.bind(this);
