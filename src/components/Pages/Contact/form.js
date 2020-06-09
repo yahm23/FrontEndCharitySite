@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import backendURL from '../../backendURLs.js'
-
+import Modal from 'react-bootstrap/Modal'
+import ModalTitle from 'react-bootstrap/ModalTitle'
+import ModalHeader from 'react-bootstrap/ModalHeader'
+import ModalBody from 'react-bootstrap/ModalBody'
+import ModalFooter from 'react-bootstrap/ModalFooter'
+import Button from 'react-bootstrap/Button' 
 
 const Form = (props)=> {
     const [name,setName]=useState();
@@ -8,7 +13,35 @@ const Form = (props)=> {
     const [number,setNumber]=useState();
     const [message,setMessage]=useState();
 
-   
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => {setShow(false); window.location.reload()};
+    const handleShow = () => {setShow(true); console.log('show is'+show); 
+};
+
+    const PopUp =()=>{
+        return(
+            <Modal
+            show={show}
+            onHide={handleClose}
+            backdrop="static"
+            keyboard={false}
+          >
+            <ModalHeader closeButton>
+              <ModalTitle>Enquiry Submitted!</ModalTitle>
+            </ModalHeader>
+            <ModalBody>
+                Thank you for Submission, we will reply as soon as we can.
+            </ModalBody>
+            <ModalFooter>
+              <Button variant="secondary" onClick={handleClose}>
+                Ok
+              </Button>
+              {/* <Button variant="primary">Ok</Button> */}
+            </ModalFooter>
+          </Modal> 
+        )
+    }
 
     const handleNameChange=(event)=> {
         setName(event.target.value);
@@ -24,7 +57,7 @@ const Form = (props)=> {
     }
 
     const handleSubmit=(event)=> {
-        
+        event.preventDefault();
         const postURL = `${backendURL}/contact-submissions`
         fetch(postURL, {
             method: 'POST',
@@ -39,11 +72,13 @@ const Form = (props)=> {
                 message:message
             })
         })
-        .then(            
-            alert('Your message has been submitted')
-        )
+        .then( ()=>{
+            event.preventDefault();
+            handleShow()
+        })
+            
 
-    }
+}
     
 
     return (
@@ -82,13 +117,14 @@ const Form = (props)=> {
                         <label htmlFor="msg">Message</label>
                         <textarea  rows="1" cols="33" value={message} onChange={handleMessageChange} id="msg" name="user_message" required></textarea>
                     </div>
-                    
+                    <PopUp></PopUp>
                     <button id= "submit" type="submit">Submit</button>
                     
                 
                 </div>
 
             </form>
+                    {/* <button  onClick={handleShow}>test</button> */}
 
             </div>
                 
