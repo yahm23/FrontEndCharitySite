@@ -89,7 +89,6 @@ const Form=(props)=>{
     const handleSubmit=(event)=> {
         event.preventDefault();
         if(amount!==undefined){
-            console.log('amount is ' + amount);
             const postURL = `${backendURL}/donations`
             fetch(postURL, {
             method: 'POST',
@@ -105,9 +104,7 @@ const Form=(props)=>{
             })
             })
             .then(handleShow())
-        } else {
-        console.log('amount is ' + amount);
-        
+        } else {        
         event.preventDefault();
         handleAlertOpen();
         }

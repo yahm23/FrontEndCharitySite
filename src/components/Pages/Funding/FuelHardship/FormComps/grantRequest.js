@@ -1,6 +1,12 @@
 import React, {useState} from "react";
 import { useMediaQuery } from 'react-responsive';
 import ItemForm from "../../SustainableDevelopment/FormComps/itemForm";
+import Modal from 'react-bootstrap/Modal'
+import ModalTitle from 'react-bootstrap/ModalTitle'
+import ModalHeader from 'react-bootstrap/ModalHeader'
+import ModalBody from 'react-bootstrap/ModalBody'
+import ModalFooter from 'react-bootstrap/ModalFooter'
+import Button from 'react-bootstrap/Button' 
 
 const GrantRequest = ({ setForm, formData, navigation }) => {
     let isMobile = useMediaQuery({ maxWidth: 767 });
@@ -15,6 +21,35 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
   let [selectedBoolean,setBoolean] = useState(false);
   let [checkbox,setCheckbox] = useState();
 
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => {setShow(false)};
+  const handleShow = () => setShow(true)
+
+
+  const PopUp =()=>{
+    return(
+        <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <ModalHeader closeButton>
+          <ModalTitle>Energy Grant Use</ModalTitle>
+        </ModalHeader>
+        <ModalBody>
+          You must confirm the grant will only be used for energy payments
+        </ModalBody>
+        <ModalFooter>
+          <Button variant="secondary" onClick={handleClose}>
+            Ok
+          </Button>
+          {/* <Button variant="primary">Ok</Button> */}
+        </ModalFooter>
+      </Modal> 
+    )
+}
   const booleanChange =(event)=>{
     setBoolean(event.target.value);
     var isTrueSet = (event.target.value == 'true');
@@ -32,6 +67,7 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
   }
 
   const confirmationOfEnergyPaymentsOnly = (event)=> {
+    event.preventDefault()
     // console.log(formData.confirmGrantOnlyForEnergy);
     
     if(formData.confirmGrantOnlyForEnergy===true){
@@ -39,8 +75,10 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
       
       next();
     } else {
-      event.preventDefault()
-      window.alert('You must confirm the grant will only be used for energy payments')
+      event.preventDefault();
+      console.log("inside the else");
+      
+      handleShow();
     }
   }
 
@@ -48,7 +86,7 @@ const GrantRequest = ({ setForm, formData, navigation }) => {
   return (
     <div className="form">
       <h2>Apply - Grant Request</h2> <h3>Please ensure all fields are filled in</h3>
-      
+      <PopUp></PopUp>
       <form onSubmit={confirmationOfEnergyPaymentsOnly}>
       <ItemForm
         label="Amount of Grant Requested (£) *"
