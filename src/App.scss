@@ -81,7 +81,7 @@ $font: 'Geon', Times, sans-serif;
   }
   
 .navTitles{
-  font-size: 60%;
+  font-size: 18px;
 }
 #space{
   flex-grow: 0.8;
@@ -89,6 +89,7 @@ $font: 'Geon', Times, sans-serif;
   margin: auto;
 }
 .headingSizes{
+  font-weight: 600;
   font-size: 60px;
 }
 .headingSizes-mobile{
@@ -957,6 +958,7 @@ button#submit{
   font-family: $font;
   background-color: $green;
   border: none;
+  font-size: 120%;
 }
 
 .modal-title, .modal-body{

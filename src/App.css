@@ -65,7 +65,7 @@ body {
 }
 
 .navTitles {
-  font-size: 60%;
+  font-size: 18px;
 }
 
 #space {
@@ -75,6 +75,7 @@ body {
 }
 
 .headingSizes {
+  font-weight: 600;
   font-size: 60px;
 }
 
@@ -966,6 +967,7 @@ button#submit {
   font-family: "Geon", Times, sans-serif;
   background-color: #84C632;
   border: none;
+  font-size: 120%;
 }
 
 .modal-title, .modal-body {
