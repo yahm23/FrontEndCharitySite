@@ -30,7 +30,8 @@ const DropDownNavBar=()=>{
                                 <Dropdown.Item href="/blogs">Success Stories</Dropdown.Item>
                                 <Dropdown.Item href="/funding">Apply to Funding</Dropdown.Item>
                                 <Dropdown.Item href="/contact">Contact</Dropdown.Item>
-                                <button className="donateButton-mobile"><Link to='/donation'>Make a donation</Link></button>
+                                <Dropdown.Item href="/donation"><button className="donateButton-mobile"> Make a donation</button></Dropdown.Item>
+                                
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>

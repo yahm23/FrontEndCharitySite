@@ -130,7 +130,8 @@ body {
   font-size: 20px;
   padding: 7px;
   flex-grow: 1;
-  margin: 14px 10%;
+  margin: -2px -5px;
+  margin-bottom: 5%;
   display: block;
 }
 
