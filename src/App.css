@@ -962,6 +962,16 @@ button#submit {
   height: 80px;
 }
 
+.btn-secondary {
+  font-family: "Geon", Times, sans-serif;
+  background-color: #84C632;
+  border: none;
+}
+
+.modal-title, .modal-body {
+  font-family: "Geon", Times, sans-serif;
+}
+
 #newReq {
   width: 180px;
   margin: 0 auto;

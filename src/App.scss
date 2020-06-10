@@ -951,16 +951,17 @@ button#submit{
   @include fundingNavButtons();
   font-size: 138%;
   height: 80px;
-  
 }
-// .fundingNavButtons-mobile{
-//   @include fundingNavButtons();
-//   font-size: 95%;
-//   height: 50px;
-//   float: right;
-//   width: 75px;
-// }
 
+.btn-secondary{
+  font-family: $font;
+  background-color: $green;
+  border: none;
+}
+
+.modal-title, .modal-body{
+  font-family: $font;
+}
 
 #newReq{
   width: 180px;
