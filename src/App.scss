@@ -137,9 +137,9 @@ $font: 'Geon', Times, sans-serif;
 .donateButton-mobile{
   @include donateButton();
   font-size: 20px;
-  padding:1%;
+  padding:7px;
   flex-grow: 1;
-  margin:4px 11%;
+  margin:14px 10%;
   display:block;
 }
 
@@ -584,7 +584,11 @@ div .Bar {
   box-shadow: 0 15px 19px 0 rgba(0,0,0,0.2);
   // margin: 2% 0%;
 }
-
+.btn-success{
+  border:none;
+  background-color: none !important;
+  
+}
 .container-mobile{
   height:100%;
 }
