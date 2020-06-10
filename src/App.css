@@ -95,6 +95,15 @@ body {
   margin-top: 8%;
 }
 
+.dropdown-item {
+  color: black;
+  flex-grow: 3;
+  padding-left: 12%;
+  text-align: left;
+  font-family: "Geon", Times, sans-serif;
+  margin-top: 15px;
+}
+
 .donateButton {
   font-family: "Geon", Times, sans-serif;
   color: white;
@@ -118,9 +127,9 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-  padding: 3%;
+  padding: 1%;
   flex-grow: 1;
-  margin: 5% 11%;
+  margin: 4px 11%;
   display: block;
 }
 
@@ -564,15 +573,16 @@ div .Bar {
 }
 
 .dropdown-menu.show {
-  background-color: white;
-  padding: 3%;
-  width: 80%;
-  border: black;
-  border-radius: 20px;
+  transform: translate3d(0, 12vh, 0px) !important;
   font-family: "Geon", Times, sans-serif;
-  color: #84C632;
-  margin: 0 auto;
-  display: inline-block;
+  color: #434137;
+  background-color: white;
+  width: 90%;
+  border: none;
+  border-radius: 15px;
+  margin: 0% 5% !important;
+  padding: none;
+  margin: none;
   box-shadow: 0 15px 19px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -896,17 +906,13 @@ button#submit {
   background-color: transparent;
 }
 
-.dropdown {
-  position: absolute;
-  background-color: white;
-  top: 75px;
-  left: 5%;
-  width: 90%;
-  font-size: 120%;
-  max-width: 100%;
-  font-weight: normal;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.15), 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+.dropleft .dropdown-toggle::before {
+  content: none;
+  margin-right: none;
+}
+
+.dropdown-toggle::after {
+  content: none;
 }
 
 #amount {
