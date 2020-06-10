@@ -18,11 +18,11 @@ const NavBar = () => {
         </div>
 
         <div id="space" className= "navbarright">
-          <h3><Link className="navTitles" to='/'>Home</Link> </h3>
-          <h3><Link className="navTitles" to='/about'>About us</Link></h3>
-          <h3><Link className="navTitles" to='/blogs'>Stories</Link></h3>
-          <h3><NavLink className="navTitles" to='/funding'> Apply to Funding</NavLink></h3>
-          <h3><Link className="navTitles" to='/contact'>Contact</Link></h3>
+          <Link className="navTitles" to='/'>Home</Link> 
+          <Link className="navTitles" to='/about'>About us</Link>
+          <Link className="navTitles" to='/blogs'>Stories</Link>
+          <NavLink className="navTitles" to='/funding'> Apply to Funding</NavLink>
+          <Link className="navTitles" to='/contact'>Contact</Link>
           <Link className="navTitles" to='/donation'><button className="donateButton"> Make a donation</button></Link>
           
           
