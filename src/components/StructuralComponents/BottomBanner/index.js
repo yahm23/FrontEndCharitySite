@@ -14,7 +14,7 @@ import PrivacyPolicy from '../../Pages/PrivacyPolicy';
 const BottomBanner= ()=> {
    
         return (
-            <div className="bottomBanner">
+            <div id="footerp" className="bottomBanner">
                 <div className="blankSpace"></div>
                 <hr className="solid"></hr>
 

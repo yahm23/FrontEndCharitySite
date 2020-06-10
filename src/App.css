@@ -656,7 +656,7 @@ div .Bar {
   background-color: rgba(104, 111, 122, 0.4);
   width: 100%;
   max-width: 1920px;
-  height: 70%;
+  height: 50vh;
   z-index: 0;
 }
 
