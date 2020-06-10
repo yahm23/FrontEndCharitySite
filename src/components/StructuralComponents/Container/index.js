@@ -11,7 +11,6 @@ import SingleBlog from "../../Pages/SingleBlog";
 import Support from "../../Pages/Support";
 import NavBar from "../NavBar";
 import PrivacyPolicy from "../../Pages/PrivacyPolicy";
-import MobileNavBar from "../MobileNavBar";
 import EmptyPage from "../../Pages/EmptyPage";
 import Funding from "../../Pages/Funding";
 import PageNotFound from '../../Pages/PageNotFound';
