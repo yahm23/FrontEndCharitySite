@@ -146,7 +146,8 @@ const HomeComp = () => {
 
                 <div className="storyContainer">
                         <Story></Story>
-                    <Link to='/blogs'><button className={isMobile ?"viewMore-mobile":"viewMore"}>View more success stories</button></Link>
+                        {/* Removal of view more button, uncomment below if needed */}
+                    {/* <Link to='/blogs'><button className={isMobile ?"viewMore-mobile":"viewMore"}>View more success stories</button></Link> */}
                 </div>
                 
 
