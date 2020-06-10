@@ -303,6 +303,7 @@ a, a:visited, a:hover, a:active {
   width: 100%;
   z-index: 1;
   position: relative;
+  overflow:auto;
   // height:100%
 }
 
@@ -655,6 +656,7 @@ div .Bar {
   max-width: 1920px;
   height: 50vh;
   z-index: 0;
+
 
 }
 

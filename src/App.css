@@ -307,6 +307,7 @@ a, a:visited, a:hover, a:active {
   width: 100%;
   z-index: 1;
   position: relative;
+  overflow: auto;
 }
 
 .boxes {
