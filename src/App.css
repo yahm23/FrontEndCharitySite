@@ -155,12 +155,14 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 22px;
-  padding: 20px 25px;
+  width: 200px;
+  height: 70px;
   flex-grow: 1;
   margin-right: 3%;
 }
 
 .LearnButton {
+  padding: 3% 9%;
   font-family: "Geon", Times, sans-serif;
   color: black;
   background-color: white;
@@ -168,7 +170,6 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-  padding: 3% 9%;
   margin: 5% 6%;
 }
 
@@ -180,8 +181,9 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 20px;
-  padding: 3% 9%;
   margin: 5% 0%;
+  width: 200px;
+  height: 70px;
 }
 
 a, a:visited, a:hover, a:active {
@@ -225,6 +227,7 @@ a, a:visited, a:hover, a:active {
   padding-top: 7%;
   padding-bottom: 13%;
   padding-left: 2%;
+  text-align: center;
   padding-top: 20%;
   margin-left: 5%;
   margin-right: 5%;
@@ -284,6 +287,7 @@ a, a:visited, a:hover, a:active {
 .black {
   font-family: "Geon", Times, sans-serif;
   color: black;
+  color: #383838;
   font-weight: 100;
   margin-bottom: 0%;
   margin-top: 10%;
@@ -295,6 +299,7 @@ a, a:visited, a:hover, a:active {
 .black-mobile {
   font-family: "Geon", Times, sans-serif;
   color: black;
+  color: #383838;
   font-weight: 100;
   margin-bottom: 0%;
   margin-top: 10%;
@@ -348,6 +353,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .blurb {
+  color: #383838;
   font-family: "Geon", Times, sans-serif;
   text-align: center;
   margin-bottom: 15%;
@@ -356,6 +362,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .blurb-mobile {
+  color: #383838;
   font-family: "Geon", Times, sans-serif;
   text-align: center;
   margin-bottom: 15%;
@@ -364,6 +371,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .mini-title {
+  color: #383838;
   font-weight: bold;
 }
 
@@ -432,7 +440,7 @@ a, a:visited, a:hover, a:active {
   border: 1px solid #C2C2C1;
   border: 1px solid #cccccc;
   border-radius: 4px;
-  color: #4E4E54;
+  color: #383838;
   text-align: center;
   text-decoration: none;
   font-size: 20PX;
@@ -447,7 +455,7 @@ a, a:visited, a:hover, a:active {
   border: 1px solid #C2C2C1;
   border: 1px solid #cccccc;
   border-radius: 4px;
-  color: #4E4E54;
+  color: #383838;
   text-align: center;
   text-decoration: none;
   font-size: 20PX;
@@ -579,7 +587,7 @@ div .Bar {
 .dropdown-menu.show {
   transform: translate3d(0, 12vh, 0px) !important;
   font-family: "Geon", Times, sans-serif;
-  color: #434137;
+  color: #383838;
   background-color: white;
   width: 90%;
   border: none;
@@ -771,7 +779,7 @@ div .Bar {
 .keepUpdated {
   margin-top: 25px;
   margin-bottom: 2%;
-  color: #4E4E54;
+  color: #383838;
 }
 
 .bottomLogo {
