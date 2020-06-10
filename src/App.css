@@ -102,6 +102,7 @@ body {
   text-align: left;
   font-family: "Geon", Times, sans-serif;
   margin-top: 15px;
+  font-size: 18px;
 }
 
 .donateButton {
@@ -589,6 +590,8 @@ div .Bar {
 .btn-success {
   border: none;
   background-color: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .container-mobile {

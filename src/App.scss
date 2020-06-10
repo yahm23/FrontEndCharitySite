@@ -113,6 +113,7 @@ $font: 'Geon', Times, sans-serif;
   text-align: left;
   font-family: $font;
   margin-top: 15px;
+  font-size: 18px;
 }
 
 @mixin donateButton {
@@ -587,7 +588,9 @@ div .Bar {
 .btn-success{
   border:none;
   background-color: none !important;
-  
+  outline: none !important;
+  box-shadow: none !important;
+
 }
 .container-mobile{
   height:100%;
