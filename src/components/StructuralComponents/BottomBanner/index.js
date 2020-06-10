@@ -47,7 +47,7 @@ const BottomBanner= ()=> {
 
                     </div>
 
-                    <p className="">Address Line 1, Address Line 2, POSTCODE, 0191 300 6161 - info@thegreenfoundation </p>
+                    <p className="">4034 The Core, Bath Lane,  NE4 5TF, 0345 222 2525 - info@thegreenfoundation </p>
                     <p className="copyright">© 2020 Green Foundation - Registered Charity No. 123456</p>
                 </div>
 
